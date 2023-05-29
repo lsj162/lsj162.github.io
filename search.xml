@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>排序算法</title>
-    <url>/2000/01/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <url>/2016/05/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h2 id="冒泡排序原理-o-n-2"><a href="#冒泡排序原理-o-n-2" class="headerlink" title="冒泡排序原理 o(n^2)"></a>冒泡排序原理 o(n^2)</h2><span id="more"></span>
 
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">Arr</span> = [<span class="number">3</span>, <span class="number">11</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">8</span>];</span><br><span class="line">    <span class="comment">// 交换</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">swap</span>(<span class="params">array, a, b</span>) &#123;</span><br><span class="line">        <span class="comment">// 独立的功能不受外界干扰</span></span><br><span class="line">        <span class="keyword">let</span> temp = array[a];</span><br><span class="line">        array[a] = array[b];</span><br><span class="line">        array[b] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 冒泡排序方法</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">MpSort</span>(<span class="params">Arr</span>) &#123;</span><br><span class="line">        <span class="comment">// 前值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, j = <span class="title class_">Arr</span>.<span class="property">length</span>; i &lt; j; i++) &#123;</span><br><span class="line">            <span class="comment">// 后值</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> k = <span class="number">0</span>; k &lt; i; k++) &#123;</span><br><span class="line">                <span class="comment">// 每一个前面值和后面值比较，交换位置；</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="title class_">Arr</span>[k] &gt; <span class="title class_">Arr</span>[i]) &#123;</span><br><span class="line">                    <span class="title function_">swap</span>(<span class="title class_">Arr</span>, i, k);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Arr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> result = <span class="title class_">MpSort</span>(<span class="title class_">Arr</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <title>实现一个 promiseAll</title>
-    <url>/2000/02/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll/</url>
+    <url>/2016/05/01/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll/</url>
     <content><![CDATA[<h1 id="实现一个-promiseAll…"><a href="#实现一个-promiseAll…" class="headerlink" title="实现一个 promiseAll…"></a>实现一个 promiseAll…</h1><span id="more"></span>
 
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">promiseAll</span>(<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> len = promises.<span class="property">length</span>;</span><br><span class="line">        <span class="comment">// 请求等待结果</span></span><br><span class="line">        <span class="keyword">let</span> res = [];</span><br><span class="line">        <span class="comment">// 累计请求成功的数量</span></span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">next</span>(<span class="params">index</span>) &#123;</span><br><span class="line">            promises[index]().<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">                res[index] = result;</span><br><span class="line">                count++;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (count === len) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="title function_">resolve</span>(res);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="title function_">next</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -32,6 +32,144 @@
       </categories>
       <tags>
         <tag>promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 使用入门</title>
+    <url>/2016/05/01/%E5%B7%A5%E5%85%B7/Git%20%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><ul>
+<li>git config user.name [查看用户名]</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>git config user.email [邮箱地址]</p>
+</li>
+<li><p>git config –global user.name “username” [修改用户名]</p>
+</li>
+<li><p>git config user.name “username”[局部]</p>
+</li>
+<li><p>git config –global user.email “email” [邮箱地址]</p>
+</li>
+<li><p>git init [初始化]</p>
+</li>
+<li><p>git add [放入暂存区]</p>
+</li>
+<li><p>git status [状态]</p>
+</li>
+<li><p>git commit -m [提交并说明]</p>
+</li>
+<li><p>git diff [查看修改内容]</p>
+</li>
+<li><p>git reset –hard commit_id [回退和恢复版本分支]</p>
+</li>
+<li><p>git checkout – file [工作区的内容修改撤销]</p>
+</li>
+<li><p>rm || git rm [删除工作区||暂存区]</p>
+</li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><h3 id="一旦提交推送到远程版本库，就形成记录-……"><a href="#一旦提交推送到远程版本库，就形成记录-……" class="headerlink" title="一旦提交推送到远程版本库，就形成记录 ……"></a>一旦提交推送到远程版本库，就形成记录 ……</h3><ul>
+<li><p>ssh [密码]</p>
+</li>
+<li><p>git remote -v [远程库信息]</p>
+</li>
+<li><p>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;</a>:somewhile&#x2F;systemjs.git [git 关联 github]</p>
+</li>
+<li><p>git branch –set-upstream-to&#x3D;origin name [关联远程分支]</p>
+</li>
+<li><p>git remote rm origin [删除关联]</p>
+</li>
+<li><p>git push -u origin master [推送]</p>
+</li>
+<li><p>git pull [更新]</p>
+</li>
+<li><p>git clone [克隆]</p>
+</li>
+<li><p>不熟练，千万别用 Stash，新开分支，这时突然一个分支临时 bug，修改这 bug，修改后继续工作</p>
+</li>
+<li><p>git stash [pull 冲突，本地暂时先存储起来]</p>
+</li>
+<li><p>git stash pop stash@{0}</p>
+</li>
+<li><p>git stash apply [恢复当前分支]</p>
+</li>
+</ul>
+<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><ul>
+<li><p>git checkout -b name 远程或本地 [创建分支]</p>
+</li>
+<li><p>git push origin [提交分支]</p>
+</li>
+<li><p>git branch [查看]</p>
+</li>
+<li><p>git checkout master [切换分支]</p>
+</li>
+<li><p>git merge dev [合并分支]</p>
+</li>
+<li><p>git branch -d||D dev [删除分支,不合并强制删除]</p>
+</li>
+<li><p>git push –set-upstream origin name [提交远程分支]</p>
+</li>
+<li><p>git push –delete origin name [删除远程分支]</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>git 不能提交空文件夹</li>
+</ul>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vi 命令</title>
+    <url>/2016/05/01/%E7%B3%BB%E7%BB%9F/vi%20%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><ul>
+<li>i：插入模式，在当前光标位置前插入文本。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>a：插入模式，在当前光标位置后插入文本。</p>
+</li>
+<li><p>o：在当前行下面新开一行并进入插入模式。</p>
+</li>
+<li><p>x：删除光标所在位置的字符。</p>
+</li>
+<li><p>dd：删除当前行。</p>
+</li>
+<li><p>yy：复制当前行。</p>
+</li>
+<li><p>p：将之前复制或剪切的内容粘贴到当前光标位置下方。</p>
+</li>
+<li><p>:w：保存文件。</p>
+</li>
+<li><p>:q：退出 vi。</p>
+</li>
+<li><p>:wq：保存并退出 vi。</p>
+</li>
+<li><p>&#x2F;：查找指定字符串。</p>
+</li>
+<li><p>n：在搜索结果中跳转到下一个匹配项。</p>
+</li>
+<li><p>N：在搜索结果中跳转到上一个匹配项。</p>
+</li>
+<li><p>u：撤销上一次操作。</p>
+</li>
+<li><p>Ctrl + r：重做上一次被撤销的操作。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+      <tags>
+        <tag>vi</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
