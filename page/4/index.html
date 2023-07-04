@@ -75,7 +75,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="React-组件通信？"><a href="#React-组件通信？" class="headerlink" title="React - 组件通信？"></a>React - 组件通信？</h1><p>常用的组件通信方式包括：</p>
+        <!-- # React - 组件通信？ -->
+
+<ul>
+<li>常用的组件通信方式包括：</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">props、</span><br><span class="line"></span><br><span class="line">Context、</span><br><span class="line"></span><br><span class="line">Redux</span><br></pre></td></tr></table></figure>
         
           <p class="article-more-link">
@@ -125,7 +129,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="React-高阶组件？"><a href="#React-高阶组件？" class="headerlink" title="React - 高阶组件？"></a>React - 高阶组件？</h1><p>高阶组件是指接受一个组件并返回一个新组件的函数。和高阶函数一样同理。</p>
+        <!-- # React - 高阶组件？ -->
+
+<p>高阶组件是指接受一个组件并返回一个新组件的函数。和高阶函数一样同理。</p>
 <p>主要作用：在组件之间共享代码、提取和重用状态逻辑，或者对包装的组件额外的操作。</p>
         
           <p class="article-more-link">
@@ -175,7 +181,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="冒泡排序原理-o-n-2"><a href="#冒泡排序原理-o-n-2" class="headerlink" title="冒泡排序原理 o(n^2)"></a>冒泡排序原理 o(n^2)</h2>
+        <h2 id="冒泡排序原理-o-n-2"><a href="#冒泡排序原理-o-n-2" class="headerlink" title="冒泡排序原理 o(n^2)"></a>冒泡排序原理 o(n^2)</h2><p>代码示范：</p>
         
           <p class="article-more-link">
             <a href="/2016/05/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/#more">Read More</a>
@@ -224,11 +230,13 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><blockquote>
-<p>平时操作 shell，用到的 vi 常用的命令；</p>
-</blockquote>
-<ul>
-<li>i：插入模式，在当前光标位置前插入文本。</li>
+        <h2 id="平时操作-shell，用到的-vi-常用的命令；"><a href="#平时操作-shell，用到的-vi-常用的命令；" class="headerlink" title="平时操作 shell，用到的 vi 常用的命令；"></a>平时操作 shell，用到的 vi 常用的命令；</h2><ul>
+<li><p>i：插入模式，在当前光标位置前插入文本。</p>
+</li>
+<li><p>a：插入模式，在当前光标位置后插入文本。</p>
+</li>
+<li><p>o：在当前行下面新开一行并进入插入模式。</p>
+</li>
 </ul>
         
           <p class="article-more-link">
@@ -259,7 +267,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a>
+    <a class="article-category-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a>
   </div>
 
   </div>
@@ -278,18 +286,17 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1><ol>
+        <ol>
 <li><p>客户端发送，FIN 包，请求关闭；</p>
 </li>
 <li><p>服务端接收到， 发送一个 ACK 包，表示确认收到</p>
 </li>
-<li><p>服务端发送一个 FIN 包，表示服务端也不再向客户端发送数据。</p>
-</li>
-<li><p>客户端接收到服务端的 FIN 包后，发送一个 ACK 包，表示确认收到，连接关闭完成。</p>
-</li>
 </ol>
-<p>需要注意的是，在四次挥手过程中，如果某个阶段超时或出错，则会重新开始四次挥手过程。同时，在 TCP 连接关闭过程中，可能存在 TIME_WAIT 状态，以避免网络延迟导致的重复请求。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2016/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -297,7 +304,7 @@
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%8F%E8%AE%AE/" rel="tag">协议</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" rel="tag">网络协议</a></li></ul>
 
     </footer>
   </div>
@@ -314,7 +321,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a>
+    <a class="article-category-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a>
   </div>
 
   </div>
@@ -333,19 +340,17 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><ol>
+        <ol>
 <li><p>客户端向服务器发送一个同步请求（SYN），告诉服务器客户端要开始建立连接。</p>
 </li>
 <li><p>服务器收到客户端的 SYN 请求后，回复一个同步确认（SYN-ACK），告诉客户端已经收到了请求，并准备好建立连接。</p>
 </li>
-<li><p>客户端收到服务器的 SYN-ACK 响应后，再次发送一个确认请求（ACK）（SYN&#x3D;0，ACK&#x3D;1，Seq&#x3D;X+1，Ack&#x3D;Y+1），告诉服务器客户端已经接收到了服务器的响应，并表示可以开始传输数据。</p>
-</li>
 </ol>
-<p>需要注意的是，在三次握手过程中，如果某个阶段超时或出错，则会重新开始三次握手过程。同时，在连接关闭时还需要进行四次挥手过程来正常关闭连接。</p>
-<h1 id="为什么不使用二次握手？"><a href="#为什么不使用二次握手？" class="headerlink" title="为什么不使用二次握手？"></a>为什么不使用二次握手？</h1><ul>
-<li>不可靠。</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/2016/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -353,7 +358,7 @@
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" rel="tag">三次握手</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" rel="tag">网络协议</a></li></ul>
 
     </footer>
   </div>
@@ -389,8 +394,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Nodejs-事件循环？"><a href="#Nodejs-事件循环？" class="headerlink" title="Nodejs - 事件循环？"></a>Nodejs - 事件循环？</h1><pre><code>Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。
-</code></pre>
+        <!-- # Nodejs - 事件循环？ -->
+
+<p>Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。</p>
         
           <p class="article-more-link">
             <a href="/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%EF%BC%9F/#more">Read More</a>
@@ -439,7 +445,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Nodejs-创建一个-HTTP-服务器？"><a href="#Nodejs-创建一个-HTTP-服务器？" class="headerlink" title="Nodejs - 创建一个 HTTP 服务器？"></a>Nodejs - 创建一个 HTTP 服务器？</h1><p>使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
+        <!-- # Nodejs - 创建一个 HTTP 服务器？ -->
+
+<p>使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
 <p>代码示范：</p>
         
           <p class="article-more-link">
@@ -489,7 +497,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Nodejs-处理文件系统？"><a href="#Nodejs-处理文件系统？" class="headerlink" title="Nodejs - 处理文件系统？"></a>Nodejs - 处理文件系统？</h1><p>在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
+        <!-- # Nodejs - 处理文件系统？ -->
+
+<p>在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
 <p>代码示范：</p>
         
           <p class="article-more-link">
@@ -539,7 +549,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Nodejs-中使用流？"><a href="#Nodejs-中使用流？" class="headerlink" title="Nodejs - 中使用流？"></a>Nodejs - 中使用流？</h1><p>在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
+        <!-- # Nodejs - 中使用流？ -->
+
+<p>在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
 <p>代码示范：</p>
         
           <p class="article-more-link">
@@ -576,7 +588,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/" rel="tag">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XSS/" rel="tag">XSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/" rel="tag">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/" rel="tag">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/" rel="tag">vi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" rel="tag">三次握手</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%8F%E8%AE%AE/" rel="tag">协议</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%AA%E6%9D%A5/" rel="tag">未来</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/" rel="tag">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XSS/" rel="tag">XSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/" rel="tag">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/" rel="tag">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/" rel="tag">vi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%AA%E6%9D%A5/" rel="tag">未来</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/" rel="tag">网络协议</a></li></ul>
     </div>
   </div>
 
@@ -597,7 +609,7 @@
           </li>
         
           <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/">Ts - interface 和 type 区别？</a>
+            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/">Ts - TypeScript 中的泛型是什么？</a>
           </li>
         
           <li>
@@ -617,7 +629,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSRF/">CSRF</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/XSS/">XSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css/">css</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/http/">http</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javaScript/">javaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E8%80%83/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B3%BB%E7%BB%9F/">系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css/">css</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E8%80%83/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B3%BB%E7%BB%9F/">系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></li></ul>
     </div>
   </div>
 

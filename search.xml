@@ -3,7 +3,8 @@
   <entry>
     <title>排序算法</title>
     <url>/2016/05/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="冒泡排序原理-o-n-2"><a href="#冒泡排序原理-o-n-2" class="headerlink" title="冒泡排序原理 o(n^2)"></a>冒泡排序原理 o(n^2)</h2><span id="more"></span>
+    <content><![CDATA[<h2 id="冒泡排序原理-o-n-2"><a href="#冒泡排序原理-o-n-2" class="headerlink" title="冒泡排序原理 o(n^2)"></a>冒泡排序原理 o(n^2)</h2><p>代码示范：</p>
+<span id="more"></span>
 
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">Arr</span> = [<span class="number">3</span>, <span class="number">11</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">8</span>];</span><br><span class="line">    <span class="comment">// 交换</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">swap</span>(<span class="params">array, a, b</span>) &#123;</span><br><span class="line">        <span class="comment">// 独立的功能不受外界干扰</span></span><br><span class="line">        <span class="keyword">let</span> temp = array[a];</span><br><span class="line">        array[a] = array[b];</span><br><span class="line">        array[b] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 冒泡排序方法</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">MpSort</span>(<span class="params">Arr</span>) &#123;</span><br><span class="line">        <span class="comment">// 前值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, j = <span class="title class_">Arr</span>.<span class="property">length</span>; i &lt; j; i++) &#123;</span><br><span class="line">            <span class="comment">// 后值</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> k = <span class="number">0</span>; k &lt; i; k++) &#123;</span><br><span class="line">                <span class="comment">// 每一个前面值和后面值比较，交换位置；</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="title class_">Arr</span>[k] &gt; <span class="title class_">Arr</span>[i]) &#123;</span><br><span class="line">                    <span class="title function_">swap</span>(<span class="title class_">Arr</span>, i, k);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Arr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> result = <span class="title class_">MpSort</span>(<span class="title class_">Arr</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
@@ -23,19 +24,17 @@
   <entry>
     <title>vi 命令</title>
     <url>/2016/05/01/%E7%B3%BB%E7%BB%9F/vi%20%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><blockquote>
-<p>平时操作 shell，用到的 vi 常用的命令；</p>
-</blockquote>
-<ul>
-<li>i：插入模式，在当前光标位置前插入文本。</li>
-</ul>
-<span id="more"></span>
-
-<ul>
+    <content><![CDATA[<h2 id="平时操作-shell，用到的-vi-常用的命令；"><a href="#平时操作-shell，用到的-vi-常用的命令；" class="headerlink" title="平时操作 shell，用到的 vi 常用的命令；"></a>平时操作 shell，用到的 vi 常用的命令；</h2><ul>
+<li><p>i：插入模式，在当前光标位置前插入文本。</p>
+</li>
 <li><p>a：插入模式，在当前光标位置后插入文本。</p>
 </li>
 <li><p>o：在当前行下面新开一行并进入插入模式。</p>
 </li>
+</ul>
+<span id="more"></span>
+
+<ul>
 <li><p>x：删除光标所在位置的字符。</p>
 </li>
 <li><p>dd：删除当前行。</p>
@@ -73,9 +72,8 @@
   <entry>
     <title>前端技术学习路线？</title>
     <url>/2020/01/01/%E6%80%9D%E8%80%83/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E4%B8%8E%E9%80%89%E6%8B%A9/</url>
-    <content><![CDATA[<h1 id="前端技术学习路线？"><a href="#前端技术学习路线？" class="headerlink" title="前端技术学习路线？"></a>前端技术学习路线？</h1><ul>
-<li>原生 html，css，js 必须学的<span id="more"></span>
-<ul>
+    <content><![CDATA[<ul>
+<li>原生 html，css，js 必须学的<ul>
 <li>html5 包含可独立应用领域功能，学习路线也是比较陡峭，如：webgl，canvas。</li>
 <li>js：包含：Ecma6，及后续每年的更新</li>
 <li>typescript 大势所趋，基本上也是必须学习掌握的</li>
@@ -83,6 +81,8 @@
 </ul>
 </li>
 </ul>
+<span id="more"></span>
+
 <h2 id="前端框架有哪些："><a href="#前端框架有哪些：" class="headerlink" title="前端框架有哪些："></a>前端框架有哪些：</h2><ul>
 <li><p>react：react18 又更新了不少新特性</p>
 </li>
@@ -141,11 +141,15 @@
   <entry>
     <title>四次挥手</title>
     <url>/2016/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
-    <content><![CDATA[<h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1><ol>
+    <content><![CDATA[<ol>
 <li><p>客户端发送，FIN 包，请求关闭；</p>
 </li>
 <li><p>服务端接收到， 发送一个 ACK 包，表示确认收到</p>
 </li>
+</ol>
+<span id="more"></span>
+
+<ol start="3">
 <li><p>服务端发送一个 FIN 包，表示服务端也不再向客户端发送数据。</p>
 </li>
 <li><p>客户端接收到服务端的 FIN 包后，发送一个 ACK 包，表示确认收到，连接关闭完成。</p>
@@ -154,22 +158,25 @@
 <p>需要注意的是，在四次挥手过程中，如果某个阶段超时或出错，则会重新开始四次挥手过程。同时，在 TCP 连接关闭过程中，可能存在 TIME_WAIT 状态，以避免网络延迟导致的重复请求。</p>
 ]]></content>
       <categories>
-        <category>面试题</category>
+        <category>网络协议</category>
       </categories>
       <tags>
-        <tag>协议</tag>
+        <tag>网络协议</tag>
       </tags>
   </entry>
   <entry>
     <title>三次握手</title>
     <url>/2016/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</url>
-    <content><![CDATA[<h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><ol>
+    <content><![CDATA[<ol>
 <li><p>客户端向服务器发送一个同步请求（SYN），告诉服务器客户端要开始建立连接。</p>
 </li>
 <li><p>服务器收到客户端的 SYN 请求后，回复一个同步确认（SYN-ACK），告诉客户端已经收到了请求，并准备好建立连接。</p>
 </li>
-<li><p>客户端收到服务器的 SYN-ACK 响应后，再次发送一个确认请求（ACK）（SYN&#x3D;0，ACK&#x3D;1，Seq&#x3D;X+1，Ack&#x3D;Y+1），告诉服务器客户端已经接收到了服务器的响应，并表示可以开始传输数据。</p>
-</li>
+</ol>
+<span id="more"></span>
+
+<ol start="3">
+<li>客户端收到服务器的 SYN-ACK 响应后，再次发送一个确认请求（ACK）（SYN&#x3D;0，ACK&#x3D;1，Seq&#x3D;X+1，Ack&#x3D;Y+1），告诉服务器客户端已经接收到了服务器的响应，并表示可以开始传输数据。</li>
 </ol>
 <p>需要注意的是，在三次握手过程中，如果某个阶段超时或出错，则会重新开始三次握手过程。同时，在连接关闭时还需要进行四次挥手过程来正常关闭连接。</p>
 <h1 id="为什么不使用二次握手？"><a href="#为什么不使用二次握手？" class="headerlink" title="为什么不使用二次握手？"></a>为什么不使用二次握手？</h1><ul>
@@ -177,10 +184,10 @@
 </ul>
 ]]></content>
       <categories>
-        <category>前端技术</category>
+        <category>网络协议</category>
       </categories>
       <tags>
-        <tag>三次握手</tag>
+        <tag>网络协议</tag>
       </tags>
   </entry>
   <entry>
@@ -195,6 +202,8 @@ $ npm install -g hexo-cli
 - _config.yml
     - theme: landscape 设置主题
 </code></pre>
+<span id="more"></span>
+
 <h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><pre><code>https://hexo.io/zh-cn/docs/
 
 https://hexo.io/themes/
@@ -213,7 +222,7 @@ https://hexo.io/themes/
     <content><![CDATA[<p>CSRF：需要用户先登录网站 A，获取 cookie。<br>CSRF：是利用网站 A 本身的漏洞，去请求网站 A 的 api。</p>
 ]]></content>
       <categories>
-        <category>CSRF</category>
+        <category>网络安全</category>
       </categories>
       <tags>
         <tag>CSRF</tag>
@@ -225,7 +234,7 @@ https://hexo.io/themes/
     <content><![CDATA[<p>XSS：不需要登录。<br>XSS：是向网站 A 注入 JS 代码，然后执行 JS 里的代码，篡改网站 A 的内容。</p>
 ]]></content>
       <categories>
-        <category>XSS</category>
+        <category>网络安全</category>
       </categories>
       <tags>
         <tag>XSS</tag>
@@ -237,6 +246,10 @@ https://hexo.io/themes/
     <content><![CDATA[<ol>
 <li>http0.9（1991） http1.0（1996） http1.1（1999）</li>
 <li>http2 优势（可以说是 SPDY 的升级版）</li>
+</ol>
+<span id="more"></span>
+
+<ol start="3">
 <li>https 原理</li>
 <li>三次握手，四次挥手</li>
 <li></li>
@@ -246,40 +259,36 @@ https://hexo.io/themes/
 </ol>
 ]]></content>
       <categories>
-        <category>http</category>
+        <category>网络协议</category>
       </categories>
       <tags>
         <tag>http</tag>
       </tags>
   </entry>
   <entry>
-    <title>未来技术发展</title>
-    <url>/2018/05/01/%E6%80%9D%E8%80%83/%E6%9C%AA%E6%9D%A5%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</url>
-    <content><![CDATA[<h1 id="未来技术发展"><a href="#未来技术发展" class="headerlink" title="未来技术发展"></a>未来技术发展</h1><pre><code>技术是第一生产力；
-</code></pre>
-<h1 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h1><pre><code>硬件；
-机器革命；
-软件：
-人工智能升级版；
-游戏与3D；
-视觉；
-</code></pre>
+    <title>未来技术发展？</title>
+    <url>/2020/01/01/%E6%80%9D%E8%80%83/%E6%9C%AA%E6%9D%A5%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</url>
+    <content><![CDATA[<p>技术是第一生产力；</p>
+<h1 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h1><ul>
+<li>硬件；<br>机器革命；</li>
+<li>软件：<br>人工智能升级版；<br>游戏与 3D；<br>视觉；</li>
+</ul>
 <span id="more"></span>
 
-<h1 id="感叹"><a href="#感叹" class="headerlink" title="感叹"></a>感叹</h1><pre><code>首先未来科技一定也是很倦，因为人才要求越来越高，专业性会的越来越多，学历要求也是越来越高，活可能越来越多，工资原来越低，搬砖的人越来越少（底层还要倦）。资金盘就那么大潜在有钱行业非常多，所以选择很重要，换个行业可能更适合自己；
-</code></pre>
+<h1 id="感叹"><a href="#感叹" class="headerlink" title="感叹"></a>感叹</h1><p>技术带动生产速度是真的快，未来科技行业一定也是很倦（空心病），对于那些有梦想的更多是寻找提升能力的环境；毕竟资金盘的潜力股行业非常多，所以选择很重要，选择对的行业可能更适合自己；</p>
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>思考</category>
       </categories>
       <tags>
-        <tag>git</tag>
+        <tag>技术</tag>
+        <tag>未来</tag>
       </tags>
   </entry>
   <entry>
     <title>Git 入门</title>
     <url>/2018/05/01/%E5%B7%A5%E5%85%B7/Git%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h1 id="Git-入门之常用命令"><a href="#Git-入门之常用命令" class="headerlink" title="Git 入门之常用命令"></a>Git 入门之常用命令</h1><ul>
+    <content><![CDATA[<ul>
 <li><p>git config user.name [查看用户名]</p>
 </li>
 <li><p>git config user.email [邮箱地址]</p>
@@ -316,7 +325,7 @@ https://hexo.io/themes/
 </li>
 <li><p>git remote -v [远程库信息]</p>
 </li>
-<li><p>git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;</a>:somewhile&#x2F;systemjs.git [git 关联 github]</p>
+<li><p>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:somewhile&#x2F;systemjs.git [git 关联 github]</p>
 </li>
 <li><p>git branch –set-upstream-to&#x3D;origin name [关联远程分支]</p>
 </li>
@@ -369,8 +378,9 @@ https://hexo.io/themes/
   <entry>
     <title>Nodejs - 事件循环？</title>
     <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Nodejs-事件循环？"><a href="#Nodejs-事件循环？" class="headerlink" title="Nodejs - 事件循环？"></a>Nodejs - 事件循环？</h1><pre><code>Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。
-</code></pre>
+    <content><![CDATA[<!-- # Nodejs - 事件循环？ -->
+
+<p>Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。</p>
 <span id="more"></span>
 
 <h1 id="loop-官方"><a href="#loop-官方" class="headerlink" title="loop 官方"></a>loop 官方</h1><pre><code>什么是事件循环？
@@ -391,7 +401,9 @@ https://hexo.io/themes/
   <entry>
     <title>Nodejs - 创建一个 HTTP 服务器？</title>
     <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%20HTTP%20%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Nodejs-创建一个-HTTP-服务器？"><a href="#Nodejs-创建一个-HTTP-服务器？" class="headerlink" title="Nodejs - 创建一个 HTTP 服务器？"></a>Nodejs - 创建一个 HTTP 服务器？</h1><p>使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
+    <content><![CDATA[<!-- # Nodejs - 创建一个 HTTP 服务器？ -->
+
+<p>使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
@@ -407,7 +419,9 @@ https://hexo.io/themes/
   <entry>
     <title>Nodejs - 处理文件系统？</title>
     <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Nodejs-处理文件系统？"><a href="#Nodejs-处理文件系统？" class="headerlink" title="Nodejs - 处理文件系统？"></a>Nodejs - 处理文件系统？</h1><p>在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
+    <content><![CDATA[<!-- # Nodejs - 处理文件系统？ -->
+
+<p>在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
@@ -423,7 +437,9 @@ https://hexo.io/themes/
   <entry>
     <title>Nodejs - 中使用流？</title>
     <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%81%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Nodejs-中使用流？"><a href="#Nodejs-中使用流？" class="headerlink" title="Nodejs - 中使用流？"></a>Nodejs - 中使用流？</h1><p>在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
+    <content><![CDATA[<!-- # Nodejs - 中使用流？ -->
+
+<p>在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
@@ -439,7 +455,9 @@ https://hexo.io/themes/
   <entry>
     <title>Nodejs - 概述？</title>
     <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E6%A6%82%E8%BF%B0%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Nodejs-概述？"><a href="#Nodejs-概述？" class="headerlink" title="Nodejs - 概述？"></a>Nodejs - 概述？</h1><p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，它在服务器端运行 JavaScript 代码。它的主要特点是非阻塞 I&#x2F;O，事件驱动和高效性能。</p>
+    <content><![CDATA[<!-- # Nodejs - 概述？ -->
+
+<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，它在服务器端运行 JavaScript 代码。它的主要特点是非阻塞 I&#x2F;O，事件驱动和高效性能。</p>
 <span id="more"></span>
 
 <h1 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h1><p>2009</p>
@@ -473,7 +491,9 @@ https://hexo.io/themes/
   <entry>
     <title>Nodejs - 访问数据库？</title>
     <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Nodejs-访问数据库？"><a href="#Nodejs-访问数据库？" class="headerlink" title="Nodejs - 访问数据库？"></a>Nodejs - 访问数据库？</h1><p>在 Node.js 中访问数据库需要使用适当的数据库驱动程序。常见的数据库驱动程序包括 MongoDB 的 mongodb 模块和 MySQL 的 mysql2 模块。以下是使用 mongodb 模块连接到 MongoDB 并查询数据的示例：</p>
+    <content><![CDATA[<!-- # Nodejs - 访问数据库？ -->
+
+<p>在 Node.js 中访问数据库需要使用适当的数据库驱动程序。常见的数据库驱动程序包括 MongoDB 的 mongodb 模块和 MySQL 的 mysql2 模块。以下是使用 mongodb 模块连接到 MongoDB 并查询数据的示例：</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
@@ -489,24 +509,34 @@ https://hexo.io/themes/
   <entry>
     <title>hash 路由 与 history 路由有什么区别？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20hash%20%E8%B7%AF%E7%94%B1%20%E4%B8%8E%20history%20%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%F0%9F%94%A5%F0%9F%94%A5/</url>
-    <content><![CDATA[<h1 id="hash-路由-与-history-路由有什么区别？"><a href="#hash-路由-与-history-路由有什么区别？" class="headerlink" title="hash 路由 与 history 路由有什么区别？"></a>hash 路由 与 history 路由有什么区别？</h1><p>区别在于 URL 格式的不同。</p>
+    <content><![CDATA[<!-- # hash 路由 与 history 路由有什么区别？ -->
+
+<ul>
+<li><p>区别：<br>URL 格式的不同。</p>
 <p>实现简单、兼容性好，而且可以运行在大多数 Web 服务器上；缺点在于 URL 不够美观，不利于搜索引擎优化（SEO）。</p>
+</li>
+</ul>
 <span id="more"></span>
 
-<p>History 路由解决了美观，SEO 的问题</p>
-<p>实现原理：html5 机制</p>
+<pre><code>History 路由解决了美观，SEO 的问题
+</code></pre>
+<ul>
+<li>实现原理：<br>html5 机制</li>
+</ul>
 ]]></content>
       <categories>
-        <category>React</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>React</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title>JS - 什么作用域和闭包？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="什么作用域和闭包？"><a href="#什么作用域和闭包？" class="headerlink" title="什么作用域和闭包？"></a>什么作用域和闭包？</h1><ul>
+    <content><![CDATA[<!-- # 什么作用域和闭包？ -->
+
+<ul>
 <li>作用域<br>JavaScript 采用词法作用域（Lexical Scope）即静态作用域，函数的作用域在函数定义时就已经确定，不会受调用位置的影响。在 JavaScript 中，<code>全局作用域</code>和<code>函数作用域</code>都是词法作用域，也就是说函数可以访问其内部外部的变量，但是外部无法访问函数内部的变量。</li>
 </ul>
 <span id="more"></span>
@@ -518,16 +548,18 @@ https://hexo.io/themes/
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createClosure</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="comment">/*...*/</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 使用 obj ...</span></span><br><span class="line">        obj = <span class="literal">null</span>; <span class="comment">// 将 obj 置为 null</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> closure = <span class="title function_">createClosure</span>();</span><br><span class="line"></span><br><span class="line"><span class="title function_">closure</span>(); <span class="comment">// 执行内部函数，此时 obj 对象已被置为 null，可以被垃圾回收机制回收</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title>Css - 概念？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/css/Css%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="CSS-是什么？"><a href="#CSS-是什么？" class="headerlink" title="CSS 是什么？"></a>CSS 是什么？</h1><p>CSS 即层叠样式表（Cascading Style Sheets），是一种用来表现 HTML 或 XML 等文件样式的计算机语言。CSS 不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
+    <content><![CDATA[<!-- # CSS 是什么？ -->
+
+<p>CSS 即层叠样式表（Cascading Style Sheets），是一种用来表现 HTML 或 XML 等文件样式的计算机语言。CSS 不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
 <p>CSS 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。</p>
 <span id="more"></span>
 
@@ -565,27 +597,31 @@ https://hexo.io/themes/
   <entry>
     <title>JS - 什么是高阶函数？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="JS-什么是高阶函数？"><a href="#JS-什么是高阶函数？" class="headerlink" title="JS - 什么是高阶函数？"></a>JS - 什么是高阶函数？</h1><p>高阶函数是接受一个或多个函数作为参数或返回一个函数的函数。</p>
+    <content><![CDATA[<!-- # JS - 什么是高阶函数？ -->
+
+<p>高阶函数是接受一个或多个函数作为参数或返回一个函数的函数。</p>
 <p>在 JavaScript 中，可以使用高阶函数实现许多常见的编程模式，如映射、过滤、排序和归约。</p>
 <span id="more"></span>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title>JS - 实现一个promiseAll？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="JS-实现一个-promiseAll？"><a href="#JS-实现一个-promiseAll？" class="headerlink" title="JS - 实现一个 promiseAll？"></a>JS - 实现一个 promiseAll？</h1><p>代码示范：</p>
+    <content><![CDATA[<!-- # JS - 实现一个 promiseAll？ -->
+
+<p>代码示范：</p>
 <span id="more"></span>
 
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">promiseAll</span>(<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> len = promises.<span class="property">length</span>;</span><br><span class="line">        <span class="comment">// 请求等待结果</span></span><br><span class="line">        <span class="keyword">let</span> res = [];</span><br><span class="line">        <span class="comment">// 累计请求成功的数量</span></span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">next</span>(<span class="params">index</span>) &#123;</span><br><span class="line">            promises[index]().<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">                res[index] = result;</span><br><span class="line">                count++;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (count === len) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="title function_">resolve</span>(res);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="title function_">next</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>javaScript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
         <tag>promise</tag>
@@ -594,7 +630,9 @@ https://hexo.io/themes/
   <entry>
     <title>JS - 数据类型?</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B?/</url>
-    <content><![CDATA[<h1 id="JS-数据类型"><a href="#JS-数据类型" class="headerlink" title="JS - 数据类型?"></a>JS - 数据类型?</h1><ul>
+    <content><![CDATA[<!-- # JS - 数据类型? -->
+
+<ul>
 <li>基本数据类型<br>数字（Number）：表示数值。例如：42，3.14。<br>字符串（String）：表示文本数据。例如：”Hello”，’World’。<br>布尔值（Boolean）：表示真（true）或假（false）值。<br>undefined：表示未定义的值。<br>null：表示空值。<br>BigInt：用于表示大整数，超出了 JavaScript 中 Number 类型的范围。例如：1000000000000000000001。<br>Symbol：表示唯一的标识符。Symbol 类型的值是通过 Symbol() 函数创建的。例如：const id &#x3D; Symbol(‘id’)。</li>
 </ul>
 <span id="more"></span>
@@ -621,79 +659,85 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures</a></p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title>JS - 页面如何渲染？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E9%A1%B5%E9%9D%A2%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="页面如何渲染"><a href="#页面如何渲染" class="headerlink" title="页面如何渲染"></a>页面如何渲染</h1><ul>
+    <content><![CDATA[<!-- # 页面如何渲染 -->
+
+<ul>
 <li>Reflow 回流</li>
+<li>为什么 JavaScript 要是单线程的 ?</li>
 </ul>
 <span id="more"></span>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 为什么 Javascript 要是单线程的 ?</span><br><span class="line">4. 为什么 JS 阻塞页面加载 ?</span><br><span class="line">    1. 是可操纵 DOM 的</span><br><span class="line">    2. js 会阻塞 Dom 解析，GUI 线程会被挂起，</span><br><span class="line">5. css 加载会造成阻塞吗 ？</span><br><span class="line">    1. CSS 加载会阻塞 Dom 的渲染和后面 js 的执行</span><br><span class="line">6. DOMContentLoaded 与 load 的区别 ?</span><br><span class="line">    1. DOMContentLoaded -&gt; load。</span><br><span class="line">7. 什么是 CRP,即关键渲染路径(Critical Rendering Path)? 如何优化 ?</span><br><span class="line">    1. 浏览器渲染流程。</span><br><span class="line">    2. 文件大小，阻塞，速度</span><br><span class="line">8. defer 和 async 的区别 ?</span><br><span class="line">9. 谈谈浏览器的回流与重绘 ?</span><br><span class="line">10. 什么是渲染层合并 (Composite) ?</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4. 为什么 JS 阻塞页面加载 ?</span><br><span class="line">    1. 是可操纵 DOM 的</span><br><span class="line">    2. js 会阻塞 Dom 解析，GUI 线程会被挂起，</span><br><span class="line">5. css 加载会造成阻塞吗 ？</span><br><span class="line">    1. CSS 加载会阻塞 Dom 的渲染和后面 js 的执行</span><br><span class="line">6. DOMContentLoaded 与 load 的区别 ?</span><br><span class="line">    1. DOMContentLoaded -&gt; load。</span><br><span class="line">7. 什么是 CRP,即关键渲染路径(Critical Rendering Path)? 如何优化 ?</span><br><span class="line">    1. 浏览器渲染流程。</span><br><span class="line">    2. 文件大小，阻塞，速度</span><br><span class="line">8. defer 和 async 的区别 ?</span><br><span class="line">9. 谈谈浏览器的回流与重绘 ?</span><br><span class="line">10. 什么是渲染层合并 (Composite) ?</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title>JS - 概念？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="什么是柯里化（Currying）？如何使用它？"><a href="#什么是柯里化（Currying）？如何使用它？" class="headerlink" title="什么是柯里化（Currying）？如何使用它？"></a>什么是柯里化（Currying）？如何使用它？</h1><p>柯里化（Currying）是一种将接受多个参数的函数转换为接受单个参数的函数序列的技术。使用柯里化可以更轻松地创建可重用的函数，并更容易地进行部分应用和组合。</p>
-<h1 id="如何使用函数式编程？它的优点和缺点是什么？"><a href="#如何使用函数式编程？它的优点和缺点是什么？" class="headerlink" title="如何使用函数式编程？它的优点和缺点是什么？"></a>如何使用函数式编程？它的优点和缺点是什么？</h1><p>函数式编程是一种编程范式，它强调使用纯函数和不可变数据结构来避免副作用和共享状态。它的优点包括简洁、可读性好、易于测试和并行化。缺点是在某些情况下可能会导致复杂性增加，而且需要更多的内存空间。</p>
+    <content><![CDATA[<!-- - JS - 概念？ -->
+
+<h2 id="什么是柯里化（Currying）？如何使用它？"><a href="#什么是柯里化（Currying）？如何使用它？" class="headerlink" title="什么是柯里化（Currying）？如何使用它？"></a>什么是柯里化（Currying）？如何使用它？</h2><p>柯里化（Currying）是一种将接受多个参数的函数转换为接受单个参数的函数序列的技术。使用柯里化可以更轻松地创建可重用的函数，并更容易地进行部分应用和组合。</p>
+<h2 id="如何使用函数式编程？它的优点和缺点是什么？"><a href="#如何使用函数式编程？它的优点和缺点是什么？" class="headerlink" title="如何使用函数式编程？它的优点和缺点是什么？"></a>如何使用函数式编程？它的优点和缺点是什么？</h2><p>函数式编程是一种编程范式，它强调使用纯函数和不可变数据结构来避免副作用和共享状态。它的优点包括简洁、可读性好、易于测试和并行化。缺点是在某些情况下可能会导致复杂性增加，而且需要更多的内存空间。</p>
 <span id="more"></span>
 
-<h1 id="如何使用函数组合（Function-Composition）？有哪些常见的组合函数？"><a href="#如何使用函数组合（Function-Composition）？有哪些常见的组合函数？" class="headerlink" title="如何使用函数组合（Function Composition）？有哪些常见的组合函数？"></a>如何使用函数组合（Function Composition）？有哪些常见的组合函数？</h1><p>函数组合（Function Composition）是将多个函数组合成一个更大的函数的过程。在 JavaScript 中，可以使用函数组合来创建一系列可重用的管道函数。常见的组合函数包括 compose、pipe 和 curry。</p>
-<h1 id="什么是-JavaScript-中的变量提升（Hoisting）？如何避免它？"><a href="#什么是-JavaScript-中的变量提升（Hoisting）？如何避免它？" class="headerlink" title="什么是 JavaScript 中的变量提升（Hoisting）？如何避免它？"></a>什么是 JavaScript 中的变量提升（Hoisting）？如何避免它？</h1><p>变量提升指的是在 JavaScript 中，变量和函数声明会被提升到它们所在作用域的顶部，即在代码执行之前就已经进行了声明。为避免变量提升带来的问题，可以使用 let 或 const 关键字声明变量，并使用函数表达式而非函数声明来定义函数。</p>
-<h1 id="什么是纯函数（Pure-Function）？为什么要使用它们？"><a href="#什么是纯函数（Pure-Function）？为什么要使用它们？" class="headerlink" title="什么是纯函数（Pure Function）？为什么要使用它们？"></a>什么是纯函数（Pure Function）？为什么要使用它们？</h1><pre><code>纯函数指的是没有副作用且返回值仅由输入决定的函数，即同样的输入总会得到同样的输出，且不会对外部环境产生任何影响。使用纯函数可以提高代码的可读性、可维护性和可测试性，因为它们具有确定性且不会引入意外的行为。
-</code></pre>
-<h1 id="什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？"><a href="#什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？" class="headerlink" title="什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？"></a>什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？</h1><p>不可变性指的是数据一旦被创建后便不能被更改的特性。在 JavaScript 中可以使用 Object.freeze() 方法来冻结对象，或使用第三方库如 Immutable.js 来创建不可变数据。使用不可变性可以避免数据被意外修改，从而减少错误和提高代码健壮性。</p>
-<h1 id="什么是-JavaScript-中的事件委托（Event-Delegation）？如何使用它？"><a href="#什么是-JavaScript-中的事件委托（Event-Delegation）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的事件委托（Event Delegation）？如何使用它？"></a>什么是 JavaScript 中的事件委托（Event Delegation）？如何使用它？</h1><p>事件委托是指将事件处理程序绑定到其祖先元素上，从而利用事件冒泡机制来处理子元素的事件。通过事件委托可以减少事件处理程序的数量，提高性能并避免内存泄漏问题。</p>
-<h1 id="什么是-JavaScript-中的内存泄漏？如何避免它？"><a href="#什么是-JavaScript-中的内存泄漏？如何避免它？" class="headerlink" title="什么是 JavaScript 中的内存泄漏？如何避免它？"></a>什么是 JavaScript 中的内存泄漏？如何避免它？</h1><p>内存泄漏指的是程序中存在指向已不再使用的内存空间的引用，从而导致这些空间无法被垃圾回收机制释放。为避免内存泄漏，可以手动解除对对象的引用、使用闭包时注意及时释放内存、避免过度使用全局变量等。</p>
-<h1 id="什么是尾递归优化？如何使用它？"><a href="#什么是尾递归优化？如何使用它？" class="headerlink" title="什么是尾递归优化？如何使用它？"></a>什么是尾递归优化？如何使用它？</h1><p>尾递归优化是一种优化技术，可以减少递归函数的内存消耗。在 JavaScript 中，可以使用尾递归优化来减少递归函数的栈帧，从而避免堆栈溢出错误。</p>
-<h1 id="什么是-JavaScript-中的垃圾回收机制？如何影响应用程序的性能？"><a href="#什么是-JavaScript-中的垃圾回收机制？如何影响应用程序的性能？" class="headerlink" title="什么是 JavaScript 中的垃圾回收机制？如何影响应用程序的性能？"></a>什么是 JavaScript 中的垃圾回收机制？如何影响应用程序的性能？</h1><p>JavaScript 中的垃圾回收机制是通过检测不再使用的变量和对象并释放它们占用的内存空间来实现的。垃圾回收机制的性能会受到代码中对象创建和销毁的频率、变量的作用域以及循环引用等因素的影响。</p>
-<h1 id="什么是-JavaScript-中的事件驱动编程（Event-Driven-Programming）？如何使用它？"><a href="#什么是-JavaScript-中的事件驱动编程（Event-Driven-Programming）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的事件驱动编程（Event-Driven Programming）？如何使用它？"></a>什么是 JavaScript 中的事件驱动编程（Event-Driven Programming）？如何使用它？</h1><p>事件驱动编程是一种编程范式，其中程序的执行流程由外部事件触发而不是指令顺序决定。在 JavaScript 中，例如使用事件监听器函数来处理用户交互、浏览器加载等事件。可以通过添加事件监听器（EventListener）来注册事件，监听器函数会在事件被触发时自动运行。</p>
-<h1 id="什么是-JavaScript-中的元编程（Metaprogramming）？如何使用它？"><a href="#什么是-JavaScript-中的元编程（Metaprogramming）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的元编程（Metaprogramming）？如何使用它？"></a>什么是 JavaScript 中的元编程（Metaprogramming）？如何使用它？</h1><p>元编程是一种编程技术，其中程序可以修改或生成其他程序。在 JavaScript 中，可以使用原型链、Reflect API、Proxy 对象等元编程技术来修改对象行为、拦截属性操作、创建类等。</p>
-<h1 id="什么是-JavaScript-中的数据结构和算法？如何使用它们来解决问题？"><a href="#什么是-JavaScript-中的数据结构和算法？如何使用它们来解决问题？" class="headerlink" title="什么是 JavaScript 中的数据结构和算法？如何使用它们来解决问题？"></a>什么是 JavaScript 中的数据结构和算法？如何使用它们来解决问题？</h1><p>数据结构和算法是计算机科学的核心概念，可以用来解决各种问题。在 JavaScript 中，可以使用内置数据结构（如数组、对象、Map、Set）以及第三方库（如 lodash）来实现常见的数据结构和算法。</p>
-<h1 id="什么是-JavaScript-中的单元测试（Unit-Testing）？如何编写和运行单元测试？"><a href="#什么是-JavaScript-中的单元测试（Unit-Testing）？如何编写和运行单元测试？" class="headerlink" title="什么是 JavaScript 中的单元测试（Unit Testing）？如何编写和运行单元测试？"></a>什么是 JavaScript 中的单元测试（Unit Testing）？如何编写和运行单元测试？</h1><p>单元测试是针对程序中最小可测试单元进行的自动化测试。在 JavaScript 中，可以使用测试框架（如 Jest、Mocha）和断言库（如 Chai、Assert）来编写和运行单元测试。</p>
-<h1 id="什么是-JavaScript-中的设计模式（Design-Patterns）？如何使用它们来构建可维护的应用程序？"><a href="#什么是-JavaScript-中的设计模式（Design-Patterns）？如何使用它们来构建可维护的应用程序？" class="headerlink" title="什么是 JavaScript 中的设计模式（Design Patterns）？如何使用它们来构建可维护的应用程序？"></a>什么是 JavaScript 中的设计模式（Design Patterns）？如何使用它们来构建可维护的应用程序？</h1><p>设计模式是通用解决问题的经验总结，可以用于构建可维护、可扩展的应用程序。在 JavaScript 中，可以使用常见的设计模式（如观察者模式、工厂模式、单例模式）来解决特定的问题。</p>
-<h1 id="什么是-JavaScript-中的重构（Refactoring）？为什么要进行重构？"><a href="#什么是-JavaScript-中的重构（Refactoring）？为什么要进行重构？" class="headerlink" title="什么是 JavaScript 中的重构（Refactoring）？为什么要进行重构？"></a>什么是 JavaScript 中的重构（Refactoring）？为什么要进行重构？</h1><p>重构是改善现有代码设计的过程，旨在提高代码可读性、可维护性和性能。在 JavaScript 中，可以使用重构方法（如拆分函数、提前返回等）来改进代码质量。</p>
-<h1 id="如何使用-JavaScript-中的面向对象编程（OOP）？它的优点和缺点是什么？"><a href="#如何使用-JavaScript-中的面向对象编程（OOP）？它的优点和缺点是什么？" class="headerlink" title="如何使用 JavaScript 中的面向对象编程（OOP）？它的优点和缺点是什么？"></a>如何使用 JavaScript 中的面向对象编程（OOP）？它的优点和缺点是什么？</h1><p>面向对象编程是一种基于类和对象的编程方法，JavaScript 中可以使用 class 关键字创建类，使用 new 运算符实例化对象。面向对象编程的优点包括代码架构清晰，易于维护和扩展，缺点包括性能较低，可能过于复杂等。</p>
-<h1 id="如何使用-JavaScript-中的正则表达式（Regular-Expression）？有哪些常见的正则表达式模式？"><a href="#如何使用-JavaScript-中的正则表达式（Regular-Expression）？有哪些常见的正则表达式模式？" class="headerlink" title="如何使用 JavaScript 中的正则表达式（Regular Expression）？有哪些常见的正则表达式模式？"></a>如何使用 JavaScript 中的正则表达式（Regular Expression）？有哪些常见的正则表达式模式？</h1><p>正则表达式是一种用于匹配文本的模式，JavaScript 中使用 RegExp 类型或正则表达式字面量来创建和操作正则表达式。常见的正则表达式模式包括匹配数字、字母、空白字符、URL 等。</p>
-<h1 id="什么是-JavaScript-中的事件循环机制（Event-Loop）？如何理解其中的微任务和宏任务？"><a href="#什么是-JavaScript-中的事件循环机制（Event-Loop）？如何理解其中的微任务和宏任务？" class="headerlink" title="什么是 JavaScript 中的事件循环机制（Event Loop）？如何理解其中的微任务和宏任务？"></a>什么是 JavaScript 中的事件循环机制（Event Loop）？如何理解其中的微任务和宏任务？</h1><p>事件循环机制是 JavaScript 运行时中处理异步操作的核心机制，微任务和宏任务是异步事件的两种类型。微任务是在当前执行栈为空时立即执行的任务（如 Promise.then()），而宏任务则需要等待下一个事件循环周期才会执行（如 setTimeout）。了解事件循环机制可以帮助开发者更好地处理异步编程和避免性能问题。</p>
-<h1 id="什么是变量提升？"><a href="#什么是变量提升？" class="headerlink" title="什么是变量提升？"></a>什么是变量提升？</h1><p>变量提升是指在执行代码之前，JS 引擎会先处理函数声明和变量声明，将其放入内存中，从而使得函数和变量可以在声明之前被引用。变量声明优先级低于函数声明，避免变量污染可以通过使用 let 或 const 来定义块级作用域。</p>
-<h1 id="如何使用生成器（Generator）函数？它们有什么特殊之处？"><a href="#如何使用生成器（Generator）函数？它们有什么特殊之处？" class="headerlink" title="如何使用生成器（Generator）函数？它们有什么特殊之处？"></a>如何使用生成器（Generator）函数？它们有什么特殊之处？</h1><p>生成器（Generator）函数是一种特殊的函数，可以通过 yield 语句来暂停函数的执行，并返回一个可迭代的对象。生成器函数可以逐步产生新的值，而不是一次性返回所有值。生成器函数通常用于处理大型数据集或无限序列。</p>
-<h1 id="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"><a href="#什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？" class="headerlink" title="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"></a>什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？</h1><p>迭代器（Iterator）是一个对象，它能够迭代（遍历）一个容器（例如列表或字典）中的所有元素。可迭代对象（Iterable）是一个带有<strong>iter</strong>()方法的对象，它返回一个迭代器。使用迭代器和可迭代对象可以遍历各种类型的数据结构，如列表、元组、字典等。</p>
-<h1 id="什么是闭包中的循环问题？如何解决？"><a href="#什么是闭包中的循环问题？如何解决？" class="headerlink" title="什么是闭包中的循环问题？如何解决？"></a>什么是闭包中的循环问题？如何解决？</h1><p>闭包中的循环问题指的是在闭包内部使用循环变量时，可能会遇到意料之外的结果。这是因为循环变量被绑定在闭包中，并且所有迭代都共享同一个变量。为了解决这个问题，可以使用立即调用函数表达式（IIFE）或 let 关键字来创建一个新的绑定。</p>
-<h1 id="什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？"><a href="#什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？" class="headerlink" title="什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？"></a>什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？</h1><p>IIFE 是一种立即调用的函数表达式，它可以在定义后立即执行，常用于创建独立的作用域并保护其中的变量不受全局作用域的影响。可以通过在函数定义后添加一对括号并传入参数来调用 IIFE。</p>
-<h1 id="如何使用模块化编程？如何导入和导出模块？"><a href="#如何使用模块化编程？如何导入和导出模块？" class="headerlink" title="如何使用模块化编程？如何导入和导出模块？"></a>如何使用模块化编程？如何导入和导出模块？</h1><p>模块化编程指将程序分解为小的模块，每个模块负责完成一个独立的功能。在 JavaScript 中，可以使用 import 和 export 语句来导入和导出模块。导入语句用于引入其他模块中的代码，导出语句用于将代码暴露给其他模块使用。</p>
-<h1 id="如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？"><a href="#如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？" class="headerlink" title="如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？"></a>如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？</h1><p>异步编程模式是 JavaScript 中处理异步操作的方式，包括回调函数、Promise、async&#x2F;await 等。其中回调函数是最基础的异步编程模式，但可能导致回调地狱问题。Promise 和 async&#x2F;await 提供了更好的语法和代码结构。</p>
-<h1 id="什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？"><a href="#什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？"></a>什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？</h1><p>模板字符串是一种用反引号 &#96; 包围的字符串，支持多行文本和插入表达式，可以简化字符串拼接、生成 HTML 片段等操作。</p>
-<h1 id="什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？"><a href="#什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？" class="headerlink" title="什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？"></a>什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？</h1><p>箭头函数是一种使用 &#x3D;&gt; 符号定义的函数，与传统函数相比具有更简洁的语法和固定的 this 绑定。箭头函数中的 this 始终指向外部作用域，不会被改变，但也有一些限制。</p>
-<h1 id="什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？"><a href="#什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？"></a>什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？</h1><p>解构赋值是一种从数组或对象中提取值并赋给变量的语法，可以简化代码和减少重复。在 JavaScript 中，可以使用数组解构和对象解构来实现解构赋值。</p>
-<h1 id="什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？"><a href="#什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？"></a>什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？</h1><p>扩展运算符和剩余参数都使用 … 语法来实现。扩展运算符可以将数组或对象展开成多个独立的值，剩余参数则可以将多个参数合并成一个数组。常见的应用包括数组合并、对象合并、函数传参等。</p>
-<h1 id="什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？"><a href="#什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？" class="headerlink" title="什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？"></a>什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？</h1><p>迭代器协议和生成器函数是 ES6 引入的两个新特性，用于处理序列数据和异步编程。迭代器协议定义了一个 next() 方法，返回一个具有 value 和 done 属性的对象，用于遍历序列数据；生成器函数通过 yield 关键字在多次执行中暂停和恢复函数的执行。</p>
-<h1 id="如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？"><a href="#如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？" class="headerlink" title="如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？"></a>如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？</h1><p>Set、Map 和 WeakSet、WeakMap 数据结构是 ES6 引入的四种新类型，它们分别用于存储唯一值、键值对映射、弱引用对象集合和弱引用键值对映射等场景，提供了更丰富和灵活的数据存储方式。</p>
+<h2 id="如何使用函数组合（Function-Composition）？有哪些常见的组合函数？"><a href="#如何使用函数组合（Function-Composition）？有哪些常见的组合函数？" class="headerlink" title="如何使用函数组合（Function Composition）？有哪些常见的组合函数？"></a>如何使用函数组合（Function Composition）？有哪些常见的组合函数？</h2><p>函数组合（Function Composition）是将多个函数组合成一个更大的函数的过程。在 JavaScript 中，可以使用函数组合来创建一系列可重用的管道函数。常见的组合函数包括 compose、pipe 和 curry。</p>
+<h2 id="什么是-JavaScript-中的变量提升（Hoisting）？如何避免它？"><a href="#什么是-JavaScript-中的变量提升（Hoisting）？如何避免它？" class="headerlink" title="什么是 JavaScript 中的变量提升（Hoisting）？如何避免它？"></a>什么是 JavaScript 中的变量提升（Hoisting）？如何避免它？</h2><p>变量提升指的是在 JavaScript 中，变量和函数声明会被提升到它们所在作用域的顶部，即在代码执行之前就已经进行了声明。为避免变量提升带来的问题，可以使用 let 或 const 关键字声明变量，并使用函数表达式而非函数声明来定义函数。</p>
+<h2 id="什么是纯函数（Pure-Function）？为什么要使用它们？"><a href="#什么是纯函数（Pure-Function）？为什么要使用它们？" class="headerlink" title="什么是纯函数（Pure Function）？为什么要使用它们？"></a>什么是纯函数（Pure Function）？为什么要使用它们？</h2><p>纯函数指的是没有副作用且返回值仅由输入决定的函数，即同样的输入总会得到同样的输出，且不会对外部环境产生任何影响。使用纯函数可以提高代码的可读性、可维护性和可测试性，因为它们具有确定性且不会引入意外的行为。</p>
+<h2 id="什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？"><a href="#什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？" class="headerlink" title="什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？"></a>什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？</h2><p>不可变性指的是数据一旦被创建后便不能被更改的特性。在 JavaScript 中可以使用 Object.freeze() 方法来冻结对象，或使用第三方库如 Immutable.js 来创建不可变数据。使用不可变性可以避免数据被意外修改，从而减少错误和提高代码健壮性。</p>
+<h2 id="什么是-JavaScript-中的事件委托（Event-Delegation）？如何使用它？"><a href="#什么是-JavaScript-中的事件委托（Event-Delegation）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的事件委托（Event Delegation）？如何使用它？"></a>什么是 JavaScript 中的事件委托（Event Delegation）？如何使用它？</h2><p>事件委托是指将事件处理程序绑定到其祖先元素上，从而利用事件冒泡机制来处理子元素的事件。通过事件委托可以减少事件处理程序的数量，提高性能并避免内存泄漏问题。</p>
+<h2 id="什么是-JavaScript-中的内存泄漏？如何避免它？"><a href="#什么是-JavaScript-中的内存泄漏？如何避免它？" class="headerlink" title="什么是 JavaScript 中的内存泄漏？如何避免它？"></a>什么是 JavaScript 中的内存泄漏？如何避免它？</h2><p>内存泄漏指的是程序中存在指向已不再使用的内存空间的引用，从而导致这些空间无法被垃圾回收机制释放。为避免内存泄漏，可以手动解除对对象的引用、使用闭包时注意及时释放内存、避免过度使用全局变量等。</p>
+<h2 id="什么是尾递归优化？如何使用它？"><a href="#什么是尾递归优化？如何使用它？" class="headerlink" title="什么是尾递归优化？如何使用它？"></a>什么是尾递归优化？如何使用它？</h2><p>尾递归优化是一种优化技术，可以减少递归函数的内存消耗。在 JavaScript 中，可以使用尾递归优化来减少递归函数的栈帧，从而避免堆栈溢出错误。</p>
+<h2 id="什么是-JavaScript-中的垃圾回收机制？如何影响应用程序的性能？"><a href="#什么是-JavaScript-中的垃圾回收机制？如何影响应用程序的性能？" class="headerlink" title="什么是 JavaScript 中的垃圾回收机制？如何影响应用程序的性能？"></a>什么是 JavaScript 中的垃圾回收机制？如何影响应用程序的性能？</h2><p>JavaScript 中的垃圾回收机制是通过检测不再使用的变量和对象并释放它们占用的内存空间来实现的。垃圾回收机制的性能会受到代码中对象创建和销毁的频率、变量的作用域以及循环引用等因素的影响。</p>
+<h2 id="什么是-JavaScript-中的事件驱动编程（Event-Driven-Programming）？如何使用它？"><a href="#什么是-JavaScript-中的事件驱动编程（Event-Driven-Programming）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的事件驱动编程（Event-Driven Programming）？如何使用它？"></a>什么是 JavaScript 中的事件驱动编程（Event-Driven Programming）？如何使用它？</h2><p>事件驱动编程是一种编程范式，其中程序的执行流程由外部事件触发而不是指令顺序决定。在 JavaScript 中，例如使用事件监听器函数来处理用户交互、浏览器加载等事件。可以通过添加事件监听器（EventListener）来注册事件，监听器函数会在事件被触发时自动运行。</p>
+<h2 id="什么是-JavaScript-中的元编程（Metaprogramming）？如何使用它？"><a href="#什么是-JavaScript-中的元编程（Metaprogramming）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的元编程（Metaprogramming）？如何使用它？"></a>什么是 JavaScript 中的元编程（Metaprogramming）？如何使用它？</h2><p>元编程是一种编程技术，其中程序可以修改或生成其他程序。在 JavaScript 中，可以使用原型链、Reflect API、Proxy 对象等元编程技术来修改对象行为、拦截属性操作、创建类等。</p>
+<h2 id="什么是-JavaScript-中的数据结构和算法？如何使用它们来解决问题？"><a href="#什么是-JavaScript-中的数据结构和算法？如何使用它们来解决问题？" class="headerlink" title="什么是 JavaScript 中的数据结构和算法？如何使用它们来解决问题？"></a>什么是 JavaScript 中的数据结构和算法？如何使用它们来解决问题？</h2><p>数据结构和算法是计算机科学的核心概念，可以用来解决各种问题。在 JavaScript 中，可以使用内置数据结构（如数组、对象、Map、Set）以及第三方库（如 lodash）来实现常见的数据结构和算法。</p>
+<h2 id="什么是-JavaScript-中的单元测试（Unit-Testing）？如何编写和运行单元测试？"><a href="#什么是-JavaScript-中的单元测试（Unit-Testing）？如何编写和运行单元测试？" class="headerlink" title="什么是 JavaScript 中的单元测试（Unit Testing）？如何编写和运行单元测试？"></a>什么是 JavaScript 中的单元测试（Unit Testing）？如何编写和运行单元测试？</h2><p>单元测试是针对程序中最小可测试单元进行的自动化测试。在 JavaScript 中，可以使用测试框架（如 Jest、Mocha）和断言库（如 Chai、Assert）来编写和运行单元测试。</p>
+<h2 id="什么是-JavaScript-中的设计模式（Design-Patterns）？如何使用它们来构建可维护的应用程序？"><a href="#什么是-JavaScript-中的设计模式（Design-Patterns）？如何使用它们来构建可维护的应用程序？" class="headerlink" title="什么是 JavaScript 中的设计模式（Design Patterns）？如何使用它们来构建可维护的应用程序？"></a>什么是 JavaScript 中的设计模式（Design Patterns）？如何使用它们来构建可维护的应用程序？</h2><p>设计模式是通用解决问题的经验总结，可以用于构建可维护、可扩展的应用程序。在 JavaScript 中，可以使用常见的设计模式（如观察者模式、工厂模式、单例模式）来解决特定的问题。</p>
+<h2 id="什么是-JavaScript-中的重构（Refactoring）？为什么要进行重构？"><a href="#什么是-JavaScript-中的重构（Refactoring）？为什么要进行重构？" class="headerlink" title="什么是 JavaScript 中的重构（Refactoring）？为什么要进行重构？"></a>什么是 JavaScript 中的重构（Refactoring）？为什么要进行重构？</h2><p>重构是改善现有代码设计的过程，旨在提高代码可读性、可维护性和性能。在 JavaScript 中，可以使用重构方法（如拆分函数、提前返回等）来改进代码质量。</p>
+<h2 id="如何使用-JavaScript-中的面向对象编程（OOP）？它的优点和缺点是什么？"><a href="#如何使用-JavaScript-中的面向对象编程（OOP）？它的优点和缺点是什么？" class="headerlink" title="如何使用 JavaScript 中的面向对象编程（OOP）？它的优点和缺点是什么？"></a>如何使用 JavaScript 中的面向对象编程（OOP）？它的优点和缺点是什么？</h2><p>面向对象编程是一种基于类和对象的编程方法，JavaScript 中可以使用 class 关键字创建类，使用 new 运算符实例化对象。面向对象编程的优点包括代码架构清晰，易于维护和扩展，缺点包括性能较低，可能过于复杂等。</p>
+<h2 id="如何使用-JavaScript-中的正则表达式（Regular-Expression）？有哪些常见的正则表达式模式？"><a href="#如何使用-JavaScript-中的正则表达式（Regular-Expression）？有哪些常见的正则表达式模式？" class="headerlink" title="如何使用 JavaScript 中的正则表达式（Regular Expression）？有哪些常见的正则表达式模式？"></a>如何使用 JavaScript 中的正则表达式（Regular Expression）？有哪些常见的正则表达式模式？</h2><p>正则表达式是一种用于匹配文本的模式，JavaScript 中使用 RegExp 类型或正则表达式字面量来创建和操作正则表达式。常见的正则表达式模式包括匹配数字、字母、空白字符、URL 等。</p>
+<h2 id="什么是-JavaScript-中的事件循环机制（Event-Loop）？如何理解其中的微任务和宏任务？"><a href="#什么是-JavaScript-中的事件循环机制（Event-Loop）？如何理解其中的微任务和宏任务？" class="headerlink" title="什么是 JavaScript 中的事件循环机制（Event Loop）？如何理解其中的微任务和宏任务？"></a>什么是 JavaScript 中的事件循环机制（Event Loop）？如何理解其中的微任务和宏任务？</h2><p>事件循环机制是 JavaScript 运行时中处理异步操作的核心机制，微任务和宏任务是异步事件的两种类型。微任务是在当前执行栈为空时立即执行的任务（如 Promise.then()），而宏任务则需要等待下一个事件循环周期才会执行（如 setTimeout）。了解事件循环机制可以帮助开发者更好地处理异步编程和避免性能问题。</p>
+<h2 id="什么是变量提升？"><a href="#什么是变量提升？" class="headerlink" title="什么是变量提升？"></a>什么是变量提升？</h2><p>变量提升是指在执行代码之前，JS 引擎会先处理函数声明和变量声明，将其放入内存中，从而使得函数和变量可以在声明之前被引用。变量声明优先级低于函数声明，避免变量污染可以通过使用 let 或 const 来定义块级作用域。</p>
+<h2 id="如何使用生成器（Generator）函数？它们有什么特殊之处？"><a href="#如何使用生成器（Generator）函数？它们有什么特殊之处？" class="headerlink" title="如何使用生成器（Generator）函数？它们有什么特殊之处？"></a>如何使用生成器（Generator）函数？它们有什么特殊之处？</h2><p>生成器（Generator）函数是一种特殊的函数，可以通过 yield 语句来暂停函数的执行，并返回一个可迭代的对象。生成器函数可以逐步产生新的值，而不是一次性返回所有值。生成器函数通常用于处理大型数据集或无限序列。</p>
+<h2 id="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"><a href="#什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？" class="headerlink" title="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"></a>什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？</h2><p>迭代器（Iterator）是一个对象，它能够迭代（遍历）一个容器（例如列表或字典）中的所有元素。可迭代对象（Iterable）是一个带有<strong>iter</strong>()方法的对象，它返回一个迭代器。使用迭代器和可迭代对象可以遍历各种类型的数据结构，如列表、元组、字典等。</p>
+<h2 id="什么是闭包中的循环问题？如何解决？"><a href="#什么是闭包中的循环问题？如何解决？" class="headerlink" title="什么是闭包中的循环问题？如何解决？"></a>什么是闭包中的循环问题？如何解决？</h2><p>闭包中的循环问题指的是在闭包内部使用循环变量时，可能会遇到意料之外的结果。这是因为循环变量被绑定在闭包中，并且所有迭代都共享同一个变量。为了解决这个问题，可以使用立即调用函数表达式（IIFE）或 let 关键字来创建一个新的绑定。</p>
+<h2 id="什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？"><a href="#什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？" class="headerlink" title="什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？"></a>什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？</h2><p>IIFE 是一种立即调用的函数表达式，它可以在定义后立即执行，常用于创建独立的作用域并保护其中的变量不受全局作用域的影响。可以通过在函数定义后添加一对括号并传入参数来调用 IIFE。</p>
+<h2 id="如何使用模块化编程？如何导入和导出模块？"><a href="#如何使用模块化编程？如何导入和导出模块？" class="headerlink" title="如何使用模块化编程？如何导入和导出模块？"></a>如何使用模块化编程？如何导入和导出模块？</h2><p>模块化编程指将程序分解为小的模块，每个模块负责完成一个独立的功能。在 JavaScript 中，可以使用 import 和 export 语句来导入和导出模块。导入语句用于引入其他模块中的代码，导出语句用于将代码暴露给其他模块使用。</p>
+<h2 id="如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？"><a href="#如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？" class="headerlink" title="如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？"></a>如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？</h2><p>异步编程模式是 JavaScript 中处理异步操作的方式，包括回调函数、Promise、async&#x2F;await 等。其中回调函数是最基础的异步编程模式，但可能导致回调地狱问题。Promise 和 async&#x2F;await 提供了更好的语法和代码结构。</p>
+<h2 id="什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？"><a href="#什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？"></a>什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？</h2><p>模板字符串是一种用反引号 &#96; 包围的字符串，支持多行文本和插入表达式，可以简化字符串拼接、生成 HTML 片段等操作。</p>
+<h2 id="什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？"><a href="#什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？" class="headerlink" title="什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？"></a>什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？</h2><p>箭头函数是一种使用 &#x3D;&gt; 符号定义的函数，与传统函数相比具有更简洁的语法和固定的 this 绑定。箭头函数中的 this 始终指向外部作用域，不会被改变，但也有一些限制。</p>
+<h2 id="什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？"><a href="#什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？"></a>什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？</h2><p>解构赋值是一种从数组或对象中提取值并赋给变量的语法，可以简化代码和减少重复。在 JavaScript 中，可以使用数组解构和对象解构来实现解构赋值。</p>
+<h2 id="什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？"><a href="#什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？"></a>什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？</h2><p>扩展运算符和剩余参数都使用 … 语法来实现。扩展运算符可以将数组或对象展开成多个独立的值，剩余参数则可以将多个参数合并成一个数组。常见的应用包括数组合并、对象合并、函数传参等。</p>
+<h2 id="什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？"><a href="#什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？" class="headerlink" title="什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？"></a>什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？</h2><p>迭代器协议和生成器函数是 ES6 引入的两个新特性，用于处理序列数据和异步编程。迭代器协议定义了一个 next() 方法，返回一个具有 value 和 done 属性的对象，用于遍历序列数据；生成器函数通过 yield 关键字在多次执行中暂停和恢复函数的执行。</p>
+<h2 id="如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？"><a href="#如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？" class="headerlink" title="如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？"></a>如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？</h2><p>Set、Map 和 WeakSet、WeakMap 数据结构是 ES6 引入的四种新类型，它们分别用于存储唯一值、键值对映射、弱引用对象集合和弱引用键值对映射等场景，提供了更丰富和灵活的数据存储方式。</p>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title>Vue - 中实现组件通信？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue2-中实现组件通信？"><a href="#Vue2-中实现组件通信？" class="headerlink" title="Vue2 中实现组件通信？"></a>Vue2 中实现组件通信？</h1><ol>
+    <content><![CDATA[<!-- # Vue2 中实现组件通信？ -->
+
+<ol>
 <li>Props：props 向子组件传递数据，</li>
 <li>Events：父组件通过子组件通过 emit 事件向父组件触发事件进行通信。</li>
 <li>$attrs：属性透传</li>
@@ -714,7 +758,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>JS - 什么作用域和闭包？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS-%20%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="什么原型和原型链？"><a href="#什么原型和原型链？" class="headerlink" title="什么原型和原型链？"></a>什么原型和原型链？</h1><ul>
+    <content><![CDATA[<!-- # 什么原型和原型链？ -->
+
+<ul>
 <li><p>每个 JavaScript 对象都有一个原型（prototype）属性，它指向另一个对象，<br>这个对象就是 当前对象的原型。</p>
 <p>当对象在自己的属性上找不到某个属性或方法，它会到原型对象中查找，直到找到为止，这就是原型链。</p>
 <p>原型链的顶端是 Object.prototype 对象，Object.prototype 的原型为 null。</p>
@@ -723,16 +769,18 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
 <span id="more"></span>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
     <title>Vue - 中的 computed 和 watch 区别？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-中的-computed-和-watch-区别？"><a href="#Vue-中的-computed-和-watch-区别？" class="headerlink" title="Vue - 中的 computed 和 watch 区别？"></a>Vue - 中的 computed 和 watch 区别？</h1><p>在 Vue 中，computed 和 watch 都可以用于监听数据变化并做出响应。 区别在于：</p>
+    <content><![CDATA[<!-- # Vue - 中的 computed 和 watch 区别？ -->
+
+<p>在 Vue 中，computed 和 watch 都可以用于监听数据变化并做出响应。 区别在于：</p>
 <ol>
 <li>计算属性 (computed)：可以处理依赖关系，并且具有缓存机制。</li>
 </ol>
@@ -752,7 +800,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Vue - 中的 mixin 和 extends 优缺点？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-中的-mixin-和-extends-优缺点？"><a href="#Vue-中的-mixin-和-extends-优缺点？" class="headerlink" title="Vue - 中的 mixin 和 extends 优缺点？"></a>Vue - 中的 mixin 和 extends 优缺点？</h1><p>mixin</p>
+    <content><![CDATA[<!-- # Vue - 中的 mixin 和 extends 优缺点？ -->
+
+<p>mixin</p>
 <p>优点：<br>可以包含任意选项，具有很大的灵活性；<br>可以复用在多个组件中，提高了代码的复用性和维护性；<br>可以通过 Vue.mixin 全局混入到所有组件中，扩展了 Vue 的能力。</p>
 <span id="more"></span>
 
@@ -774,7 +824,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Vue - 中的 v-model 指令？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-中的-v-model-指令？"><a href="#Vue-中的-v-model-指令？" class="headerlink" title="Vue - 中的 v-model 指令？"></a>Vue - 中的 v-model 指令？</h1><p>它可以简化表单元素上的双向数据绑定。它通常用于对表单元素的输入值进行绑定，这样数据就会在视图和模型之间自动同步。</p>
+    <content><![CDATA[<!-- # Vue - 中的 v-model 指令？ -->
+
+<p>它可以简化表单元素上的双向数据绑定。它通常用于对表单元素的输入值进行绑定，这样数据就会在视图和模型之间自动同步。</p>
 <span id="more"></span>
 
 <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>v-model 是什么。语法糖 :value + @input。</p>
@@ -792,7 +844,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Vue - 什么是 Virtual DOM，优势？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-什么是-Virtual-DOM，优势？"><a href="#Vue-什么是-Virtual-DOM，优势？" class="headerlink" title="Vue - 什么是 Virtual DOM，优势？"></a>Vue - 什么是 Virtual DOM，优势？</h1><p>它是一个内存中的虚拟节点树，其结构与真实的 DOM 树相似，但是它只存在于内存中，并不需要直接操作浏览器中的 DOM。当数据发生变化时，框架会先利用算法比较新旧虚拟 DOM 的差异，并仅更新需要更新的部分。</p>
+    <content><![CDATA[<!-- # Vue - 什么是 Virtual DOM，优势？ -->
+
+<p>它是一个内存中的虚拟节点树，其结构与真实的 DOM 树相似，但是它只存在于内存中，并不需要直接操作浏览器中的 DOM。当数据发生变化时，框架会先利用算法比较新旧虚拟 DOM 的差异，并仅更新需要更新的部分。</p>
 <span id="more"></span>
 
 <h1 id="虚拟-DOM-的优势："><a href="#虚拟-DOM-的优势：" class="headerlink" title="虚拟 DOM 的优势："></a>虚拟 DOM 的优势：</h1><ol>
@@ -814,7 +868,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Vue - 有哪些性能优化？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E6%9C%89%E5%93%AA%E4%BA%9B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-有哪些性能优化？"><a href="#Vue-有哪些性能优化？" class="headerlink" title="Vue - 有哪些性能优化？"></a>Vue - 有哪些性能优化？</h1><ol>
+    <content><![CDATA[<!-- # Vue - 有哪些性能优化？ -->
+
+<ol>
 <li><p>避免不必要的重渲染 beforeUpdate，watch</p>
 </li>
 <li><p>使用 v-if 和 v-show 指令</p>
@@ -839,9 +895,11 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Ts - interface 和 type 区别？</title>
+    <title>Ts - TypeScript 中的泛型是什么？</title>
     <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="TypeScript-中的泛型是什么？如何使用泛型？"><a href="#TypeScript-中的泛型是什么？如何使用泛型？" class="headerlink" title="TypeScript 中的泛型是什么？如何使用泛型？"></a>TypeScript 中的泛型是什么？如何使用泛型？</h1><p>TypeScript 中的泛型是一种类型参数，它可以在定义函数、类或接口时使用，用于指定一个类型占位符。<br>这个类型占位符可以在调用函数或实例化类时被具体的类型所代替，从而实现代码的灵活性和复用性。</p>
+    <content><![CDATA[<!-- # TypeScript 中的泛型是什么？如何使用泛型？ -->
+
+<p>TypeScript 中的泛型是一种类型参数，它可以在定义函数、类或接口时使用，用于指定一个类型占位符。<br>这个类型占位符可以在调用函数或实例化类时被具体的类型所代替，从而实现代码的灵活性和复用性。</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
@@ -857,7 +915,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Ts - interface 和 type 区别？</title>
     <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Ts-interface-和-type-区别？"><a href="#Ts-interface-和-type-区别？" class="headerlink" title="Ts - interface 和 type 区别？"></a>Ts - interface 和 type 区别？</h1><p>interface 主要用于描述对象的结构，可继承</p>
+    <content><![CDATA[<!-- # Ts - interface 和 type 区别？ -->
+
+<p>interface 主要用于描述对象的结构，可继承</p>
 <p>type 更适合用于描述一般的类型，type 能够给任何类型起别名，</p>
 <p>type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
 <span id="more"></span>
@@ -872,7 +932,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>如何在 TypeScript 中使用命名空间？</title>
     <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="如何在-TypeScript-中使用命名空间？"><a href="#如何在-TypeScript-中使用命名空间？" class="headerlink" title="如何在 TypeScript 中使用命名空间？"></a>如何在 TypeScript 中使用命名空间？</h1><p>简单回答下：<br>在 TypeScript 中，命名空间是一种用于组织代码的结构化方式。<br>我们可以使用命名空间来避免命名冲突，并将相关的函数、类和接口等组织到一个逻辑单元中。</p>
+    <content><![CDATA[<!-- # 如何在 TypeScript 中使用命名空间？ -->
+
+<p>简单回答下：<br>在 TypeScript 中，命名空间是一种用于组织代码的结构化方式。<br>我们可以使用命名空间来避免命名冲突，并将相关的函数、类和接口等组织到一个逻辑单元中。</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
@@ -888,7 +950,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Ts - 如何使用接口来描述函数类型？</title>
     <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Ts-如何使用接口来描述函数类型？"><a href="#Ts-如何使用接口来描述函数类型？" class="headerlink" title="Ts - 如何使用接口来描述函数类型？"></a>Ts - 如何使用接口来描述函数类型？</h1><p>代码示范：</p>
+    <content><![CDATA[<!-- # Ts - 如何使用接口来描述函数类型？ -->
+
+<p>代码示范：</p>
 <span id="more"></span>
 
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">interface <span class="title class_">AddFunction</span> &#123;</span><br><span class="line">    (<span class="attr">x</span>: number, <span class="attr">y</span>: number): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -903,7 +967,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Vue - 如何实现路由守卫？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-如何实现路由守卫？"><a href="#Vue-如何实现路由守卫？" class="headerlink" title="Vue - 如何实现路由守卫？"></a>Vue - 如何实现路由守卫？</h1><p>在 Vue 中，可以通过守卫来拦截导航、验证用户身份等操作。</p>
+    <content><![CDATA[<!-- # Vue - 如何实现路由守卫？ -->
+
+<p>在 Vue 中，可以通过守卫来拦截导航、验证用户身份等操作。</p>
 <span id="more"></span>
 
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 假设路由表</span></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/home&quot;</span>, <span class="attr">component</span>: <span class="title class_">Home</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/about&quot;</span>, <span class="attr">component</span>: <span class="title class_">About</span>, <span class="attr">meta</span>: &#123; <span class="attr">requiresAuth</span>: <span class="literal">true</span> &#125; &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">routes.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 需要登录验证但用户未登录</span></span><br><span class="line">    <span class="keyword">if</span> (to.<span class="property">meta</span>.<span class="property">requiresAuth</span> &amp;&amp; !auth.<span class="title function_">isLoggedIn</span>()) &#123;</span><br><span class="line">        <span class="title function_">next</span>(<span class="string">&quot;/login&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 继续导航</span></span><br><span class="line">        <span class="title function_">next</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -920,7 +986,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>Ts - 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</title>
     <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="在-TypeScript-中，如何定义一个枚举类型？如何使用枚举类型？"><a href="#在-TypeScript-中，如何定义一个枚举类型？如何使用枚举类型？" class="headerlink" title="在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？"></a>在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</h1><p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
+    <content><![CDATA[<!-- # 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？ -->
+
+<p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
@@ -936,7 +1004,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - Fiber？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Fiber%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-Fiber？"><a href="#React-Fiber？" class="headerlink" title="React - Fiber？"></a>React - Fiber？</h1><p>Fiber 是一种可中断的和优先级处理的协调引擎。</p>
+    <content><![CDATA[<!-- # React - Fiber？ -->
+
+<p>Fiber 是一种可中断的和优先级处理的协调引擎。</p>
 <p>它可以提高性能、改善用户体验和支持渐进式渲染。更好地流畅管理组件树的渲染过程。</p>
 <span id="more"></span>
 
@@ -953,7 +1023,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - Hooks？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Hooks%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-Hooks？"><a href="#React-Hooks？" class="headerlink" title="React - Hooks？"></a>React - Hooks？</h1><p>常用的 Hooks 包括 useState、useEffect、useContext 等。<br>useState 可以让我们在函数组件中使用 state，useEffect 可以让我们在组件渲染后执行副作用代码，而 useContext 则可以让我们在组件间共享数据。</p>
+    <content><![CDATA[<!-- # React - Hooks？ -->
+
+<p>常用的 Hooks 包括 useState、useEffect、useContext 等。<br>useState 可以让我们在函数组件中使用 state，useEffect 可以让我们在组件渲染后执行副作用代码，而 useContext 则可以让我们在组件间共享数据。</p>
 <span id="more"></span>
 ]]></content>
       <categories>
@@ -966,7 +1038,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - Virtual DOM？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Virtual%20DOM%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-Virtual-DOM？"><a href="#React-Virtual-DOM？" class="headerlink" title="React - Virtual DOM？"></a>React - Virtual DOM？</h1><p>Virtual DOM 是一个轻量级的 JavaScript 对象，描述了真实 DOM 的层次结构。</p>
+    <content><![CDATA[<!-- # React - Virtual DOM？ -->
+
+<p>Virtual DOM 是一个轻量级的 JavaScript 对象，描述了真实 DOM 的层次结构。</p>
 <p>在 React 中，当状态发生变化时，React 会创建一个新的 Virtual DOM 对象来代表新的 DOM 层次结构，并使用算法比较旧的和新的 Virtual DOM 对象之间的不同之处。根据 diff 算法的结果，React 只更新需要更改的部分，而不需要重新渲染整个页面。</p>
 <span id="more"></span>
 
@@ -982,7 +1056,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - useMemo 和 useCallback 区别？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20useMemo%20%E5%92%8C%20useCallback%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-useMemo-和-useCallback-区别？"><a href="#React-useMemo-和-useCallback-区别？" class="headerlink" title="React - useMemo 和 useCallback 区别？"></a>React - useMemo 和 useCallback 区别？</h1><p>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</p>
+    <content><![CDATA[<!-- # React - useMemo 和 useCallback 区别？ -->
+
+<p>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</p>
 <span id="more"></span>
 
 <p>useMemo 可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如：</p>
@@ -1005,7 +1081,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - useState 和 useReducer 的区别是什么？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20useState%20%E5%92%8C%20useReducer%20%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-useState-和-useReducer-的区别是什么？"><a href="#React-useState-和-useReducer-的区别是什么？" class="headerlink" title="React - useState 和 useReducer 的区别是什么？"></a>React - useState 和 useReducer 的区别是什么？</h1><p>useState 和 useReducer 都是 React 中用于管理组件的状态。</p>
+    <content><![CDATA[<!-- # React - useState 和 useReducer 的区别是什么？ -->
+
+<p>useState 和 useReducer 都是 React 中用于管理组件的状态。</p>
 <span id="more"></span>
 
 <p>主要区别如下：<br>useState：只能处理单个状态值，可以通过多次调用。</p>
@@ -1021,7 +1099,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - 如何处理错误信息？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-如何处理错误信息？"><a href="#React-如何处理错误信息？" class="headerlink" title="React - 如何处理错误信息？"></a>React - 如何处理错误信息？</h1><p>在组件中通过定义 componentDidCatch 生命周期方法来捕获错误，并使用 ErrorBoundary 组件或 static getDerivedStateFromError 方法来处理错误。</p>
+    <content><![CDATA[<!-- # React - 如何处理错误信息？ -->
+
+<p>在组件中通过定义 componentDidCatch 生命周期方法来捕获错误，并使用 ErrorBoundary 组件或 static getDerivedStateFromError 方法来处理错误。</p>
 <p>目前没有办法将错误边界写成函数组件。但是，您不必自己编写错误边界类。例如，您可以 react-error-boundary 改为使用。</p>
 <span id="more"></span>
 ]]></content>
@@ -1035,7 +1115,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - 生命周期有哪些？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%87%92%E5%8A%A0%E8%BD%BD%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-生命周期有哪些？"><a href="#React-生命周期有哪些？" class="headerlink" title="React - 生命周期有哪些？"></a>React - 生命周期有哪些？</h1><p>可以通过使用 React.lazy 和 Suspense 组件，在需要时才动态加载组件代码。</p>
+    <content><![CDATA[<!-- # React - 生命周期有哪些？ -->
+
+<p>可以通过使用 React.lazy 和 Suspense 组件，在需要时才动态加载组件代码。</p>
 <span id="more"></span>
 ]]></content>
       <categories>
@@ -1048,7 +1130,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - 属性key作用？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%B1%9E%E6%80%A7key%E4%BD%9C%E7%94%A8%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-属性-key-作用？"><a href="#React-属性-key-作用？" class="headerlink" title="React - 属性 key 作用？"></a>React - 属性 key 作用？</h1><p>Key 是 React 用于识别哪些元素已经被修改、添加或删除的机制。当我们使用数组渲染组件列表时，每个组件都需要有一个唯一的 key 属性，这样 React 就可以快速确定哪些组件需要更新，避免不必要的渲染，从而提高性能。</p>
+    <content><![CDATA[<!-- # React - 属性 key 作用？ -->
+
+<p>Key 是 React 用于识别哪些元素已经被修改、添加或删除的机制。当我们使用数组渲染组件列表时，每个组件都需要有一个唯一的 key 属性，这样 React 就可以快速确定哪些组件需要更新，避免不必要的渲染，从而提高性能。</p>
 <span id="more"></span>
 ]]></content>
       <categories>
@@ -1061,7 +1145,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - 性能优化？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-性能优化？"><a href="#React-性能优化？" class="headerlink" title="React - 性能优化？"></a>React - 性能优化？</h1><p>避免重复渲染： 使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数<br>组件懒加载：React.lazy 和 Suspense<br>使用 key 属性<br>按需加载模块<br>SSR 提高首屏渲染速度<br>Web Workers 避免阻塞 UI 线程</p>
+    <content><![CDATA[<!-- # React - 性能优化？ -->
+
+<p>避免重复渲染： 使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数<br>组件懒加载：React.lazy 和 Suspense<br>使用 key 属性<br>按需加载模块<br>SSR 提高首屏渲染速度<br>Web Workers 避免阻塞 UI 线程</p>
 <span id="more"></span>
 
 <h1 id="避免重复渲染组件？🔥"><a href="#避免重复渲染组件？🔥" class="headerlink" title="避免重复渲染组件？🔥"></a>避免重复渲染组件？🔥</h1><p>使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数</p>
@@ -1076,7 +1162,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React -  描述下react生命周期？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E6%8F%8F%E8%BF%B0%E4%B8%8Breact%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-描述下-react-生命周期？"><a href="#React-描述下-react-生命周期？" class="headerlink" title="React - 描述下 react 生命周期？"></a>React - 描述下 react 生命周期？</h1><p>constructor()：当组件被实例化时调用。<br>render()：根据组件的 props 和状态返回一个 React 元素。<br>componentDidMount()：当组件已经渲染到页面上时调用。<br>componentDidUpdate()：当组件更新时调用。<br>componentWillUnmount()：当组件从页面上卸载时调用。</p>
+    <content><![CDATA[<!-- # React - 描述下 react 生命周期？ -->
+
+<p>constructor()：当组件被实例化时调用。<br>render()：根据组件的 props 和状态返回一个 React 元素。<br>componentDidMount()：当组件已经渲染到页面上时调用。<br>componentDidUpdate()：当组件更新时调用。<br>componentWillUnmount()：当组件从页面上卸载时调用。</p>
 <span id="more"></span>
 ]]></content>
       <categories>
@@ -1089,7 +1177,11 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - 组件通信？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-组件通信？"><a href="#React-组件通信？" class="headerlink" title="React - 组件通信？"></a>React - 组件通信？</h1><p>常用的组件通信方式包括：</p>
+    <content><![CDATA[<!-- # React - 组件通信？ -->
+
+<ul>
+<li>常用的组件通信方式包括：</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">props、</span><br><span class="line"></span><br><span class="line">Context、</span><br><span class="line"></span><br><span class="line">Redux</span><br></pre></td></tr></table></figure>
 
 <span id="more"></span>
@@ -1106,7 +1198,9 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   <entry>
     <title>React - 高阶组件？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-高阶组件？"><a href="#React-高阶组件？" class="headerlink" title="React - 高阶组件？"></a>React - 高阶组件？</h1><p>高阶组件是指接受一个组件并返回一个新组件的函数。和高阶函数一样同理。</p>
+    <content><![CDATA[<!-- # React - 高阶组件？ -->
+
+<p>高阶组件是指接受一个组件并返回一个新组件的函数。和高阶函数一样同理。</p>
 <p>主要作用：在组件之间共享代码、提取和重用状态逻辑，或者对包装的组件额外的操作。</p>
 <span id="more"></span>
 ]]></content>
@@ -1115,6 +1209,22 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </categories>
       <tags>
         <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C - 如何使用指针交换变量？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/C/C%20-%20%E6%8C%87%E9%92%88%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F%EF%BC%9F/</url>
+    <content><![CDATA[<p>交换变量，使用指针处理；</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">double</span> *y)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> x = QUIT;</span><br><span class="line">    <span class="type">double</span> y = <span class="number">10.0001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针交换变量</span></span><br><span class="line">    swap(&amp;x, &amp;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输出结果： %d %le \n&quot;</span>, x, y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">double</span> *y)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    temp = *x;</span><br><span class="line">    *x = *y;</span><br><span class="line">    *y = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>c</tag>
       </tags>
   </entry>
 </search>
