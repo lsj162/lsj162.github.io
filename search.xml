@@ -253,40 +253,6 @@ https://hexo.io/themes/
       </tags>
   </entry>
   <entry>
-    <title>css 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/css/1.%20css%20%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<p>一、CSS 是什么？</p>
-<p>CSS 即层叠样式表（Cascading Style Sheets），是一种用来表现 HTML 或 XML 等文件样式的计算机语言。CSS 不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
-<p>CSS 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。</p>
-<span id="more"></span>
-
-<ol>
-<li><p>CSS 选择器有哪些？优先级排序？哪些属性可以继承？<br>答案：<br>id 选择器(#myid)、类选择器(.myclassname)、标签选择器(div, h1, p)、相邻选择器(h1 + p)、子选择器（ul &gt; li）、后代选择器（li a）、通配符选择器（*）、属性选择器（a[rel&#x3D;”external”]）、伪类选择器（a:hover, li:nth-child）</p>
-<pre><code>可继承的属性：font-size, font-family, color
-不可继承的样式：border, padding, margin, width, height
-</code></pre>
-</li>
-<li><p>如何居中 div？如何居中一个浮动元素？如何让绝对定位的 div 居中？</p>
-</li>
-<li><p>display 属性常见的有哪些值？<br>block 块显示<br>inline-block 行内块显示<br>none 隐藏</p>
-</li>
-<li><p>position 的值？<br>static（默认）：按照正常 文档流 进行排列；<br>relative（相对定位）：不脱离文档流，参考自身静态位置通过 top, bottom, left, right 定位；<br>absolute(绝对定位)：参考距其最近一个不为 static 的父级元素通过 top, bottom, left, right 定位；<br>fixed(固定定位)：所固定的参照对像是可视窗口。</p>
-</li>
-<li><p>CSS3 有哪些新特性？<br>RGBA 和透明度<br>background-image background-origin(content-box&#x2F;padding-box&#x2F;border-box) background-size background-repeat<br>word-wrap（对长的不可分割单词换行）word-wrap：break-word<br>文字阴影：text-shadow： 5px 5px 5px #FF0000;（水平阴影，垂直阴影，模糊距离，阴影颜色）<br>font-face 属性：定义自己的字体<br>圆角（边框半径）：border-radius 属性用于创建圆角<br>边框图片：border-image: url(border.png) 30 30 round<br>盒阴影：box-shadow: 10px 10px 5px #888888<br>媒体查询：定义两套 css，当浏览器的尺寸变化时会采用不同的属性</p>
-</li>
-<li><p>请解释一下 CSS3 的 flexbox（弹性盒布局模型）,以及适用场景？</p>
-<p>该布局模型的目的是提供一种更加高效的方式来对容器中的条目进行布局、对齐和分配空间。在传统的布局方式中，block 布局是把块在垂直方向从上到下依次排列的；而 inline 布局则是在水平方向来排列。弹性盒布局并没有这样内在的方向限制，可以由开发人员自由操作。<br>试用场景：弹性布局适合于移动前端开发，在 Android 和 ios 上也完美支持。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>未来技术发展</title>
     <url>/2018/05/01/%E6%80%9D%E8%80%83/%E6%9C%AA%E6%9D%A5%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</url>
     <content><![CDATA[<h1 id="未来技术发展"><a href="#未来技术发展" class="headerlink" title="未来技术发展"></a>未来技术发展</h1><pre><code>技术是第一生产力；
@@ -401,23 +367,155 @@ https://hexo.io/themes/
       </tags>
   </entry>
   <entry>
-    <title>javascript 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/javaScript/1.%20%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<p>变量提升是指在执行代码之前，JS 引擎会先处理函数声明和变量声明，将其放入内存中，从而使得函数和变量可以在声明之前被引用。变量声明优先级低于函数声明，避免变量污染可以通过使用 let 或 const 来定义块级作用域。</p>
+    <title>Nodejs - 事件循环？</title>
+    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Nodejs-事件循环？"><a href="#Nodejs-事件循环？" class="headerlink" title="Nodejs - 事件循环？"></a>Nodejs - 事件循环？</h1><pre><code>Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。
+</code></pre>
 <span id="more"></span>
 
-<h1 id="如何使用生成器（Generator）函数？它们有什么特殊之处？"><a href="#如何使用生成器（Generator）函数？它们有什么特殊之处？" class="headerlink" title="如何使用生成器（Generator）函数？它们有什么特殊之处？"></a>如何使用生成器（Generator）函数？它们有什么特殊之处？</h1><p>生成器（Generator）函数是一种特殊的函数，可以通过 yield 语句来暂停函数的执行，并返回一个可迭代的对象。生成器函数可以逐步产生新的值，而不是一次性返回所有值。生成器函数通常用于处理大型数据集或无限序列。</p>
-<h1 id="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"><a href="#什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？" class="headerlink" title="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"></a>什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？</h1><p>迭代器（Iterator）是一个对象，它能够迭代（遍历）一个容器（例如列表或字典）中的所有元素。可迭代对象（Iterable）是一个带有<strong>iter</strong>()方法的对象，它返回一个迭代器。使用迭代器和可迭代对象可以遍历各种类型的数据结构，如列表、元组、字典等。</p>
-<h1 id="什么是闭包中的循环问题？如何解决？"><a href="#什么是闭包中的循环问题？如何解决？" class="headerlink" title="什么是闭包中的循环问题？如何解决？"></a>什么是闭包中的循环问题？如何解决？</h1><p>闭包中的循环问题指的是在闭包内部使用循环变量时，可能会遇到意料之外的结果。这是因为循环变量被绑定在闭包中，并且所有迭代都共享同一个变量。为了解决这个问题，可以使用立即调用函数表达式（IIFE）或 let 关键字来创建一个新的绑定。</p>
-<h1 id="什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？"><a href="#什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？" class="headerlink" title="什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？"></a>什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？</h1><p>IIFE 是一种立即调用的函数表达式，它可以在定义后立即执行，常用于创建独立的作用域并保护其中的变量不受全局作用域的影响。可以通过在函数定义后添加一对括号并传入参数来调用 IIFE。</p>
-<h1 id="如何使用模块化编程？如何导入和导出模块？"><a href="#如何使用模块化编程？如何导入和导出模块？" class="headerlink" title="如何使用模块化编程？如何导入和导出模块？"></a>如何使用模块化编程？如何导入和导出模块？</h1><p>模块化编程指将程序分解为小的模块，每个模块负责完成一个独立的功能。在 JavaScript 中，可以使用 import 和 export 语句来导入和导出模块。导入语句用于引入其他模块中的代码，导出语句用于将代码暴露给其他模块使用。</p>
-<h1 id="如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？"><a href="#如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？" class="headerlink" title="如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？"></a>如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？</h1><p>异步编程模式是 JavaScript 中处理异步操作的方式，包括回调函数、Promise、async&#x2F;await 等。其中回调函数是最基础的异步编程模式，但可能导致回调地狱问题。Promise 和 async&#x2F;await 提供了更好的语法和代码结构。</p>
-<h1 id="什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？"><a href="#什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？"></a>什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？</h1><p>模板字符串是一种用反引号 &#96; 包围的字符串，支持多行文本和插入表达式，可以简化字符串拼接、生成 HTML 片段等操作。</p>
-<h1 id="什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？"><a href="#什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？" class="headerlink" title="什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？"></a>什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？</h1><p>箭头函数是一种使用 &#x3D;&gt; 符号定义的函数，与传统函数相比具有更简洁的语法和固定的 this 绑定。箭头函数中的 this 始终指向外部作用域，不会被改变，但也有一些限制。</p>
-<h1 id="什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？"><a href="#什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？"></a>什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？</h1><p>解构赋值是一种从数组或对象中提取值并赋给变量的语法，可以简化代码和减少重复。在 JavaScript 中，可以使用数组解构和对象解构来实现解构赋值。</p>
-<h1 id="什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？"><a href="#什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？"></a>什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？</h1><p>扩展运算符和剩余参数都使用 … 语法来实现。扩展运算符可以将数组或对象展开成多个独立的值，剩余参数则可以将多个参数合并成一个数组。常见的应用包括数组合并、对象合并、函数传参等。</p>
-<h1 id="什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？"><a href="#什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？" class="headerlink" title="什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？"></a>什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？</h1><p>迭代器协议和生成器函数是 ES6 引入的两个新特性，用于处理序列数据和异步编程。迭代器协议定义了一个 next() 方法，返回一个具有 value 和 done 属性的对象，用于遍历序列数据；生成器函数通过 yield 关键字在多次执行中暂停和恢复函数的执行。</p>
-<h1 id="如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？"><a href="#如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？" class="headerlink" title="如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？"></a>如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？</h1><p>Set、Map 和 WeakSet、WeakMap 数据结构是 ES6 引入的四种新类型，它们分别用于存储唯一值、键值对映射、弱引用对象集合和弱引用键值对映射等场景，提供了更丰富和灵活的数据存储方式。</p>
+<h1 id="loop-官方"><a href="#loop-官方" class="headerlink" title="loop 官方"></a>loop 官方</h1><pre><code>什么是事件循环？
+事件循环允许 Node.js 通过尽可能将操作卸载到系统内核来执行非阻塞 I/O 操作 ——尽管 JavaScript 是单线程的。
+
+事件循环解释
+当 Node.js 启动时，它会初始化事件循环，处理提供的输入脚本，这可能会进行异步 API 调用、调度计时器或调用 process.nextTick()，然后开始处理事件环形。
+</code></pre>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick">官方文档链接 https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick</a></p>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 创建一个 HTTP 服务器？</title>
+    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%20HTTP%20%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Nodejs-创建一个-HTTP-服务器？"><a href="#Nodejs-创建一个-HTTP-服务器？" class="headerlink" title="Nodejs - 创建一个 HTTP 服务器？"></a>Nodejs - 创建一个 HTTP 服务器？</h1><p>使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.<span class="property">statusCode</span> = <span class="number">200</span>;</span><br><span class="line">    res.<span class="title function_">setHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;text/plain&quot;</span>);</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">3000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Server running at http://localhost:3000/&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 处理文件系统？</title>
+    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Nodejs-处理文件系统？"><a href="#Nodejs-处理文件系统？" class="headerlink" title="Nodejs - 处理文件系统？"></a>Nodejs - 处理文件系统？</h1><p>在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line">fs.<span class="title function_">readFile</span>(<span class="string">&quot;file.txt&quot;</span>, <span class="string">&quot;utf8&quot;</span>, <span class="function">(<span class="params">err, data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 中使用流？</title>
+    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%81%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Nodejs-中使用流？"><a href="#Nodejs-中使用流？" class="headerlink" title="Nodejs - 中使用流？"></a>Nodejs - 中使用流？</h1><p>在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> readStream = fs.<span class="title function_">createReadStream</span>(<span class="string">&#x27;file.txt&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> writeStream = fs.<span class="title function_">createWriteStream</span>(<span class="string">&#x27;output.txt&#x27;</span>);</span><br><span class="line"></span><br><span class="line">readStream.<span class="title function_">pipe</span>(write</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 概述？</title>
+    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E6%A6%82%E8%BF%B0%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Nodejs-概述？"><a href="#Nodejs-概述？" class="headerlink" title="Nodejs - 概述？"></a>Nodejs - 概述？</h1><p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，它在服务器端运行 JavaScript 代码。它的主要特点是非阻塞 I&#x2F;O，事件驱动和高效性能。</p>
+<span id="more"></span>
+
+<h1 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h1><p>2009</p>
+<p>Node.js 发布<br>创建 npm  的第一种形式</p>
+<p>2010</p>
+<p>Express  发布<br>Socket.io  发布</p>
+<p>2011</p>
+<p>npm 发布 1.0 版本<br>大公司开始采用 Node.js: 像 LinkedIn, Uber 等等。<br>hapi  发布</p>
+<p>2012</p>
+<p>持续被更多人所使用</p>
+<p>2013</p>
+<p>第一个使用 Node.js 的大型博客平台: Ghost<br>Koa  发布</p>
+<p>2014</p>
+<p>分裂分支: io.js 是 Node.js 分裂出的主要分支, 目标是引入 ES6 的支持并更快的开发迭代。</p>
+<p>2015</p>
+<p>Node.js 基金会   诞生<br>IO.js 合并回 Node.js<br>npm 引入私有模块<br>Node.js 4 (以前从未发布过 1, 2 和 3 版本)</p>
+<p>2016</p>
+<p>kik, left-pad 和 npm 事件<br>Yarn  发布<br>Node.js 6</p>
+<p>2017</p>
+<p>npm 更注重安全性<br>Node.js 8<br>HTTP&#x2F;2<br>V8 在其测试套件中引入 Node.js，正式使 Node.js 成为除 Chrome 之外的 JS 引擎的目标<br>每周超 30 亿次 npm 下载</p>
+<p>2018</p>
+<p>Node.js 10<br>ES modules .mjs 实验支持</p>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 访问数据库？</title>
+    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Nodejs-访问数据库？"><a href="#Nodejs-访问数据库？" class="headerlink" title="Nodejs - 访问数据库？"></a>Nodejs - 访问数据库？</h1><p>在 Node.js 中访问数据库需要使用适当的数据库驱动程序。常见的数据库驱动程序包括 MongoDB 的 mongodb 模块和 MySQL 的 mysql2 模块。以下是使用 mongodb 模块连接到 MongoDB 并查询数据的示例：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MongoClient</span> = <span class="built_in">require</span>(<span class="string">&quot;mongodb&quot;</span>).<span class="property">MongoClient</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> url = <span class="string">&quot;mongodb://localhost:27017/myproject&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">MongoClient</span>.<span class="title function_">connect</span>(url, <span class="function">(<span class="params">err, client</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Connected successfully to server&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> db = client.<span class="title function_">db</span>(<span class="string">&quot;myproject&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> collection = db.<span class="title function_">collection</span>(<span class="string">&quot;documents&quot;</span>);</span><br><span class="line"></span><br><span class="line">    collection.<span class="title function_">find</span>(&#123;&#125;).<span class="title function_">toArray</span>(<span class="function">(<span class="params">err, docs</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Found the following records&quot;</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(docs);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    client.<span class="title function_">close</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hash 路由 与 history 路由有什么区别？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20hash%20%E8%B7%AF%E7%94%B1%20%E4%B8%8E%20history%20%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%F0%9F%94%A5%F0%9F%94%A5/</url>
+    <content><![CDATA[<h1 id="hash-路由-与-history-路由有什么区别？"><a href="#hash-路由-与-history-路由有什么区别？" class="headerlink" title="hash 路由 与 history 路由有什么区别？"></a>hash 路由 与 history 路由有什么区别？</h1><p>区别在于 URL 格式的不同。</p>
+<p>实现简单、兼容性好，而且可以运行在大多数 Web 服务器上；缺点在于 URL 不够美观，不利于搜索引擎优化（SEO）。</p>
+<span id="more"></span>
+
+<p>History 路由解决了美观，SEO 的问题</p>
+<p>实现原理：html5 机制</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 什么作用域和闭包？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="什么作用域和闭包？"><a href="#什么作用域和闭包？" class="headerlink" title="什么作用域和闭包？"></a>什么作用域和闭包？</h1><ul>
+<li>作用域<br>JavaScript 采用词法作用域（Lexical Scope）即静态作用域，函数的作用域在函数定义时就已经确定，不会受调用位置的影响。在 JavaScript 中，<code>全局作用域</code>和<code>函数作用域</code>都是词法作用域，也就是说函数可以访问其内部外部的变量，但是外部无法访问函数内部的变量。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li>闭包<br>闭包（Closure）是指函数可以访问并操作其外部作用域的变量，即使外部作用域已经销毁，也不会影响函数内部对这些变量的访问。<br>所以闭包也可以看做是函数对其外部作用域的引用，通过这种方式扩展了函数的作用域链。</li>
+</ul>
+<h1 id="产生的内存泄露"><a href="#产生的内存泄露" class="headerlink" title="产生的内存泄露"></a>产生的内存泄露</h1><p>或者使用 WeakMap 来实现自动化的垃圾回收。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createClosure</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="comment">/*...*/</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 使用 obj ...</span></span><br><span class="line">        obj = <span class="literal">null</span>; <span class="comment">// 将 obj 置为 null</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> closure = <span class="title function_">createClosure</span>();</span><br><span class="line"></span><br><span class="line"><span class="title function_">closure</span>(); <span class="comment">// 执行内部函数，此时 obj 对象已被置为 null，可以被垃圾回收机制回收</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -427,34 +525,49 @@ https://hexo.io/themes/
       </tags>
   </entry>
   <entry>
-    <title>javascript 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/javaScript/5.%20%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
-    <content><![CDATA[<ol>
-<li>页面如何渲染</li>
-<li>Reflow 回流</li>
-<li>为什么 Javascript 要是单线程的 ?</li>
-<li>为什么 JS 阻塞页面加载 ?<ol>
-<li>是可操纵 DOM 的</li>
-<li>js 会阻塞 Dom 解析，GUI 线程会被挂起，</li>
-</ol>
+    <title>Css - 概念？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/css/Css%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="CSS-是什么？"><a href="#CSS-是什么？" class="headerlink" title="CSS 是什么？"></a>CSS 是什么？</h1><p>CSS 即层叠样式表（Cascading Style Sheets），是一种用来表现 HTML 或 XML 等文件样式的计算机语言。CSS 不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
+<p>CSS 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>CSS 选择器有哪些？优先级排序？哪些属性可以继承？<br>答案：<br>id 选择器(#myid)、类选择器(.myclassname)、标签选择器(div, h1, p)、相邻选择器(h1 + p)、子选择器（ul &gt; li）、后代选择器（li a）、通配符选择器（*）、属性选择器（a[rel&#x3D;”external”]）、伪类选择器（a:hover, li:nth-child）</p>
+<pre><code>可继承的属性：font-size, font-family, color
+不可继承的样式：border, padding, margin, width, height
+</code></pre>
 </li>
-<li>css 加载会造成阻塞吗 ？<ol>
-<li>CSS 加载会阻塞 Dom 的渲染和后面 js 的执行</li>
-</ol>
+<li><p>如何居中 div？如何居中一个浮动元素？如何让绝对定位的 div 居中？</p>
 </li>
-<li>DOMContentLoaded 与 load 的区别 ?<ol>
-<li>DOMContentLoaded -&gt; load。</li>
-</ol>
+<li><p>display 属性常见的有哪些值？<br>block 块显示<br>inline-block 行内块显示<br>none 隐藏</p>
 </li>
-<li>什么是 CRP,即关键渲染路径(Critical Rendering Path)? 如何优化 ?<ol>
-<li>浏览器渲染流程。</li>
-<li>文件大小，阻塞，速度</li>
-</ol>
+<li><p>position 的值？<br>static（默认）：按照正常 文档流 进行排列；<br>relative（相对定位）：不脱离文档流，参考自身静态位置通过 top, bottom, left, right 定位；<br>absolute(绝对定位)：参考距其最近一个不为 static 的父级元素通过 top, bottom, left, right 定位；<br>fixed(固定定位)：所固定的参照对像是可视窗口。</p>
 </li>
-<li>defer 和 async 的区别 ?</li>
-<li>谈谈浏览器的回流与重绘 ?</li>
-<li>什么是渲染层合并 (Composite) ?</li>
+<li><p>CSS3 有哪些新特性？<br>RGBA 和透明度<br>background-image background-origin(content-box&#x2F;padding-box&#x2F;border-box) background-size background-repeat<br>word-wrap（对长的不可分割单词换行）word-wrap：break-word<br>文字阴影：text-shadow： 5px 5px 5px #FF0000;（水平阴影，垂直阴影，模糊距离，阴影颜色）<br>font-face 属性：定义自己的字体<br>圆角（边框半径）：border-radius 属性用于创建圆角<br>边框图片：border-image: url(border.png) 30 30 round<br>盒阴影：box-shadow: 10px 10px 5px #888888<br>媒体查询：定义两套 css，当浏览器的尺寸变化时会采用不同的属性</p>
+</li>
+<li><p>请解释一下 CSS3 的 flexbox（弹性盒布局模型）,以及适用场景？</p>
+<p>该布局模型的目的是提供一种更加高效的方式来对容器中的条目进行布局、对齐和分配空间。在传统的布局方式中，block 布局是把块在垂直方向从上到下依次排列的；而 inline 布局则是在水平方向来排列。弹性盒布局并没有这样内在的方向限制，可以由开发人员自由操作。<br>试用场景：弹性布局适合于移动前端开发，在 Android 和 ios 上也完美支持。</p>
+</li>
 </ol>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/07/04/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%B0%BE%E9%80%92%E5%BD%92%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>JS - 什么是高阶函数？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="JS-什么是高阶函数？"><a href="#JS-什么是高阶函数？" class="headerlink" title="JS - 什么是高阶函数？"></a>JS - 什么是高阶函数？</h1><p>高阶函数是接受一个或多个函数作为参数或返回一个函数的函数。</p>
+<p>在 JavaScript 中，可以使用高阶函数实现许多常见的编程模式，如映射、过滤、排序和归约。</p>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -464,13 +577,30 @@ https://hexo.io/themes/
       </tags>
   </entry>
   <entry>
-    <title>javascript 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/javaScript/javascript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AF%86%E5%88%AB?/</url>
-    <content><![CDATA[<h1 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型?"></a>JavaScript 数据类型?</h1><ul>
-<li><p>基本数据类型<br>数字（Number）：表示数值。例如：42，3.14。<br>字符串（String）：表示文本数据。例如：”Hello”，’World’。<br>布尔值（Boolean）：表示真（true）或假（false）值。<br>undefined：表示未定义的值。<br>null：表示空值。<br>BigInt：用于表示大整数，超出了 JavaScript 中 Number 类型的范围。例如：1000000000000000000001。<br>Symbol：表示唯一的标识符。Symbol 类型的值是通过 Symbol() 函数创建的。例如：const id &#x3D; Symbol(‘id’)。</p>
-</li>
-<li><p>复杂数据类型<br>对象（Object）：对象是键值对的集合，用于存储相关数据和功能。例如：let person &#x3D; { name: “John”, age: 30 };。<br>数组（Array）：数组是有序的值列表，用于存储多个值。例如：let numbers &#x3D; [1, 2, 3, 4];。<br>函数（Function）：函数是一段可重复使用的代码块，用于执行特定任务。例如：function add(a, b) { return a + b; }。</p>
-</li>
+    <title>JS - 实现一个promiseAll？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="JS-实现一个-promiseAll？"><a href="#JS-实现一个-promiseAll？" class="headerlink" title="JS - 实现一个 promiseAll？"></a>JS - 实现一个 promiseAll？</h1><p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">promiseAll</span>(<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> len = promises.<span class="property">length</span>;</span><br><span class="line">        <span class="comment">// 请求等待结果</span></span><br><span class="line">        <span class="keyword">let</span> res = [];</span><br><span class="line">        <span class="comment">// 累计请求成功的数量</span></span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">next</span>(<span class="params">index</span>) &#123;</span><br><span class="line">            promises[index]().<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">                res[index] = result;</span><br><span class="line">                count++;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (count === len) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="title function_">resolve</span>(res);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="title function_">next</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>javaScript</category>
+      </categories>
+      <tags>
+        <tag>promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 数据类型?</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B?/</url>
+    <content><![CDATA[<h1 id="JS-数据类型"><a href="#JS-数据类型" class="headerlink" title="JS - 数据类型?"></a>JS - 数据类型?</h1><ul>
+<li>基本数据类型<br>数字（Number）：表示数值。例如：42，3.14。<br>字符串（String）：表示文本数据。例如：”Hello”，’World’。<br>布尔值（Boolean）：表示真（true）或假（false）值。<br>undefined：表示未定义的值。<br>null：表示空值。<br>BigInt：用于表示大整数，超出了 JavaScript 中 Number 类型的范围。例如：1000000000000000000001。<br>Symbol：表示唯一的标识符。Symbol 类型的值是通过 Symbol() 函数创建的。例如：const id &#x3D; Symbol(‘id’)。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li>复杂数据类型<br>对象（Object）：对象是键值对的集合，用于存储相关数据和功能。例如：let person &#x3D; { name: “John”, age: 30 };。<br>数组（Array）：数组是有序的值列表，用于存储多个值。例如：let numbers &#x3D; [1, 2, 3, 4];。<br>函数（Function）：函数是一段可重复使用的代码块，用于执行特定任务。例如：function add(a, b) { return a + b; }。</li>
 </ul>
 <h1 id="识别"><a href="#识别" class="headerlink" title="识别"></a>识别</h1><pre><code>typeof 操作符：typeof 操作符返回一个字符串，表示操作数的数据类型。
 
@@ -498,14 +628,29 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>javascript 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/javaScript/%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="什么是高阶函数？如何使用它们？"><a href="#什么是高阶函数？如何使用它们？" class="headerlink" title="什么是高阶函数？如何使用它们？"></a>什么是高阶函数？如何使用它们？</h1><p>高阶函数是接受一个或多个函数作为参数或返回一个函数的函数。在 JavaScript 中，可以使用高阶函数实现许多常见的编程模式，如映射、过滤、排序和归约。</p>
+    <title>JS - 页面如何渲染？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E9%A1%B5%E9%9D%A2%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="页面如何渲染"><a href="#页面如何渲染" class="headerlink" title="页面如何渲染"></a>页面如何渲染</h1><ul>
+<li>Reflow 回流</li>
+</ul>
 <span id="more"></span>
 
-<h1 id="什么是尾递归优化？如何使用它？"><a href="#什么是尾递归优化？如何使用它？" class="headerlink" title="什么是尾递归优化？如何使用它？"></a>什么是尾递归优化？如何使用它？</h1><p>尾递归优化是一种优化技术，可以减少递归函数的内存消耗。在 JavaScript 中，可以使用尾递归优化来减少递归函数的栈帧，从而避免堆栈溢出错误。</p>
-<h1 id="什么是柯里化（Currying）？如何使用它？"><a href="#什么是柯里化（Currying）？如何使用它？" class="headerlink" title="什么是柯里化（Currying）？如何使用它？"></a>什么是柯里化（Currying）？如何使用它？</h1><p>柯里化（Currying）是一种将接受多个参数的函数转换为接受单个参数的函数序列的技术。使用柯里化可以更轻松地创建可重用的函数，并更容易地进行部分应用和组合。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 为什么 Javascript 要是单线程的 ?</span><br><span class="line">4. 为什么 JS 阻塞页面加载 ?</span><br><span class="line">    1. 是可操纵 DOM 的</span><br><span class="line">    2. js 会阻塞 Dom 解析，GUI 线程会被挂起，</span><br><span class="line">5. css 加载会造成阻塞吗 ？</span><br><span class="line">    1. CSS 加载会阻塞 Dom 的渲染和后面 js 的执行</span><br><span class="line">6. DOMContentLoaded 与 load 的区别 ?</span><br><span class="line">    1. DOMContentLoaded -&gt; load。</span><br><span class="line">7. 什么是 CRP,即关键渲染路径(Critical Rendering Path)? 如何优化 ?</span><br><span class="line">    1. 浏览器渲染流程。</span><br><span class="line">    2. 文件大小，阻塞，速度</span><br><span class="line">8. defer 和 async 的区别 ?</span><br><span class="line">9. 谈谈浏览器的回流与重绘 ?</span><br><span class="line">10. 什么是渲染层合并 (Composite) ?</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 概念？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="什么是柯里化（Currying）？如何使用它？"><a href="#什么是柯里化（Currying）？如何使用它？" class="headerlink" title="什么是柯里化（Currying）？如何使用它？"></a>什么是柯里化（Currying）？如何使用它？</h1><p>柯里化（Currying）是一种将接受多个参数的函数转换为接受单个参数的函数序列的技术。使用柯里化可以更轻松地创建可重用的函数，并更容易地进行部分应用和组合。</p>
 <h1 id="如何使用函数式编程？它的优点和缺点是什么？"><a href="#如何使用函数式编程？它的优点和缺点是什么？" class="headerlink" title="如何使用函数式编程？它的优点和缺点是什么？"></a>如何使用函数式编程？它的优点和缺点是什么？</h1><p>函数式编程是一种编程范式，它强调使用纯函数和不可变数据结构来避免副作用和共享状态。它的优点包括简洁、可读性好、易于测试和并行化。缺点是在某些情况下可能会导致复杂性增加，而且需要更多的内存空间。</p>
+<span id="more"></span>
+
 <h1 id="如何使用函数组合（Function-Composition）？有哪些常见的组合函数？"><a href="#如何使用函数组合（Function-Composition）？有哪些常见的组合函数？" class="headerlink" title="如何使用函数组合（Function Composition）？有哪些常见的组合函数？"></a>如何使用函数组合（Function Composition）？有哪些常见的组合函数？</h1><p>函数组合（Function Composition）是将多个函数组合成一个更大的函数的过程。在 JavaScript 中，可以使用函数组合来创建一系列可重用的管道函数。常见的组合函数包括 compose、pipe 和 curry。</p>
 <h1 id="什么是-JavaScript-中的变量提升（Hoisting）？如何避免它？"><a href="#什么是-JavaScript-中的变量提升（Hoisting）？如何避免它？" class="headerlink" title="什么是 JavaScript 中的变量提升（Hoisting）？如何避免它？"></a>什么是 JavaScript 中的变量提升（Hoisting）？如何避免它？</h1><p>变量提升指的是在 JavaScript 中，变量和函数声明会被提升到它们所在作用域的顶部，即在代码执行之前就已经进行了声明。为避免变量提升带来的问题，可以使用 let 或 const 关键字声明变量，并使用函数表达式而非函数声明来定义函数。</p>
 <h1 id="什么是纯函数（Pure-Function）？为什么要使用它们？"><a href="#什么是纯函数（Pure-Function）？为什么要使用它们？" class="headerlink" title="什么是纯函数（Pure Function）？为什么要使用它们？"></a>什么是纯函数（Pure Function）？为什么要使用它们？</h1><pre><code>纯函数指的是没有副作用且返回值仅由输入决定的函数，即同样的输入总会得到同样的输出，且不会对外部环境产生任何影响。使用纯函数可以提高代码的可读性、可维护性和可测试性，因为它们具有确定性且不会引入意外的行为。
@@ -513,6 +658,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
 <h1 id="什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？"><a href="#什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？" class="headerlink" title="什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？"></a>什么是不可变性（Immutability）？如何使用它来编写更健壮的代码？</h1><p>不可变性指的是数据一旦被创建后便不能被更改的特性。在 JavaScript 中可以使用 Object.freeze() 方法来冻结对象，或使用第三方库如 Immutable.js 来创建不可变数据。使用不可变性可以避免数据被意外修改，从而减少错误和提高代码健壮性。</p>
 <h1 id="什么是-JavaScript-中的事件委托（Event-Delegation）？如何使用它？"><a href="#什么是-JavaScript-中的事件委托（Event-Delegation）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的事件委托（Event Delegation）？如何使用它？"></a>什么是 JavaScript 中的事件委托（Event Delegation）？如何使用它？</h1><p>事件委托是指将事件处理程序绑定到其祖先元素上，从而利用事件冒泡机制来处理子元素的事件。通过事件委托可以减少事件处理程序的数量，提高性能并避免内存泄漏问题。</p>
 <h1 id="什么是-JavaScript-中的内存泄漏？如何避免它？"><a href="#什么是-JavaScript-中的内存泄漏？如何避免它？" class="headerlink" title="什么是 JavaScript 中的内存泄漏？如何避免它？"></a>什么是 JavaScript 中的内存泄漏？如何避免它？</h1><p>内存泄漏指的是程序中存在指向已不再使用的内存空间的引用，从而导致这些空间无法被垃圾回收机制释放。为避免内存泄漏，可以手动解除对对象的引用、使用闭包时注意及时释放内存、避免过度使用全局变量等。</p>
+<h1 id="什么是尾递归优化？如何使用它？"><a href="#什么是尾递归优化？如何使用它？" class="headerlink" title="什么是尾递归优化？如何使用它？"></a>什么是尾递归优化？如何使用它？</h1><p>尾递归优化是一种优化技术，可以减少递归函数的内存消耗。在 JavaScript 中，可以使用尾递归优化来减少递归函数的栈帧，从而避免堆栈溢出错误。</p>
 <h1 id="什么是-JavaScript-中的垃圾回收机制？如何影响应用程序的性能？"><a href="#什么是-JavaScript-中的垃圾回收机制？如何影响应用程序的性能？" class="headerlink" title="什么是 JavaScript 中的垃圾回收机制？如何影响应用程序的性能？"></a>什么是 JavaScript 中的垃圾回收机制？如何影响应用程序的性能？</h1><p>JavaScript 中的垃圾回收机制是通过检测不再使用的变量和对象并释放它们占用的内存空间来实现的。垃圾回收机制的性能会受到代码中对象创建和销毁的频率、变量的作用域以及循环引用等因素的影响。</p>
 <h1 id="什么是-JavaScript-中的事件驱动编程（Event-Driven-Programming）？如何使用它？"><a href="#什么是-JavaScript-中的事件驱动编程（Event-Driven-Programming）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的事件驱动编程（Event-Driven Programming）？如何使用它？"></a>什么是 JavaScript 中的事件驱动编程（Event-Driven Programming）？如何使用它？</h1><p>事件驱动编程是一种编程范式，其中程序的执行流程由外部事件触发而不是指令顺序决定。在 JavaScript 中，例如使用事件监听器函数来处理用户交互、浏览器加载等事件。可以通过添加事件监听器（EventListener）来注册事件，监听器函数会在事件被触发时自动运行。</p>
 <h1 id="什么是-JavaScript-中的元编程（Metaprogramming）？如何使用它？"><a href="#什么是-JavaScript-中的元编程（Metaprogramming）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的元编程（Metaprogramming）？如何使用它？"></a>什么是 JavaScript 中的元编程（Metaprogramming）？如何使用它？</h1><p>元编程是一种编程技术，其中程序可以修改或生成其他程序。在 JavaScript 中，可以使用原型链、Reflect API、Proxy 对象等元编程技术来修改对象行为、拦截属性操作、创建类等。</p>
@@ -523,6 +669,19 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
 <h1 id="如何使用-JavaScript-中的面向对象编程（OOP）？它的优点和缺点是什么？"><a href="#如何使用-JavaScript-中的面向对象编程（OOP）？它的优点和缺点是什么？" class="headerlink" title="如何使用 JavaScript 中的面向对象编程（OOP）？它的优点和缺点是什么？"></a>如何使用 JavaScript 中的面向对象编程（OOP）？它的优点和缺点是什么？</h1><p>面向对象编程是一种基于类和对象的编程方法，JavaScript 中可以使用 class 关键字创建类，使用 new 运算符实例化对象。面向对象编程的优点包括代码架构清晰，易于维护和扩展，缺点包括性能较低，可能过于复杂等。</p>
 <h1 id="如何使用-JavaScript-中的正则表达式（Regular-Expression）？有哪些常见的正则表达式模式？"><a href="#如何使用-JavaScript-中的正则表达式（Regular-Expression）？有哪些常见的正则表达式模式？" class="headerlink" title="如何使用 JavaScript 中的正则表达式（Regular Expression）？有哪些常见的正则表达式模式？"></a>如何使用 JavaScript 中的正则表达式（Regular Expression）？有哪些常见的正则表达式模式？</h1><p>正则表达式是一种用于匹配文本的模式，JavaScript 中使用 RegExp 类型或正则表达式字面量来创建和操作正则表达式。常见的正则表达式模式包括匹配数字、字母、空白字符、URL 等。</p>
 <h1 id="什么是-JavaScript-中的事件循环机制（Event-Loop）？如何理解其中的微任务和宏任务？"><a href="#什么是-JavaScript-中的事件循环机制（Event-Loop）？如何理解其中的微任务和宏任务？" class="headerlink" title="什么是 JavaScript 中的事件循环机制（Event Loop）？如何理解其中的微任务和宏任务？"></a>什么是 JavaScript 中的事件循环机制（Event Loop）？如何理解其中的微任务和宏任务？</h1><p>事件循环机制是 JavaScript 运行时中处理异步操作的核心机制，微任务和宏任务是异步事件的两种类型。微任务是在当前执行栈为空时立即执行的任务（如 Promise.then()），而宏任务则需要等待下一个事件循环周期才会执行（如 setTimeout）。了解事件循环机制可以帮助开发者更好地处理异步编程和避免性能问题。</p>
+<h1 id="什么是变量提升？"><a href="#什么是变量提升？" class="headerlink" title="什么是变量提升？"></a>什么是变量提升？</h1><p>变量提升是指在执行代码之前，JS 引擎会先处理函数声明和变量声明，将其放入内存中，从而使得函数和变量可以在声明之前被引用。变量声明优先级低于函数声明，避免变量污染可以通过使用 let 或 const 来定义块级作用域。</p>
+<h1 id="如何使用生成器（Generator）函数？它们有什么特殊之处？"><a href="#如何使用生成器（Generator）函数？它们有什么特殊之处？" class="headerlink" title="如何使用生成器（Generator）函数？它们有什么特殊之处？"></a>如何使用生成器（Generator）函数？它们有什么特殊之处？</h1><p>生成器（Generator）函数是一种特殊的函数，可以通过 yield 语句来暂停函数的执行，并返回一个可迭代的对象。生成器函数可以逐步产生新的值，而不是一次性返回所有值。生成器函数通常用于处理大型数据集或无限序列。</p>
+<h1 id="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"><a href="#什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？" class="headerlink" title="什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？"></a>什么是迭代器（Iterator）和可迭代对象（Iterable）？如何使用它们？</h1><p>迭代器（Iterator）是一个对象，它能够迭代（遍历）一个容器（例如列表或字典）中的所有元素。可迭代对象（Iterable）是一个带有<strong>iter</strong>()方法的对象，它返回一个迭代器。使用迭代器和可迭代对象可以遍历各种类型的数据结构，如列表、元组、字典等。</p>
+<h1 id="什么是闭包中的循环问题？如何解决？"><a href="#什么是闭包中的循环问题？如何解决？" class="headerlink" title="什么是闭包中的循环问题？如何解决？"></a>什么是闭包中的循环问题？如何解决？</h1><p>闭包中的循环问题指的是在闭包内部使用循环变量时，可能会遇到意料之外的结果。这是因为循环变量被绑定在闭包中，并且所有迭代都共享同一个变量。为了解决这个问题，可以使用立即调用函数表达式（IIFE）或 let 关键字来创建一个新的绑定。</p>
+<h1 id="什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？"><a href="#什么是-IIFE（Immediately-Invoked-Function-Expression）？如何使用它？" class="headerlink" title="什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？"></a>什么是 IIFE（Immediately Invoked Function Expression）？如何使用它？</h1><p>IIFE 是一种立即调用的函数表达式，它可以在定义后立即执行，常用于创建独立的作用域并保护其中的变量不受全局作用域的影响。可以通过在函数定义后添加一对括号并传入参数来调用 IIFE。</p>
+<h1 id="如何使用模块化编程？如何导入和导出模块？"><a href="#如何使用模块化编程？如何导入和导出模块？" class="headerlink" title="如何使用模块化编程？如何导入和导出模块？"></a>如何使用模块化编程？如何导入和导出模块？</h1><p>模块化编程指将程序分解为小的模块，每个模块负责完成一个独立的功能。在 JavaScript 中，可以使用 import 和 export 语句来导入和导出模块。导入语句用于引入其他模块中的代码，导出语句用于将代码暴露给其他模块使用。</p>
+<h1 id="如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？"><a href="#如何使用-JavaScript-中的异步编程模式？有哪些常见的异步编程模式？" class="headerlink" title="如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？"></a>如何使用 JavaScript 中的异步编程模式？有哪些常见的异步编程模式？</h1><p>异步编程模式是 JavaScript 中处理异步操作的方式，包括回调函数、Promise、async&#x2F;await 等。其中回调函数是最基础的异步编程模式，但可能导致回调地狱问题。Promise 和 async&#x2F;await 提供了更好的语法和代码结构。</p>
+<h1 id="什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？"><a href="#什么是-JavaScript-中的模板字符串（Template-Literals）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？"></a>什么是 JavaScript 中的模板字符串（Template Literals）？如何使用它们？</h1><p>模板字符串是一种用反引号 &#96; 包围的字符串，支持多行文本和插入表达式，可以简化字符串拼接、生成 HTML 片段等操作。</p>
+<h1 id="什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？"><a href="#什么是-JavaScript-中的箭头函数（Arrow-Function）？它们与传统函数有什么区别？" class="headerlink" title="什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？"></a>什么是 JavaScript 中的箭头函数（Arrow Function）？它们与传统函数有什么区别？</h1><p>箭头函数是一种使用 &#x3D;&gt; 符号定义的函数，与传统函数相比具有更简洁的语法和固定的 this 绑定。箭头函数中的 this 始终指向外部作用域，不会被改变，但也有一些限制。</p>
+<h1 id="什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？"><a href="#什么是-JavaScript-中的解构赋值（Destructuring-Assignment）？如何使用它？" class="headerlink" title="什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？"></a>什么是 JavaScript 中的解构赋值（Destructuring Assignment）？如何使用它？</h1><p>解构赋值是一种从数组或对象中提取值并赋给变量的语法，可以简化代码和减少重复。在 JavaScript 中，可以使用数组解构和对象解构来实现解构赋值。</p>
+<h1 id="什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？"><a href="#什么是-JavaScript-中的扩展运算符（Spread-Operator）和剩余参数（Rest-Parameters）？如何使用它们？" class="headerlink" title="什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？"></a>什么是 JavaScript 中的扩展运算符（Spread Operator）和剩余参数（Rest Parameters）？如何使用它们？</h1><p>扩展运算符和剩余参数都使用 … 语法来实现。扩展运算符可以将数组或对象展开成多个独立的值，剩余参数则可以将多个参数合并成一个数组。常见的应用包括数组合并、对象合并、函数传参等。</p>
+<h1 id="什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？"><a href="#什么是-JavaScript-中的迭代器协议（Iterator-Protocol）和生成器函数（Generator-Function）？" class="headerlink" title="什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？"></a>什么是 JavaScript 中的迭代器协议（Iterator Protocol）和生成器函数（Generator Function）？</h1><p>迭代器协议和生成器函数是 ES6 引入的两个新特性，用于处理序列数据和异步编程。迭代器协议定义了一个 next() 方法，返回一个具有 value 和 done 属性的对象，用于遍历序列数据；生成器函数通过 yield 关键字在多次执行中暂停和恢复函数的执行。</p>
+<h1 id="如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？"><a href="#如何使用-JavaScript-中的-Set、Map-和-WeakSet、WeakMap-数据结构？" class="headerlink" title="如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？"></a>如何使用 JavaScript 中的 Set、Map 和 WeakSet、WeakMap 数据结构？</h1><p>Set、Map 和 WeakSet、WeakMap 数据结构是 ES6 引入的四种新类型，它们分别用于存储唯一值、键值对映射、弱引用对象集合和弱引用键值对映射等场景，提供了更丰富和灵活的数据存储方式。</p>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -532,33 +691,36 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>javascript 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/javaScript/%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="什么作用域和闭包？"><a href="#什么作用域和闭包？" class="headerlink" title="什么作用域和闭包？"></a>什么作用域和闭包？</h1><ul>
-<li><p>作用域<br>JavaScript 采用词法作用域（Lexical Scope）即静态作用域，函数的作用域在函数定义时就已经确定，不会受调用位置的影响。在 JavaScript 中，<code>全局作用域</code>和<code>函数作用域</code>都是词法作用域，也就是说函数可以访问其内部外部的变量，但是外部无法访问函数内部的变量。</p>
-</li>
-<li><p>闭包<br>闭包（Closure）是指函数可以访问并操作其外部作用域的变量，即使外部作用域已经销毁，也不会影响函数内部对这些变量的访问。<br>所以闭包也可以看做是函数对其外部作用域的引用，通过这种方式扩展了函数的作用域链。</p>
-</li>
-</ul>
-<h1 id="产生的内存泄露"><a href="#产生的内存泄露" class="headerlink" title="产生的内存泄露"></a>产生的内存泄露</h1><p>或者使用 WeakMap 来实现自动化的垃圾回收。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createClosure</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="comment">/*...*/</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 使用 obj ...</span></span><br><span class="line">        obj = <span class="literal">null</span>; <span class="comment">// 将 obj 置为 null</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> closure = <span class="title function_">createClosure</span>();</span><br><span class="line"></span><br><span class="line"><span class="title function_">closure</span>(); <span class="comment">// 执行内部函数，此时 obj 对象已被置为 null，可以被垃圾回收机制回收</span></span><br></pre></td></tr></table></figure>
+    <title>Vue - 中实现组件通信？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Vue2-中实现组件通信？"><a href="#Vue2-中实现组件通信？" class="headerlink" title="Vue2 中实现组件通信？"></a>Vue2 中实现组件通信？</h1><ol>
+<li>Props：props 向子组件传递数据，</li>
+<li>Events：父组件通过子组件通过 emit 事件向父组件触发事件进行通信。</li>
+<li>$attrs：属性透传</li>
+</ol>
+<span id="more"></span>
+
+<h1 id="Vue3-中实现组件通信？"><a href="#Vue3-中实现组件通信？" class="headerlink" title="Vue3 中实现组件通信？"></a>Vue3 中实现组件通信？</h1><ol>
+<li>provide&#x2F;inject：与 Vuex 不同的是，它是基于依赖注入的方式实现的。父组件通过 provide 提供数据，子孙组件通过 inject 来注入数据，从而实现了跨层级的组件通信。</li>
+</ol>
 ]]></content>
       <categories>
-        <category>javascript</category>
+        <category>Vue</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
-    <title>javascript 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/javaScript/%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%EF%BC%9F/</url>
+    <title>JS - 什么作用域和闭包？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS-%20%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%EF%BC%9F/</url>
     <content><![CDATA[<h1 id="什么原型和原型链？"><a href="#什么原型和原型链？" class="headerlink" title="什么原型和原型链？"></a>什么原型和原型链？</h1><ul>
 <li><p>每个 JavaScript 对象都有一个原型（prototype）属性，它指向另一个对象，<br>这个对象就是 当前对象的原型。</p>
 <p>当对象在自己的属性上找不到某个属性或方法，它会到原型对象中查找，直到找到为止，这就是原型链。</p>
 <p>原型链的顶端是 Object.prototype 对象，Object.prototype 的原型为 null。</p>
 </li>
 </ul>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>javascript</category>
@@ -568,191 +730,122 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>实现一个 promiseAll</title>
-    <url>/2022/05/01/%E5%89%8D%E7%AB%AF/javaScript/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll/</url>
-    <content><![CDATA[<h1 id="实现一个-promiseAll…"><a href="#实现一个-promiseAll…" class="headerlink" title="实现一个 promiseAll…"></a>实现一个 promiseAll…</h1><span id="more"></span>
+    <title>Vue - 中的 computed 和 watch 区别？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Vue-中的-computed-和-watch-区别？"><a href="#Vue-中的-computed-和-watch-区别？" class="headerlink" title="Vue - 中的 computed 和 watch 区别？"></a>Vue - 中的 computed 和 watch 区别？</h1><p>在 Vue 中，computed 和 watch 都可以用于监听数据变化并做出响应。 区别在于：</p>
+<ol>
+<li>计算属性 (computed)：可以处理依赖关系，并且具有缓存机制。</li>
+</ol>
+<span id="more"></span>
 
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">promiseAll</span>(<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> len = promises.<span class="property">length</span>;</span><br><span class="line">        <span class="comment">// 请求等待结果</span></span><br><span class="line">        <span class="keyword">let</span> res = [];</span><br><span class="line">        <span class="comment">// 累计请求成功的数量</span></span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">next</span>(<span class="params">index</span>) &#123;</span><br><span class="line">            promises[index]().<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">                res[index] = result;</span><br><span class="line">                count++;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (count === len) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="title function_">resolve</span>(res);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="title function_">next</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>javaScript</category>
-      </categories>
-      <tags>
-        <tag>promise</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/1.%20%E4%BB%80%E4%B9%88%E6%98%AF%20Node.js?/</url>
-    <content><![CDATA[<h1 id="什么是-Node-js-它的主要特点是什么？"><a href="#什么是-Node-js-它的主要特点是什么？" class="headerlink" title="什么是 Node.js? 它的主要特点是什么？"></a>什么是 Node.js? 它的主要特点是什么？</h1><p>GPT 答：Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，它在服务器端运行 JavaScript 代码。它的主要特点是非阻塞 I&#x2F;O，事件驱动和高效性能。</p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/2.%20Node.js%20%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%AE%83%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%EF%BC%9F/</url>
-    <content><![CDATA[<ol>
-<li><p>Node.js 中的事件循环是什么？它如何工作？</p>
-<p> GPT 答：Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。</p>
-</li>
-<li><p>loop 官方</p>
-<p> 什么是事件循环？<br> 事件循环允许 Node.js 通过尽可能将操作卸载到系统内核来执行非阻塞 I&#x2F;O 操作 ——尽管 JavaScript 是单线程的。</p>
-<p> 事件循环解释<br> 当 Node.js 启动时，它会初始化事件循环，处理提供的输入脚本，这可能会进行异步 API 调用、调度计时器或调用 process.nextTick()，然后开始处理事件环形。</p>
-</li>
-</ol>
-<p>官方说明链接：<a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick">https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick</a></p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/3.%20Node.js%20%E4%B8%AD%E7%9A%84%E6%A8%A1%E5%9D%97%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%B8%B8%E8%A7%81%E7%9A%84%E6%A8%A1%E5%9D%97%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Node-js-中的模块是什么？常见的模块有哪些？"><a href="#Node-js-中的模块是什么？常见的模块有哪些？" class="headerlink" title="Node.js 中的模块是什么？常见的模块有哪些？"></a>Node.js 中的模块是什么？常见的模块有哪些？</h1><p>答：Node.js 中的模块是一段实现了特定功能的代码。常见的模块包括核心模块（如 fs 和 http）和第三方模块（如 Express 框架和 async 库）。</p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/5.%20Node.js%20%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8C%E5%BC%82%E5%B8%B8%EF%BC%9F%E4%BD%A0%E8%83%BD%E6%8F%90%E4%BE%9B%E5%87%A0%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E9%94%99%E8%AF%AF%E6%88%96%E5%BC%82%E5%B8%B8%E5%90%97%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="如何处理-Node-js-中的错误和异常？你能提供几个常见的错误或异常吗？"><a href="#如何处理-Node-js-中的错误和异常？你能提供几个常见的错误或异常吗？" class="headerlink" title="如何处理 Node.js 中的错误和异常？你能提供几个常见的错误或异常吗？"></a>如何处理 Node.js 中的错误和异常？你能提供几个常见的错误或异常吗？</h1><p>答：在 Node.js 中，错误和异常通常由回调函数或 Promise 的拒绝处理函数抛出。常见的错误或异常包括类型错误、未定义变量和超时错误等。</p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/6.%20Node.js%20%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%20HTTP%20%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F%E8%AF%B7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B/</url>
-    <content><![CDATA[<h1 id="如何使用-Node-js-创建一个-HTTP-服务器？请提供一个示例。"><a href="#如何使用-Node-js-创建一个-HTTP-服务器？请提供一个示例。" class="headerlink" title="如何使用 Node.js 创建一个 HTTP 服务器？请提供一个示例。"></a>如何使用 Node.js 创建一个 HTTP 服务器？请提供一个示例。</h1><p>答：使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.<span class="property">statusCode</span> = <span class="number">200</span>;</span><br><span class="line">    res.<span class="title function_">setHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;text/plain&quot;</span>);</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">3000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Server running at http://localhost:3000/&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/4.%20Node.js%20%E4%B8%AD%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%EF%BC%9F%E8%AF%B7%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E%E3%80%82/</url>
-    <content><![CDATA[<h1 id="如何在-Node-js-中处理异步操作？请举例说明。"><a href="#如何在-Node-js-中处理异步操作？请举例说明。" class="headerlink" title="如何在 Node.js 中处理异步操作？请举例说明。"></a>如何在 Node.js 中处理异步操作？请举例说明。</h1><p>答：在 Node.js 中可以使用回调函数、Promise 和 async&#x2F;await 等方法来处理异步操作。例如，在读取文件时，可以使用 fs.readFile 方法传递一个回调函数作为参数，在读取完成后调用该函数。</p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/7.%20Node.js%20%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F%E8%AF%B7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B%E3%80%82/</url>
-    <content><![CDATA[<h1 id="如何使用-Node-js-访问数据库？请提供一个示例。"><a href="#如何使用-Node-js-访问数据库？请提供一个示例。" class="headerlink" title="如何使用 Node.js 访问数据库？请提供一个示例。"></a>如何使用 Node.js 访问数据库？请提供一个示例。</h1><p>答：在 Node.js 中访问数据库需要使用适当的数据库驱动程序。常见的数据库驱动程序包括 MongoDB 的 mongodb 模块和 MySQL 的 mysql2 模块。以下是使用 mongodb 模块连接到 MongoDB 并查询数据的示例：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MongoClient</span> = <span class="built_in">require</span>(<span class="string">&quot;mongodb&quot;</span>).<span class="property">MongoClient</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> url = <span class="string">&quot;mongodb://localhost:27017/myproject&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">MongoClient</span>.<span class="title function_">connect</span>(url, <span class="function">(<span class="params">err, client</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Connected successfully to server&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> db = client.<span class="title function_">db</span>(<span class="string">&quot;myproject&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> collection = db.<span class="title function_">collection</span>(<span class="string">&quot;documents&quot;</span>);</span><br><span class="line"></span><br><span class="line">    collection.<span class="title function_">find</span>(&#123;&#125;).<span class="title function_">toArray</span>(<span class="function">(<span class="params">err, docs</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Found the following records&quot;</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(docs);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    client.<span class="title function_">close</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/8.%20Node.js%20%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%EF%BC%9F%E8%AF%B7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B%E3%80%82/</url>
-    <content><![CDATA[<h1 id="如何使用-Node-js-处理文件系统？请提供一个示例。"><a href="#如何使用-Node-js-处理文件系统？请提供一个示例。" class="headerlink" title="如何使用 Node.js 处理文件系统？请提供一个示例。"></a>如何使用 Node.js 处理文件系统？请提供一个示例。</h1><p>答：在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line">fs.<span class="title function_">readFile</span>(<span class="string">&quot;file.txt&quot;</span>, <span class="string">&quot;utf8&quot;</span>, <span class="function">(<span class="params">err, data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/9.%20Node.js%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%81%EF%BC%9F%E8%AF%B7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B%E3%80%82/</url>
-    <content><![CDATA[<h1 id="如何在-Node-js-中使用流？请提供一个示例。"><a href="#如何在-Node-js-中使用流？请提供一个示例。" class="headerlink" title="如何在 Node.js 中使用流？请提供一个示例。"></a>如何在 Node.js 中使用流？请提供一个示例。</h1><p>答：在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> readStream = fs.<span class="title function_">createReadStream</span>(<span class="string">&#x27;file.txt&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> writeStream = fs.<span class="title function_">createWriteStream</span>(<span class="string">&#x27;output.txt&#x27;</span>);</span><br><span class="line"></span><br><span class="line">readStream.<span class="title function_">pipe</span>(write</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/nodejs/10.%20Node.js%20%E8%BF%9B%E8%A1%8C%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%EF%BC%9F%E4%BD%A0%E8%83%BD%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E6%B5%81%E8%A1%8C%E7%9A%84%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E5%90%97%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="如何使用-Node-js-进行单元测试？你能提供一些流行的测试框架吗？"><a href="#如何使用-Node-js-进行单元测试？你能提供一些流行的测试框架吗？" class="headerlink" title="如何使用 Node.js 进行单元测试？你能提供一些流行的测试框架吗？"></a>如何使用 Node.js 进行单元测试？你能提供一些流行的测试框架吗？</h1><p>答：在 Node.js 中进行单元测试需要使用适当的测试框架。常用的测试框架包括 Mocha、Jasmine 和 Jest 等。可以使用这些框架编写测试用例，并使用断言库（如 Chai）检查期望的结果。以下是一个使用 Mocha 和 Chai 编写测试用例的示例：</p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/react/3.%20react/</url>
-    <content><![CDATA[<ol>
-<li>react 生命周期</li>
-<li>react diff 算法，说一说</li>
-<li>React 如何处理错误信息</li>
-<li>react 如何处理崩溃</li>
+<ol start="2">
+<li>监听器 (watch)：能够响应数据的变化，并在数据变化时执行指定的操作。监听器不会缓存值，每次数据变化都会触发回调函数。</li>
 </ol>
 ]]></content>
       <categories>
-        <category>React</category>
+        <category>Vue</category>
       </categories>
       <tags>
-        <tag>React</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
-    <title>TypeScript 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/typescript/1.%20%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<ol>
-<li><p>interface 和 type 区别？</p>
-<p> interface 主要用于描述对象的结构，可继承<br> type 更适合用于描述一般的类型，type 能够给任何类型起别名，<br> type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
+    <title>Vue - 中的 mixin 和 extends 优缺点？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Vue-中的-mixin-和-extends-优缺点？"><a href="#Vue-中的-mixin-和-extends-优缺点？" class="headerlink" title="Vue - 中的 mixin 和 extends 优缺点？"></a>Vue - 中的 mixin 和 extends 优缺点？</h1><p>mixin</p>
+<p>优点：<br>可以包含任意选项，具有很大的灵活性；<br>可以复用在多个组件中，提高了代码的复用性和维护性；<br>可以通过 Vue.mixin 全局混入到所有组件中，扩展了 Vue 的能力。</p>
+<span id="more"></span>
+
+<p>缺点：<br>由于 mixin 会与组件本身的选项合并，可能会导致命名冲突或者选项被覆盖的问题；<br>滥用 mixin 可能导致代码变得难以理解和维护。</p>
+<p>extends</p>
+<p>优点：<br>可以方便地扩展基础组件的选项，节省了编写重复代码的时间；<br>使组件的继承关系更加清晰，易于理解。</p>
+<p>缺点：<br>扩展基础组件的选项可能会与其他组件的选项产生冲突；<br>继承链过长可能会导致性能问题。</p>
+<h1 id="Vue-中的-mixins-是什么？如何使用它？"><a href="#Vue-中的-mixins-是什么？如何使用它？" class="headerlink" title="# Vue 中的 mixins 是什么？如何使用它？"></a># Vue 中的 mixins 是什么？如何使用它？</h1><p>在 Vue 中，mixins 是一种可重用的组件选项。它允许你在多个组件中共享相同的逻辑或功能，从而避免代码复制和粘贴。</p>
+<p>具体来说，mixins 提供了一种方式将组件选项合并为一个新的选项对象，然后传递给组件创建函数。这样，组件可以继承这些选项，并且可以根据需要进行覆盖或修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const myMixin = &#123; // mixin 选项 &#125; new Vue(&#123; mixins: [myMixin], // 组件选项 &#125;)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue - 中的 v-model 指令？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Vue-中的-v-model-指令？"><a href="#Vue-中的-v-model-指令？" class="headerlink" title="Vue - 中的 v-model 指令？"></a>Vue - 中的 v-model 指令？</h1><p>它可以简化表单元素上的双向数据绑定。它通常用于对表单元素的输入值进行绑定，这样数据就会在视图和模型之间自动同步。</p>
+<span id="more"></span>
+
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>v-model 是什么。语法糖 :value + @input。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 原生DOM input select textarea</span></span><br><span class="line">&lt;input v-model=<span class="string">&quot;val&quot;</span>&gt;</span><br><span class="line">&#123;<span class="comment">/* &lt;!-- 基本等价于，因为内部还有一些其他的处理 --&gt; */</span>&#125;</span><br><span class="line">&lt;input :value=<span class="string">&quot;val&quot;</span> @input=<span class="string">&quot;val = $event.target.value&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&#123;<span class="comment">/* 自定义组件 */</span>&#125;</span><br><span class="line">&lt;v-input v-model=<span class="string">&quot;val&quot;</span>&gt;&lt;/v-input&gt;</span><br><span class="line">&#123;<span class="comment">/* &lt;!-- 等价于 --&gt; */</span>&#125;</span><br><span class="line">&lt;v-input :value=<span class="string">&quot;val&quot;</span> @input=<span class="string">&quot;val = $event&quot;</span>&gt;&lt;/v-input&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://cn.vuejs.org/guide/components/v-model.html">https://cn.vuejs.org/guide/components/v-model.html</a></p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue - 什么是 Virtual DOM，优势？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Vue-什么是-Virtual-DOM，优势？"><a href="#Vue-什么是-Virtual-DOM，优势？" class="headerlink" title="Vue - 什么是 Virtual DOM，优势？"></a>Vue - 什么是 Virtual DOM，优势？</h1><p>它是一个内存中的虚拟节点树，其结构与真实的 DOM 树相似，但是它只存在于内存中，并不需要直接操作浏览器中的 DOM。当数据发生变化时，框架会先利用算法比较新旧虚拟 DOM 的差异，并仅更新需要更新的部分。</p>
+<span id="more"></span>
+
+<h1 id="虚拟-DOM-的优势："><a href="#虚拟-DOM-的优势：" class="headerlink" title="虚拟 DOM 的优势："></a>虚拟 DOM 的优势：</h1><ol>
+<li><p>性能优化：虚拟 DOM 可以通过判断传入数据是否有变化来决定是否需要重新渲染整个组件，从而避免了无谓的重绘和回流操作，提高了页面渲染性能。</p>
 </li>
-<li><p>TypeScript 中的泛型是什么？如何使用泛型？</p>
-<p> TypeScript 中的泛型是一种类型参数，它可以在定义函数、类或接口时使用，用于指定一个类型占位符。<br> 这个类型占位符可以在调用函数或实例化类时被具体的类型所代替，从而实现代码的灵活性和复用性。</p>
- <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> identity&lt;T&gt;(<span class="attr">arg</span>: T): T &#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>开发效率：虚拟 DOM 使得开发者可以将精力集中在业务逻辑上，不需要关注底层 DOM 操作，从而提高了开发效率。</p>
 </li>
-<li><p>如何在 TypeScript 中使用命名空间？</p>
-<p> 简单回答下：<br> 在 TypeScript 中，命名空间是一种用于组织代码的结构化方式。<br> 我们可以使用命名空间来避免命名冲突，并将相关的函数、类和接口等组织到一个逻辑单元中。</p>
- <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">namespace <span class="title class_">MyNamespace</span> &#123;</span><br><span class="line">  <span class="keyword">export</span> interface <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: string;</span><br><span class="line">    <span class="attr">age</span>: number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params">person: Person</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello, <span class="subst">$&#123;person.name&#125;</span>!`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">person</span>: <span class="title class_">MyNamespace</span>.<span class="property">Person</span> = &#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="title class_">MyNamespace</span>.<span class="title function_">sayHello</span>(person);</span><br></pre></td></tr></table></figure>
+<li><p>跨平台支持：由于虚拟 DOM 只是一个内存中的对象，因此可以在不同平台上使用相同的代码，比如浏览器、移动端和服务器端渲染等。</p>
 </li>
-<li><p>如何在 TypeScript 中定义一个接口？如何使用接口来描述函数类型？</p>
- <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">interface <span class="title class_">AddFunction</span> &#123;</span><br><span class="line">    (<span class="attr">x</span>: number, <span class="attr">y</span>: number): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</p>
-<p> 简单回答下：<br> 在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
- <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">  <span class="title class_">Up</span>,</span><br><span class="line">  <span class="title class_">Down</span>,</span><br><span class="line">  <span class="title class_">Left</span>,</span><br><span class="line">  <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span></span><br></pre></td></tr></table></figure></li>
 </ol>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue - 有哪些性能优化？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E6%9C%89%E5%93%AA%E4%BA%9B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Vue-有哪些性能优化？"><a href="#Vue-有哪些性能优化？" class="headerlink" title="Vue - 有哪些性能优化？"></a>Vue - 有哪些性能优化？</h1><ol>
+<li><p>避免不必要的重渲染 beforeUpdate，watch</p>
+</li>
+<li><p>使用 v-if 和 v-show 指令</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<ol start="3">
+<li><p>合理使用计算属性和缓存</p>
+</li>
+<li><p>使用异步组件：Vue 提供了异步组件来延迟加载组件，可以大大提高应用程序的初始加载速度和性能。</p>
+</li>
+<li><p>使用 keep-alive 缓存组件状态</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - interface 和 type 区别？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="TypeScript-中的泛型是什么？如何使用泛型？"><a href="#TypeScript-中的泛型是什么？如何使用泛型？" class="headerlink" title="TypeScript 中的泛型是什么？如何使用泛型？"></a>TypeScript 中的泛型是什么？如何使用泛型？</h1><p>TypeScript 中的泛型是一种类型参数，它可以在定义函数、类或接口时使用，用于指定一个类型占位符。<br>这个类型占位符可以在调用函数或实例化类时被具体的类型所代替，从而实现代码的灵活性和复用性。</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> identity&lt;T&gt;(<span class="attr">arg</span>: T): T &#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>TypeScript</category>
@@ -762,9 +855,136 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>React 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/react/useCallback%E4%B8%8E%20useMemo%E5%8C%BA%E5%88%AB%F0%9F%94%A5/</url>
-    <content><![CDATA[<h1 id="useMemo-和-useCallback-区别"><a href="#useMemo-和-useCallback-区别" class="headerlink" title="useMemo 和 useCallback 区别"></a>useMemo 和 useCallback 区别</h1><p>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</p>
+    <title>Ts - interface 和 type 区别？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Ts-interface-和-type-区别？"><a href="#Ts-interface-和-type-区别？" class="headerlink" title="Ts - interface 和 type 区别？"></a>Ts - interface 和 type 区别？</h1><p>interface 主要用于描述对象的结构，可继承</p>
+<p>type 更适合用于描述一般的类型，type 能够给任何类型起别名，</p>
+<p>type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在 TypeScript 中使用命名空间？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="如何在-TypeScript-中使用命名空间？"><a href="#如何在-TypeScript-中使用命名空间？" class="headerlink" title="如何在 TypeScript 中使用命名空间？"></a>如何在 TypeScript 中使用命名空间？</h1><p>简单回答下：<br>在 TypeScript 中，命名空间是一种用于组织代码的结构化方式。<br>我们可以使用命名空间来避免命名冲突，并将相关的函数、类和接口等组织到一个逻辑单元中。</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">namespace <span class="title class_">MyNamespace</span> &#123;</span><br><span class="line">  <span class="keyword">export</span> interface <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: string;</span><br><span class="line">    <span class="attr">age</span>: number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params">person: Person</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello, <span class="subst">$&#123;person.name&#125;</span>!`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">person</span>: <span class="title class_">MyNamespace</span>.<span class="property">Person</span> = &#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="title class_">MyNamespace</span>.<span class="title function_">sayHello</span>(person);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - 如何使用接口来描述函数类型？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Ts-如何使用接口来描述函数类型？"><a href="#Ts-如何使用接口来描述函数类型？" class="headerlink" title="Ts - 如何使用接口来描述函数类型？"></a>Ts - 如何使用接口来描述函数类型？</h1><p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">interface <span class="title class_">AddFunction</span> &#123;</span><br><span class="line">    (<span class="attr">x</span>: number, <span class="attr">y</span>: number): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue - 如何实现路由守卫？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="Vue-如何实现路由守卫？"><a href="#Vue-如何实现路由守卫？" class="headerlink" title="Vue - 如何实现路由守卫？"></a>Vue - 如何实现路由守卫？</h1><p>在 Vue 中，可以通过守卫来拦截导航、验证用户身份等操作。</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 假设路由表</span></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/home&quot;</span>, <span class="attr">component</span>: <span class="title class_">Home</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/about&quot;</span>, <span class="attr">component</span>: <span class="title class_">About</span>, <span class="attr">meta</span>: &#123; <span class="attr">requiresAuth</span>: <span class="literal">true</span> &#125; &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">routes.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 需要登录验证但用户未登录</span></span><br><span class="line">    <span class="keyword">if</span> (to.<span class="property">meta</span>.<span class="property">requiresAuth</span> &amp;&amp; !auth.<span class="title function_">isLoggedIn</span>()) &#123;</span><br><span class="line">        <span class="title function_">next</span>(<span class="string">&quot;/login&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 继续导航</span></span><br><span class="line">        <span class="title function_">next</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://router.vuejs.org/guide/advanced/meta.html">https://router.vuejs.org/guide/advanced/meta.html</a></p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="在-TypeScript-中，如何定义一个枚举类型？如何使用枚举类型？"><a href="#在-TypeScript-中，如何定义一个枚举类型？如何使用枚举类型？" class="headerlink" title="在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？"></a>在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</h1><p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span>,</span><br><span class="line">    <span class="title class_">Down</span>,</span><br><span class="line">    <span class="title class_">Left</span>,</span><br><span class="line">    <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - Fiber？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Fiber%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-Fiber？"><a href="#React-Fiber？" class="headerlink" title="React - Fiber？"></a>React - Fiber？</h1><p>Fiber 是一种可中断的和优先级处理的协调引擎。</p>
+<p>它可以提高性能、改善用户体验和支持渐进式渲染。更好地流畅管理组件树的渲染过程。</p>
+<span id="more"></span>
+
+<p>在传统的 React 版本中，组件树的更新是通过递归遍历整个树来实现的，这可能会在更新过程中阻塞主线程。<br>而使用 Fiber，React 可以将更新分解为多个小任务，并使用优先级控制算法来安排这些任务的执行顺序，以便它们可以在不影响用户体验的情况下执行。此外，Fiber 还支持中断和恢复任务的执行，以便在处理紧急事件（如用户输入）时能够及时响应。</p>
+<p>Fiber 架构的另一个重要方面是它使 React 能够进行渐进式的渲染。这意味着 React 可以立即开始渲染页面并在后台继续执行剩余的工作，而不必等待所有内容都准备好才开始渲染。这可以改善首次加载时间并提高性能。</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - Hooks？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Hooks%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-Hooks？"><a href="#React-Hooks？" class="headerlink" title="React - Hooks？"></a>React - Hooks？</h1><p>常用的 Hooks 包括 useState、useEffect、useContext 等。<br>useState 可以让我们在函数组件中使用 state，useEffect 可以让我们在组件渲染后执行副作用代码，而 useContext 则可以让我们在组件间共享数据。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - Virtual DOM？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Virtual%20DOM%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-Virtual-DOM？"><a href="#React-Virtual-DOM？" class="headerlink" title="React - Virtual DOM？"></a>React - Virtual DOM？</h1><p>Virtual DOM 是一个轻量级的 JavaScript 对象，描述了真实 DOM 的层次结构。</p>
+<p>在 React 中，当状态发生变化时，React 会创建一个新的 Virtual DOM 对象来代表新的 DOM 层次结构，并使用算法比较旧的和新的 Virtual DOM 对象之间的不同之处。根据 diff 算法的结果，React 只更新需要更改的部分，而不需要重新渲染整个页面。</p>
+<span id="more"></span>
+
+<p>Virtual DOM 是 React 用于提高性能的重要机制。它是一个轻量级的 JavaScript 对象树，用于表示真实的 DOM 结构，并且与真实的 DOM 保持同步。在 React 应用程序中，当状态发生变化时，React 首先会更新 Virtual DOM，然后通过比较前后两个版本的 Virtual DOM，计算出需要更新的最小操作，最后只更新这些操作对应的真实 DOM 节点，从而提高性能和减少不必要的 DOM 操作。</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - useMemo 和 useCallback 区别？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20useMemo%20%E5%92%8C%20useCallback%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-useMemo-和-useCallback-区别？"><a href="#React-useMemo-和-useCallback-区别？" class="headerlink" title="React - useMemo 和 useCallback 区别？"></a>React - useMemo 和 useCallback 区别？</h1><p>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</p>
+<span id="more"></span>
+
 <p>useMemo 可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如：</p>
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedValue = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> <span class="title function_">computeExpensiveValue</span>(a, b), [a, b]);</span><br></pre></td></tr></table></figure>
 
@@ -783,24 +1003,11 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>React 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/react/React%20%E4%B8%AD%E7%9A%84%20Fiber%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AE%83%E5%BE%88%E9%87%8D%E8%A6%81%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="React-中的-Fiber-是什么？为什么它很重要？"><a href="#React-中的-Fiber-是什么？为什么它很重要？" class="headerlink" title="React 中的 Fiber 是什么？为什么它很重要？"></a>React 中的 Fiber 是什么？为什么它很重要？</h1><p>Fiber 是一种可中断的和优先级处理的协调引擎。</p>
-<p>它可以提高性能、改善用户体验和支持渐进式渲染。更好地流畅管理组件树的渲染过程。</p>
-<p>在传统的 React 版本中，组件树的更新是通过递归遍历整个树来实现的，这可能会在更新过程中阻塞主线程。<br>而使用 Fiber，React 可以将更新分解为多个小任务，并使用优先级控制算法来安排这些任务的执行顺序，以便它们可以在不影响用户体验的情况下执行。此外，Fiber 还支持中断和恢复任务的执行，以便在处理紧急事件（如用户输入）时能够及时响应。</p>
-<p>Fiber 架构的另一个重要方面是它使 React 能够进行渐进式的渲染。这意味着 React 可以立即开始渲染页面并在后台继续执行剩余的工作，而不必等待所有内容都准备好才开始渲染。这可以改善首次加载时间并提高性能。</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/react/useState%E5%92%8CuseReducer%20%E5%8C%BA%E5%88%AB%F0%9F%94%A5/</url>
-    <content><![CDATA[<h1 id="useState-和-useReducer-的区别是什么？🔥🔥"><a href="#useState-和-useReducer-的区别是什么？🔥🔥" class="headerlink" title="useState 和 useReducer 的区别是什么？🔥🔥"></a>useState 和 useReducer 的区别是什么？🔥🔥</h1><p>简单回答下：<br>useState 和 useReducer 都是 React 中用于管理组件的状态。</p>
+    <title>React - useState 和 useReducer 的区别是什么？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20useState%20%E5%92%8C%20useReducer%20%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-useState-和-useReducer-的区别是什么？"><a href="#React-useState-和-useReducer-的区别是什么？" class="headerlink" title="React - useState 和 useReducer 的区别是什么？"></a>React - useState 和 useReducer 的区别是什么？</h1><p>useState 和 useReducer 都是 React 中用于管理组件的状态。</p>
+<span id="more"></span>
+
 <p>主要区别如下：<br>useState：只能处理单个状态值，可以通过多次调用。</p>
 <p>useReducer：适用于复杂的状态管理，可以处理多个相关联的状态值，并支持在更新状态时执行自定义操作。useReducer 接受一个 reducer 函数和初始状态，并返回当前状态和 dispatch 函数，用于触发状态更新。</p>
 ]]></content>
@@ -812,40 +1019,11 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>React 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/react/hash%20%E8%B7%AF%E7%94%B1%20%E4%B8%8E%20history%20%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%F0%9F%94%A5%F0%9F%94%A5/</url>
-    <content><![CDATA[<h1 id="hash-路由-与-history-路由有什么区别"><a href="#hash-路由-与-history-路由有什么区别" class="headerlink" title="hash 路由 与 history 路由有什么区别"></a>hash 路由 与 history 路由有什么区别</h1><p>简单回答下：<br>区别在于 URL 格式的不同。</p>
-<p>实现简单、兼容性好，而且可以运行在大多数 Web 服务器上；缺点在于 URL 不够美观，不利于搜索引擎优化（SEO）。</p>
-<p>History 路由解决了美观，SEO 的问题</p>
-<p>实现原理：</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React 使用入门</title>
-    <url>/2020/05/01/%E5%89%8D%E7%AB%AF/react/%F0%9F%94%A5%20%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-    <content><![CDATA[<p>概念 -&gt; 通常应用场景 -&gt; 背后实现原理</p>
-<h1 id="React-中的生命周期方法有哪些？"><a href="#React-中的生命周期方法有哪些？" class="headerlink" title="React 中的生命周期方法有哪些？"></a>React 中的生命周期方法有哪些？</h1><p>简单回答下：<br>constructor()：当组件被实例化时调用。<br>render()：根据组件的 props 和状态返回一个 React 元素。<br>componentDidMount()：当组件已经渲染到页面上时调用。<br>componentDidUpdate()：当组件更新时调用。<br>componentWillUnmount()：当组件从页面上卸载时调用。</p>
-<h1 id="如何避免在-React-应用程序中重复渲染组件？🔥"><a href="#如何避免在-React-应用程序中重复渲染组件？🔥" class="headerlink" title="如何避免在 React 应用程序中重复渲染组件？🔥"></a>如何避免在 React 应用程序中重复渲染组件？🔥</h1><p>简单回答下：<br>使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数</p>
-<h1 id="如何在-React-中实现懒加载？"><a href="#如何在-React-中实现懒加载？" class="headerlink" title="如何在 React 中实现懒加载？"></a>如何在 React 中实现懒加载？</h1><p>简单回答下：<br>可以通过使用 React.lazy 和 Suspense 组件，在需要时才动态加载组件代码。</p>
-<h1 id="为什么使用-React-时需要使用-Key-属性？"><a href="#为什么使用-React-时需要使用-Key-属性？" class="headerlink" title="为什么使用 React 时需要使用 Key 属性？"></a>为什么使用 React 时需要使用 Key 属性？</h1><p>简单回答下：<br>Key 是 React 用于识别哪些元素已经被修改、添加或删除的机制。当我们使用数组渲染组件列表时，每个组件都需要有一个唯一的 key 属性，这样 React 就可以快速确定哪些组件需要更新，避免不必要的渲染，从而提高性能。</p>
-<h1 id="在-React-中使用第三方库时应该注意哪些问题？"><a href="#在-React-中使用第三方库时应该注意哪些问题？" class="headerlink" title="在 React 中使用第三方库时应该注意哪些问题？"></a>在 React 中使用第三方库时应该注意哪些问题？</h1><p>简单回答下：<br>安全性，大小、兼容性、命名冲突、API 稳定性等因素</p>
-<h1 id="为什么可以使用“setState”来更新组件状态？"><a href="#为什么可以使用“setState”来更新组件状态？" class="headerlink" title="为什么可以使用“setState”来更新组件状态？"></a>为什么可以使用“setState”来更新组件状态？</h1><p>简单回答下：<br>只能通过 setState 方法进行更新。触发组件的重新渲染。</p>
-<h1 id="如何使用-React-Context-来管理全局数据？"><a href="#如何使用-React-Context-来管理全局数据？" class="headerlink" title="如何使用 React Context 来管理全局数据？"></a>如何使用 React Context 来管理全局数据？</h1><p>简单回答下：<br>可以通过 React.createContext 方法创建一个 Context 实例，并通过 Provider 组件来向下传递数据，而子组件可以通过 Consumer 组件或 useContext 钩子来获取这些数据。</p>
-<h1 id="什么是-React-Hooks？列举一些常用的-Hooks。"><a href="#什么是-React-Hooks？列举一些常用的-Hooks。" class="headerlink" title="什么是 React Hooks？列举一些常用的 Hooks。"></a>什么是 React Hooks？列举一些常用的 Hooks。</h1><p>简单回答下：<br>常用的 Hooks 包括 useState、useEffect、useContext 等。<br>useState 可以让我们在函数组件中使用 state，useEffect 可以让我们在组件渲染后执行副作用代码，而 useContext 则可以让我们在组件间共享数据。</p>
-<h1 id="在-React-中如何处理异步操作？"><a href="#在-React-中如何处理异步操作？" class="headerlink" title="在 React 中如何处理异步操作？"></a>在 React 中如何处理异步操作？</h1><p>简单回答下：<br>可以使用 async&#x2F;await 语法或者 Promise 来处理异步操作。<br>在函数组件中使用 async&#x2F;await 语法时，需要将其放在 useEffect 钩子函数内部，并使用一个自执行函数包裹起来。</p>
-<h1 id="什么是-React-的错误边界？如何使用它们？"><a href="#什么是-React-的错误边界？如何使用它们？" class="headerlink" title="什么是 React 的错误边界？如何使用它们？"></a>什么是 React 的错误边界？如何使用它们？</h1><p>简单回答下：<br>在组件中通过定义 componentDidCatch 生命周期方法来捕获错误，并使用 ErrorBoundary 组件或 static getDerivedStateFromError 方法来处理错误。</p>
+    <title>React - 如何处理错误信息？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-如何处理错误信息？"><a href="#React-如何处理错误信息？" class="headerlink" title="React - 如何处理错误信息？"></a>React - 如何处理错误信息？</h1><p>在组件中通过定义 componentDidCatch 生命周期方法来捕获错误，并使用 ErrorBoundary 组件或 static getDerivedStateFromError 方法来处理错误。</p>
 <p>目前没有办法将错误边界写成函数组件。但是，您不必自己编写错误边界类。例如，您可以 react-error-boundary 改为使用。</p>
-<h1 id="什么是-React-的组件通信？列举一些常用的组件通信方式。"><a href="#什么是-React-的组件通信？列举一些常用的组件通信方式。" class="headerlink" title="什么是 React 的组件通信？列举一些常用的组件通信方式。"></a>什么是 React 的组件通信？列举一些常用的组件通信方式。</h1><p>简单回答下：<br>常用的组件通信方式包括 props、Context、Redux 等。</p>
-<h1 id="什么是-React-的高阶组件？"><a href="#什么是-React-的高阶组件？" class="headerlink" title="什么是 React 的高阶组件？"></a>什么是 React 的高阶组件？</h1><p>简单回答下：<br>高阶组件是指接受一个组件并返回一个新组件的函数。<br>用于：在组件之间共享代码、提取和重用状态逻辑，或者对包装的组件额外的操作。</p>
-<h1 id="如何在-React-中使用-Redux-状态管理库？🚮"><a href="#如何在-React-中使用-Redux-状态管理库？🚮" class="headerlink" title="如何在 React 中使用 Redux 状态管理库？🚮"></a>如何在 React 中使用 Redux 状态管理库？🚮</h1><p>简单回答下：<br>可以通过安装 redux 和 react-redux 库，并定义 action、reducer、store 等概念，来处理全局状态管理和通信。</p>
-<h1 id="如何在-React-中使用-MobX-状态管理库？🚮"><a href="#如何在-React-中使用-MobX-状态管理库？🚮" class="headerlink" title="如何在 React 中使用 MobX 状态管理库？🚮"></a>如何在 React 中使用 MobX 状态管理库？🚮</h1><p>简单回答下：<br>可以通过安装 mobx 和 mobx-react 库，并使用@observable、@computed、@action 等装饰器来处理全局状态管理和通信。</p>
-<h1 id="什么是-React-Router？🚮"><a href="#什么是-React-Router？🚮" class="headerlink" title="什么是 React Router？🚮"></a>什么是 React Router？🚮</h1><p>简单回答下：<br>React Router 是一个流行的第三方库，用于在 React 应用程序中管理客户端路由。它提供了许多功能，例如路由导航、参数传递、嵌套路由等，并且可以与 React 的生命周期方法集成。</p>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>React</category>
@@ -855,11 +1033,10 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>React 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/react/React%20%E4%B8%AD%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%9F%F0%9F%94%A5/</url>
-    <content><![CDATA[<h1 id="React-中什么是-Virtual-DOM？🔥"><a href="#React-中什么是-Virtual-DOM？🔥" class="headerlink" title="React 中什么是 Virtual DOM？🔥"></a>React 中什么是 Virtual DOM？🔥</h1><p>Virtual DOM 是一个轻量级的 JavaScript 对象，描述了真实 DOM 的层次结构。</p>
-<p>在 React 中，当状态发生变化时，React 会创建一个新的 Virtual DOM 对象来代表新的 DOM 层次结构，并使用算法比较旧的和新的 Virtual DOM 对象之间的不同之处。根据 diff 算法的结果，React 只更新需要更改的部分，而不需要重新渲染整个页面。</p>
-<p>Virtual DOM 是 React 用于提高性能的重要机制。它是一个轻量级的 JavaScript 对象树，用于表示真实的 DOM 结构，并且与真实的 DOM 保持同步。在 React 应用程序中，当状态发生变化时，React 首先会更新 Virtual DOM，然后通过比较前后两个版本的 Virtual DOM，计算出需要更新的最小操作，最后只更新这些操作对应的真实 DOM 节点，从而提高性能和减少不必要的 DOM 操作。</p>
+    <title>React - 生命周期有哪些？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%87%92%E5%8A%A0%E8%BD%BD%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-生命周期有哪些？"><a href="#React-生命周期有哪些？" class="headerlink" title="React - 生命周期有哪些？"></a>React - 生命周期有哪些？</h1><p>可以通过使用 React.lazy 和 Suspense 组件，在需要时才动态加载组件代码。</p>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>React</category>
@@ -869,9 +1046,10 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>React 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/react/%E4%BB%80%E4%B9%88%E6%98%AF%20React%20%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7%EF%BC%9F%E5%88%97%E4%B8%BE%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7%F0%9F%94%A5/</url>
-    <content><![CDATA[<h1 id="什么是-React-的性能优化技巧？列举一些常用的性能优化技巧。"><a href="#什么是-React-的性能优化技巧？列举一些常用的性能优化技巧。" class="headerlink" title="什么是 React 的性能优化技巧？列举一些常用的性能优化技巧。"></a>什么是 React 的性能优化技巧？列举一些常用的性能优化技巧。</h1><p>简单回答下：<br>避免重复渲染： 使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数<br>组件懒加载：React.lazy 和 Suspense<br>使用 key 属性<br>按需加载模块<br>SSR 提高首屏渲染速度<br>Web Workers 避免阻塞 UI 线程</p>
+    <title>React - 属性key作用？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%B1%9E%E6%80%A7key%E4%BD%9C%E7%94%A8%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-属性-key-作用？"><a href="#React-属性-key-作用？" class="headerlink" title="React - 属性 key 作用？"></a>React - 属性 key 作用？</h1><p>Key 是 React 用于识别哪些元素已经被修改、添加或删除的机制。当我们使用数组渲染组件列表时，每个组件都需要有一个唯一的 key 属性，这样 React 就可以快速确定哪些组件需要更新，避免不必要的渲染，从而提高性能。</p>
+<span id="more"></span>
 ]]></content>
       <categories>
         <category>React</category>
@@ -881,242 +1059,62 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Vue 高级</title>
-    <url>/2020/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20%E9%AB%98%E7%BA%A7/</url>
-    <content><![CDATA[<blockquote>
-<p>总结下，vue 一些不常用，或者有特殊作用的 api。</p>
-</blockquote>
+    <title>React - 性能优化？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-性能优化？"><a href="#React-性能优化？" class="headerlink" title="React - 性能优化？"></a>React - 性能优化？</h1><p>避免重复渲染： 使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数<br>组件懒加载：React.lazy 和 Suspense<br>使用 key 属性<br>按需加载模块<br>SSR 提高首屏渲染速度<br>Web Workers 避免阻塞 UI 线程</p>
 <span id="more"></span>
 
-<h2 id="directives-自定义指令"><a href="#directives-自定义指令" class="headerlink" title="directives 自定义指令"></a>directives 自定义指令</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-focus</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">directives</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">focus</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="attr">mounted</span>: <span class="function">(<span class="params">el</span>) =&gt;</span> el.<span class="title function_">focus</span>(),</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="避免重复渲染组件？🔥"><a href="#避免重复渲染组件？🔥" class="headerlink" title="避免重复渲染组件？🔥"></a>避免重复渲染组件？🔥</h1><p>使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React -  描述下react生命周期？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E6%8F%8F%E8%BF%B0%E4%B8%8Breact%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-描述下-react-生命周期？"><a href="#React-描述下-react-生命周期？" class="headerlink" title="React - 描述下 react 生命周期？"></a>React - 描述下 react 生命周期？</h1><p>constructor()：当组件被实例化时调用。<br>render()：根据组件的 props 和状态返回一个 React 元素。<br>componentDidMount()：当组件已经渲染到页面上时调用。<br>componentDidUpdate()：当组件更新时调用。<br>componentWillUnmount()：当组件从页面上卸载时调用。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - 组件通信？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-组件通信？"><a href="#React-组件通信？" class="headerlink" title="React - 组件通信？"></a>React - 组件通信？</h1><p>常用的组件通信方式包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">props、</span><br><span class="line"></span><br><span class="line">Context、</span><br><span class="line"></span><br><span class="line">Redux</span><br></pre></td></tr></table></figure>
 
-<h2 id="KeepAlive-缓存组件"><a href="#KeepAlive-缓存组件" class="headerlink" title="KeepAlive 缓存组件"></a>KeepAlive 缓存组件</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">KeepAlive</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;current&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">KeepAlive</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>前端技术</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2020/11/12/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/2.%20webpack/</url>
-    <content><![CDATA[<ol>
-<li><p>webpack 优化有哪些</p>
-<ol>
-<li>最少数量的必要模块</li>
-<li>include 包含文件</li>
-<li>SplitChunksPlugin</li>
-<li>dll</li>
-<li>thread-loader</li>
-<li>cache-loader</li>
-<li>watchOptions</li>
-<li>webpack-dev-server</li>
-</ol>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/Vue%E4%B8%AD%E7%9A%84v-model%E6%8C%87%E4%BB%A4%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-中的-v-model-指令是什么？"><a href="#Vue-中的-v-model-指令是什么？" class="headerlink" title="Vue 中的 v-model 指令是什么？"></a>Vue 中的 v-model 指令是什么？</h1><p>它可以简化表单元素上的双向数据绑定。它通常用于对表单元素的输入值进行绑定，这样数据就会在视图和模型之间自动同步。</p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/Vue%E4%B8%AD%E7%9A%84mixin%E5%92%8Cextends%E5%92%8Cmixins%20%E4%BC%98%E7%BC%BA%E7%82%B9/</url>
-    <content><![CDATA[<h1 id="Vue-中的-mixin-和-extends-和-mixins-优缺点"><a href="#Vue-中的-mixin-和-extends-和-mixins-优缺点" class="headerlink" title="Vue 中的 mixin 和 extends 和 mixins 优缺点"></a>Vue 中的 mixin 和 extends 和 mixins 优缺点</h1><p>mixin</p>
-<p>优点：<br>可以包含任意选项，具有很大的灵活性；<br>可以复用在多个组件中，提高了代码的复用性和维护性；<br>可以通过 Vue.mixin 全局混入到所有组件中，扩展了 Vue 的能力。</p>
-<p>缺点：<br>由于 mixin 会与组件本身的选项合并，可能会导致命名冲突或者选项被覆盖的问题；<br>滥用 mixin 可能导致代码变得难以理解和维护。</p>
-<p>extends</p>
-<p>优点：<br>可以方便地扩展基础组件的选项，节省了编写重复代码的时间；<br>使组件的继承关系更加清晰，易于理解。</p>
-<p>缺点：<br>扩展基础组件的选项可能会与其他组件的选项产生冲突；<br>继承链过长可能会导致性能问题。</p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 基础</title>
-    <url>/2020/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<blockquote>
-<p>前端框架是用来简化和加速 Web 应用程序开发的工具。使用框架可以节省时间和精力，提高劳动力，因为它们提供了许多常见功能和最佳实践的预设，并且可以使代码更易于维护和扩展。</p>
-</blockquote>
 <span id="more"></span>
 
-<h1 id="在-vue2-x-选项式-API"><a href="#在-vue2-x-选项式-API" class="headerlink" title="在 vue2.x 选项式 API"></a>在 vue2.x 选项式 API</h1><h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        <span class="title function_">created</span>(<span class="params">el, binding, vnode, prevVnode</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;在绑定元素的 attribute 前，或事件监听器应用前调用&#x27;</span>);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="title function_">beforeMount</span>(<span class="params">el, binding, vnode, prevVnode</span>) &#123;&#125;,</span><br><span class="line">        <span class="title function_">mounted</span>(<span class="params">el, binding, vnode, prevVnode</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;在绑定元素的父组件，及他自己的所有子节点都挂载完成后调用&#x27;</span>);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="title function_">beforeUpdate</span>(<span class="params">el, binding, vnode, prevVnode</span>) &#123;&#125;,</span><br><span class="line">        <span class="title function_">updated</span>(<span class="params">el, binding, vnode, prevVnode</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;在绑定元素的父组件， 及他自己的所有子节点都更新后调用&#x27;</span>);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="title function_">beforeUnmount</span>(<span class="params">el, binding, vnode, prevVnode</span>) &#123;&#125;,</span><br><span class="line">        <span class="title function_">unmounted</span>(<span class="params">el, binding, vnode, prevVnode</span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;父组件卸载后调用&#x27;</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h2><p>内置指令</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;&quot;</span>&gt;</span>是<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-else</span>&gt;</span>否<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">v-show</span>=<span class="string">&quot;&quot;</span>&gt;</span>Hello!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;(value, key) in items&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;key&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;edit me&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Message is: &#123;&#123; message || &#x27;??&#x27; &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>通过 app.component() 方法挂在全局，使用条件就是全局组件</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">import</span> <span class="title class_">Child</span> <span class="keyword">from</span> <span class="string">&#x27;./Child.vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        <span class="attr">components</span>: &#123;</span><br><span class="line">            <span class="title class_">Child</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;add&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            &#123;&#123; result &#125;&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">return</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                <span class="attr">count</span>: <span class="number">0</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">methods</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="title function_">add</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                <span class="variable language_">this</span>.<span class="property">count</span>++;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><p>组件实例</p>
-<blockquote>
-<p>props 传参数、$emit 自定义事件、$refs 访问组件、$attr 属性透传（可禁止）</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Child</span> <span class="attr">ref</span>=<span class="string">&quot;childRef&quot;</span> @<span class="attr">some-event</span>=<span class="string">&quot;callback&quot;</span> <span class="attr">name</span>=<span class="string">&quot;child&quot;</span> <span class="attr">:message</span>=<span class="string">&quot;message&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    export default &#123;</span></span><br><span class="line"><span class="language-xml">        # ...</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        data() &#123;</span></span><br><span class="line"><span class="language-xml">            return &#123;</span></span><br><span class="line"><span class="language-xml">                message: &#x27;child!&#x27;,</span></span><br><span class="line"><span class="language-xml">            &#125;;</span></span><br><span class="line"><span class="language-xml">        &#125;,</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">        methods: &#123;</span></span><br><span class="line"><span class="language-xml">            callback(a, b, c) &#123;</span></span><br><span class="line"><span class="language-xml">                console.log(&#x27;事件监听&#x27;, a, b, c);</span></span><br><span class="line"><span class="language-xml">            &#125;,</span></span><br><span class="line"><span class="language-xml">            # 通过$refs父组件调用子组件方法</span></span><br><span class="line"><span class="language-xml">            callChildMethod() &#123;</span></span><br><span class="line"><span class="language-xml">                const child = this.$refs.childRef;</span></span><br><span class="line"><span class="language-xml">                child.childMethod();</span></span><br><span class="line"><span class="language-xml">            &#125;,</span></span><br><span class="line"><span class="language-xml">        &#125;,</span></span><br><span class="line"><span class="language-xml">    &#125;</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"># <span class="title class_">Child</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        # 子组件调用父组件的方法</span></span><br><span class="line"><span class="language-xml">        # 通过$emit方法触发自动的响应式更新和事件处理。</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$emit(&#x27;someEvent&#x27;, 1, 2, 3)&quot;</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">props</span>: [<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;message&#x27;</span>],</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">data</span>(<span class="params"></span>)&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="keyword">return</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                <span class="attr">name</span>:<span class="string">&#x27;子组件&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">methods</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="title function_">callback</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="数据注入"><a href="#数据注入" class="headerlink" title="数据注入"></a>数据注入</h2><p>provide 与 inject</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        <span class="attr">components</span>: &#123;</span><br><span class="line">            <span class="title class_">Child</span>,</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="attr">provide</span>: &#123;</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&quot;myName&quot;</span>,</span><br><span class="line">            <span class="attr">data</span>: &#123;</span><br><span class="line">                <span class="attr">value</span>: <span class="string">&#x27;100&#x27;</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"># <span class="title class_">Child</span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">        <span class="attr">inject</span>: [<span class="string">&#x27;foo&#x27;</span>,<span class="string">&#x27;data&#x27;</span>],</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="监听"><a href="#监听" class="headerlink" title="监听"></a>监听</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;count++&quot;</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">return</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="attr">count</span>: <span class="number">0</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">watch</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">count</span>(<span class="params">newQuestion, oldQuestion</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;当 count 改变时&#x27;</span>, newQuestion, oldQuestion);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">// 深层侦听器</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">deep</span>: <span class="literal">true</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h1 id="在-vue3-x-组合式-API"><a href="#在-vue3-x-组合式-API" class="headerlink" title="在 vue3.x 组合式 API"></a>在 vue3.x 组合式 API</h1><blockquote>
-<p>没有什么特殊，script 使用 setup，就表示开启</p>
-</blockquote>
-<h2 id="生命周期-1"><a href="#生命周期-1" class="headerlink" title="生命周期"></a>生命周期</h2><p>常规的 api</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">    <span class="keyword">import</span> &#123; onMounted, onUpdated, onUnmounted &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">onMounted</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`挂载完成`</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="title function_">onUpdated</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`更新后`</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="title function_">onUnmounted</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`卸载后`</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="组件-1"><a href="#组件-1" class="headerlink" title="组件"></a>组件</h2><p>简洁了不少</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Child</span> <span class="attr">myName</span>=<span class="string">&quot;child&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">import</span> <span class="title class_">Child</span> <span class="keyword">from</span> <span class="string">&#x27;./Child.vue&#x27;</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="事件绑定-1"><a href="#事件绑定-1" class="headerlink" title="事件绑定"></a>事件绑定</h2><p>简洁了不少</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">       <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;add&quot;</span>&gt;</span>Count is: &#123;&#123; data.number &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">import</span> &#123; reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">const</span> data = <span class="title function_">reactive</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">number</span>: <span class="number">0</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params"></span>) =&gt; &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        data.<span class="property">number</span>++;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="组件通信-1"><a href="#组件通信-1" class="headerlink" title="组件通信"></a>组件通信</h2><p>defineProps() 、defineEmits()</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">ChildComp</span> @<span class="attr">click</span>=<span class="string">&quot;()=&gt;&#123;&#125;&quot;</span> <span class="attr">msg</span>=<span class="string">&quot;message&quot;</span> /&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">import</span> <span class="title class_">ChildComp</span> <span class="keyword">from</span> <span class="string">&#x27;./ChildComp.vue&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"># <span class="title class_">Child</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123; msg || &#x27;No props passed yet&#x27; &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">const</span> props = <span class="title function_">defineProps</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">msg</span>: <span class="title class_">String</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">const</span> emit = <span class="title function_">defineEmits</span>([<span class="string">&#x27;click&#x27;</span>])</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">emit</span>(<span class="string">&#x27;click&#x27;</span>, <span class="string">&#x27;child&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="数据注入-1"><a href="#数据注入-1" class="headerlink" title="数据注入"></a>数据注入</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">    <span class="keyword">import</span> &#123; provide &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line">    <span class="keyword">import</span> <span class="title class_">Child</span> <span class="keyword">from</span> <span class="string">&#x27;./Child.vue&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供静态值</span></span><br><span class="line">    <span class="title function_">provide</span>(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;myChild&#x27;</span>);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"># <span class="title class_">Child</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;&#123; name &#125;&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">import</span> &#123; inject &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">const</span> message = <span class="title function_">inject</span>(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;这是默认值&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="监听-1"><a href="#监听-1" class="headerlink" title="监听"></a>监听</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;count++&quot;</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    import &#123; ref, watch &#125; from &#x27;vue&#x27;</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    const count = ref(0)</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">    # 监听count变化</span></span><br><span class="line"><span class="language-xml">    watch(count, (newCount) =&gt; &#123;</span></span><br><span class="line"><span class="language-xml">        console.log(`new count is: $&#123;newCount&#125;`)</span></span><br><span class="line"><span class="language-xml">    &#125;)</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="如何使用-React-Context-来管理全局数据？"><a href="#如何使用-React-Context-来管理全局数据？" class="headerlink" title="如何使用 React Context 来管理全局数据？"></a>如何使用 React Context 来管理全局数据？</h1><p>简单回答下：<br>可以通过 React.createContext 方法创建一个 Context 实例，并通过 Provider 组件来向下传递数据，而子组件可以通过 Consumer 组件或 useContext 钩子来获取这些数据。</p>
 ]]></content>
       <categories>
-        <category>前端技术</category>
+        <category>React</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
+        <tag>React</tag>
       </tags>
   </entry>
   <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9FDOM%EF%BC%88Virtual%20DOM%EF%BC%89%EF%BC%8C%E5%AE%83%E6%9C%89%E4%BB%80%E4%B9%88%E4%BC%98%E5%8A%BF%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="什么是虚拟-DOM（Virtual-DOM），它有什么优势？"><a href="#什么是虚拟-DOM（Virtual-DOM），它有什么优势？" class="headerlink" title="什么是虚拟 DOM（Virtual DOM），它有什么优势？"></a>什么是虚拟 DOM（Virtual DOM），它有什么优势？</h1><p>它是一个内存中的虚拟节点树，其结构与真实的 DOM 树相似，但是它只存在于内存中，并不需要直接操作浏览器中的 DOM。当数据发生变化时，框架会先利用算法比较新旧虚拟 DOM 的差异，并仅更新需要更新的部分。</p>
-<p>虚拟 DOM 的优势：</p>
-<ol>
-<li><p>性能优化：虚拟 DOM 可以通过判断传入数据是否有变化来决定是否需要重新渲染整个组件，从而避免了无谓的重绘和回流操作，提高了页面渲染性能。</p>
-</li>
-<li><p>开发效率：虚拟 DOM 使得开发者可以将精力集中在业务逻辑上，不需要关注底层 DOM 操作，从而提高了开发效率。</p>
-</li>
-<li><p>跨平台支持：由于虚拟 DOM 只是一个内存中的对象，因此可以在不同平台上使用相同的代码，比如浏览器、移动端和服务器端渲染等。</p>
-</li>
-</ol>
+    <title>React - 高阶组件？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="React-高阶组件？"><a href="#React-高阶组件？" class="headerlink" title="React - 高阶组件？"></a>React - 高阶组件？</h1><p>高阶组件是指接受一个组件并返回一个新组件的函数。和高阶函数一样同理。</p>
+<p>主要作用：在组件之间共享代码、提取和重用状态逻辑，或者对包装的组件额外的操作。</p>
+<span id="more"></span>
 ]]></content>
       <categories>
-        <category>Vue</category>
+        <category>React</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/Vue%E4%B8%AD%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%E5%92%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B2%E6%9F%93%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-中的服务端渲染和客户端渲染有什么区别？"><a href="#Vue-中的服务端渲染和客户端渲染有什么区别？" class="headerlink" title="Vue 中的服务端渲染和客户端渲染有什么区别？"></a>Vue 中的服务端渲染和客户端渲染有什么区别？</h1><p>客户端渲染是指在浏览器端使用 JavaScript 将页面渲染出来，它的优点是可以利用浏览器缓存机制，减轻服务器压力，并且能够实现一些动态交互效果。但是客户端渲染也有一些缺点，例如首屏加载速度较慢、SEO 不友好等。</p>
-<p>服务端渲染是指在服务器端将页面渲染出来，再将整个 HTML 响应给浏览器端。它的优点是可以提高首屏加载速度、SEO 友好，并且可以减少浏览器对 JavaScript 的依赖。但是它也存在一些缺点，例如不能实现一些动态交互效果、服务器压力大等。</p>
-<p>Vue 提供了服务端渲染(SSR)的支持，可以在服务器端执行组件的生命周期钩子函数和数据预取逻辑，生成完整的 HTML 响应，然后将其发送到浏览器端。这样就可以兼顾了 SSR 和 CSR 的优点，既可以实现快速的首屏渲染，又可以保留客户端渲染的动态交互效果。</p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/computed%20%E4%B8%8Ewatch%E5%8C%BA%E5%88%AB/</url>
-    <content><![CDATA[<h1 id="Vue-中的-computed-和-watch-有什么区别？"><a href="#Vue-中的-computed-和-watch-有什么区别？" class="headerlink" title="Vue 中的 computed 和 watch 有什么区别？"></a>Vue 中的 computed 和 watch 有什么区别？</h1><p>在 Vue 中，computed 和 watch 都可以用于监听数据变化并做出响应。<br>区别在于：</p>
-<ol>
-<li>计算属性 (computed)：可以处理依赖关系，并且具有缓存机制。</li>
-<li>监听器 (watch)：能够响应数据的变化，并在数据变化时执行指定的操作。监听器不会缓存值，每次数据变化都会触发回调函数。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/%E5%A6%82%E4%BD%95%E5%9C%A8Vue%E4%B8%AD%E4%BC%98%E5%8C%96%E6%80%A7%E8%83%BD%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="如何在-Vue-中优化性能？"><a href="#如何在-Vue-中优化性能？" class="headerlink" title="如何在 Vue 中优化性能？"></a>如何在 Vue 中优化性能？</h1><p>使用 v-if 和 v-show 指令</p>
-<p>合理使用计算属性和缓存</p>
-<p>避免不必要的重渲染<br>beforeUpdate，watch</p>
-<p>使用异步组件：Vue 提供了异步组件来延迟加载组件，可以大大提高应用程序的初始加载速度和性能。</p>
-<p>使用 keep-alive 缓存组件状态</p>
-<p>使用合适的第三方库</p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/%E5%A6%82%E4%BD%95%E5%9C%A8Vue%E4%B8%AD%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="如何在-Vue-中实现路由守卫？"><a href="#如何在-Vue-中实现路由守卫？" class="headerlink" title="如何在 Vue 中实现路由守卫？"></a>如何在 Vue 中实现路由守卫？</h1><p>在 Vue 中，可以通过使用路由守卫来拦截导航、验证用户身份等操作。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    // 定义路由表</span><br><span class="line">    &#123; path: &#x27;/home&#x27;, component: Home &#125;,</span><br><span class="line">    &#123; path: &#x27;/about&#x27;, component: About, meta: &#123; requiresAuth: true &#125; &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">  if (to.meta.requiresAuth &amp;&amp; !auth.isLoggedIn()) &#123;</span><br><span class="line">    // 需要登录验证但用户未登录</span><br><span class="line">    next(&#x27;/login&#x27;)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 继续导航</span><br><span class="line">    next()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/%E5%B0%91%E6%9C%89%20-%20Vue%E4%B8%AD%E7%9A%84mixins%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="Vue-中的-mixins-是什么？如何使用它？"><a href="#Vue-中的-mixins-是什么？如何使用它？" class="headerlink" title="Vue 中的 mixins 是什么？如何使用它？"></a>Vue 中的 mixins 是什么？如何使用它？</h1><p>在 Vue 中，mixins 是一种可重用的组件选项。它允许你在多个组件中共享相同的逻辑或功能，从而避免代码复制和粘贴。</p>
-<p>具体来说，mixins 提供了一种方式将组件选项合并为一个新的选项对象，然后传递给组件创建函数。这样，组件可以继承这些选项，并且可以根据需要进行覆盖或修改。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const myMixin = &#123; // mixin 选项 &#125; new Vue(&#123; mixins: [myMixin], // 组件选项 &#125;)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 使用入门</title>
-    <url>/2020/10/01/%E5%89%8D%E7%AB%AF/vue/%E5%A6%82%E4%BD%95%E5%9C%A8Vue%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
-    <content><![CDATA[<h1 id="如何在-Vue-中实现组件通信？"><a href="#如何在-Vue-中实现组件通信？" class="headerlink" title="如何在 Vue 中实现组件通信？"></a>如何在 Vue 中实现组件通信？</h1><p>在 Vue 中，有以下几种方式可以实现组件之间的通信：</p>
-<ol>
-<li><p>Props&#x2F;Events：父组件通过 props 向子组件传递数据，子组件通过 emit 事件向父组件触发事件进行通信。</p>
-</li>
-<li><p>Vuex：可以实现全局的非父子组件之间的通信。</p>
-</li>
-<li><p>provide&#x2F;inject：与 Vuex 不同的是，它是基于依赖注入的方式实现的。父组件通过 provide 提供数据，子孙组件通过 inject 来注入数据，从而实现了跨层级的组件通信。</p>
-</li>
-</ol>
-<h2 id="扩展：Vue-中的-provide-和-inject-有什么作用？"><a href="#扩展：Vue-中的-provide-和-inject-有什么作用？" class="headerlink" title="扩展：Vue 中的 provide 和 inject 有什么作用？"></a>扩展：Vue 中的 provide 和 inject 有什么作用？</h2><pre><code>以在一个组件中定义数据或方法，并使其在该组件的子组件中可用。
-</code></pre>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
+        <tag>React</tag>
       </tags>
   </entry>
 </search>
