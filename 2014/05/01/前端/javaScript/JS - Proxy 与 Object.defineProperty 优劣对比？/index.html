@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Vue - 中实现组件通信？ | 启示录·异境</title>
+  <title>JS - 数据类型? | 启示录·异境</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -47,14 +47,14 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-前端/vue/Vue - 生命周期的理解？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-前端/javaScript/JS - Proxy 与 Object.defineProperty 优劣对比？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/" class="article-date">
-  <time class="dt-published" datetime="2021-12-31T16:00:00.000Z" itemprop="datePublished">2022-01-01</time>
+    <a href="/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20Proxy%20%E4%B8%8E%20Object.defineProperty%20%E4%BC%98%E5%8A%A3%E5%AF%B9%E6%AF%94%EF%BC%9F/" class="article-date">
+  <time class="dt-published" datetime="2014-04-30T16:00:00.000Z" itemprop="datePublished">2014-05-01</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
   </div>
 
   </div>
@@ -65,7 +65,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Vue - 中实现组件通信？
+      JS - 数据类型?
     </h1>
   
 
@@ -73,26 +73,23 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -&gt; 渲染、更新 -&gt; 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
+        <h2 id="Proxy-的优势如下"><a href="#Proxy-的优势如下" class="headerlink" title="Proxy 的优势如下:"></a>Proxy 的优势如下:</h2><p>Proxy 可以直接监听对象而非属性；</p>
+<p>Proxy 可以直接监听数组的变化；</p>
+<p>Proxy 有多达 13 种拦截方法,不限于 apply、ownKeys、deleteProperty、has 等等是 Object.<br>defineProperty 不具备的；</p>
 <span id="more"></span>
 
-<h1 id="组件调用执行过程"><a href="#组件调用执行过程" class="headerlink" title="组件调用执行过程"></a>组件调用执行过程</h1><h2 id="加载渲染过程"><a href="#加载渲染过程" class="headerlink" title="加载渲染过程"></a>加载渲染过程</h2><p>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount -&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
-<h2 id="子组件更新过程"><a href="#子组件更新过程" class="headerlink" title="子组件更新过程"></a>子组件更新过程</h2><p>父 beforeUpdate -&gt; 子 beforeUpdate -&gt; 子 updated -&gt; 父 updated</p>
-<h2 id="父组件更新过程"><a href="#父组件更新过程" class="headerlink" title="父组件更新过程"></a>父组件更新过程</h2><p>父 beforeUpdate -&gt; 父 updated</p>
-<h2 id="销毁过程"><a href="#销毁过程" class="headerlink" title="销毁过程"></a>销毁过程</h2><p>父 beforeDestroy -&gt; 子 beforeDestroy -&gt; 子 destroyed -&gt; 父 destroyed</p>
-<h2 id="生命周期内调用异步请求？"><a href="#生命周期内调用异步请求？" class="headerlink" title="生命周期内调用异步请求？"></a>生命周期内调用异步请求？</h2><pre><code>可以在钩子函数 created、beforeMount、mounted 中进行调用，推荐在 created 钩子。
-</code></pre>
-<h2 id="什么阶段才能访问操作-DOM？"><a href="#什么阶段才能访问操作-DOM？" class="headerlink" title="什么阶段才能访问操作 DOM？"></a>什么阶段才能访问操作 DOM？</h2><pre><code>在 mounted 中可以访问操作 DOM。
-</code></pre>
+<p>Proxy 返回的是一个新对象,我们可以只操作新的对象达到目的,而 Object.defineProperty 只能遍历对象属性直接修改；</p>
+<p>Proxy 作为新标准将受到浏览器厂商重点持续的性能优化，也就是传说中的新标准的性能红利；</p>
+<h2 id="Object-defineProperty-的优势如下"><a href="#Object-defineProperty-的优势如下" class="headerlink" title="Object.defineProperty 的优势如下:"></a>Object.defineProperty 的优势如下:</h2><p>兼容性好，支持 IE9，而 Proxy 不兼容性 IE,而且无法用 polyfill 磨平;</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/" data-id="cljp35sxm0000vjjdbnov0a58" data-title="Vue - 中实现组件通信？" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20Proxy%20%E4%B8%8E%20Object.defineProperty%20%E4%BC%98%E5%8A%A3%E5%AF%B9%E6%AF%94%EF%BC%9F/" data-id="cljp590oq0000l2jd295vg8k9" data-title="JS - 数据类型?" class="article-share-link">分享</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
 
     </footer>
   </div>
@@ -100,20 +97,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS-%20%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          Vue - 如何实现路由守卫？
+          JS - 什么作用域和闭包？
         
       </div>
     </a>
   
-  
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">Vue - 中实现组件通信？</div>
-    </a>
   
 </nav>
 

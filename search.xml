@@ -1233,10 +1233,47 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
     <content><![CDATA[<p>生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -&gt; 渲染、更新 -&gt; 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
 <span id="more"></span>
 
-<h2 id="加载渲染过程"><a href="#加载渲染过程" class="headerlink" title="加载渲染过程"></a>加载渲染过程</h2><p>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount -&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
+<h1 id="组件调用执行过程"><a href="#组件调用执行过程" class="headerlink" title="组件调用执行过程"></a>组件调用执行过程</h1><h2 id="加载渲染过程"><a href="#加载渲染过程" class="headerlink" title="加载渲染过程"></a>加载渲染过程</h2><p>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount -&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
 <h2 id="子组件更新过程"><a href="#子组件更新过程" class="headerlink" title="子组件更新过程"></a>子组件更新过程</h2><p>父 beforeUpdate -&gt; 子 beforeUpdate -&gt; 子 updated -&gt; 父 updated</p>
 <h2 id="父组件更新过程"><a href="#父组件更新过程" class="headerlink" title="父组件更新过程"></a>父组件更新过程</h2><p>父 beforeUpdate -&gt; 父 updated</p>
 <h2 id="销毁过程"><a href="#销毁过程" class="headerlink" title="销毁过程"></a>销毁过程</h2><p>父 beforeDestroy -&gt; 子 beforeDestroy -&gt; 子 destroyed -&gt; 父 destroyed</p>
+<h2 id="生命周期内调用异步请求？"><a href="#生命周期内调用异步请求？" class="headerlink" title="生命周期内调用异步请求？"></a>生命周期内调用异步请求？</h2><pre><code>可以在钩子函数 created、beforeMount、mounted 中进行调用，推荐在 created 钩子。
+</code></pre>
+<h2 id="什么阶段才能访问操作-DOM？"><a href="#什么阶段才能访问操作-DOM？" class="headerlink" title="什么阶段才能访问操作 DOM？"></a>什么阶段才能访问操作 DOM？</h2><pre><code>在 mounted 中可以访问操作 DOM。
+</code></pre>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 数据类型?</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20Proxy%20%E4%B8%8E%20Object.defineProperty%20%E4%BC%98%E5%8A%A3%E5%AF%B9%E6%AF%94%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="Proxy-的优势如下"><a href="#Proxy-的优势如下" class="headerlink" title="Proxy 的优势如下:"></a>Proxy 的优势如下:</h2><p>Proxy 可以直接监听对象而非属性；</p>
+<p>Proxy 可以直接监听数组的变化；</p>
+<p>Proxy 有多达 13 种拦截方法,不限于 apply、ownKeys、deleteProperty、has 等等是 Object.<br>defineProperty 不具备的；</p>
+<span id="more"></span>
+
+<p>Proxy 返回的是一个新对象,我们可以只操作新的对象达到目的,而 Object.defineProperty 只能遍历对象属性直接修改；</p>
+<p>Proxy 作为新标准将受到浏览器厂商重点持续的性能优化，也就是传说中的新标准的性能红利；</p>
+<h2 id="Object-defineProperty-的优势如下"><a href="#Object-defineProperty-的优势如下" class="headerlink" title="Object.defineProperty 的优势如下:"></a>Object.defineProperty 的优势如下:</h2><p>兼容性好，支持 IE9，而 Proxy 不兼容性 IE,而且无法用 polyfill 磨平;</p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue - 中实现组件通信？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/</url>
+    <content><![CDATA[<p>虚拟 DOM 的实现原理主要包括以下 3 部分：</p>
+<p>用 JavaScript 对象模拟真实 DOM 树，对真实 DOM 进行抽象；<br>diff 算法 — 比较两棵虚拟 DOM 树的差异；<br>pach 算法 — 将两个虚拟 DOM 对象的差异应用到真正的 DOM 树。</p>
+<p><a href="https://juejin.cn/post/6844903895467032589#heading-14">深入剖析：Vue 核心之虚拟 DOM</a></p>
 ]]></content>
       <categories>
         <category>Vue</category>

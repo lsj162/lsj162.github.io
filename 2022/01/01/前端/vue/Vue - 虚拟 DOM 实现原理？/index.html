@@ -47,9 +47,9 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-前端/vue/Vue - 生命周期的理解？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-前端/vue/Vue - 虚拟 DOM 实现原理？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/" class="article-date">
+    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/" class="article-date">
   <time class="dt-published" datetime="2021-12-31T16:00:00.000Z" itemprop="datePublished">2022-01-01</time>
 </a>
     
@@ -73,22 +73,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -&gt; 渲染、更新 -&gt; 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
-<span id="more"></span>
-
-<h1 id="组件调用执行过程"><a href="#组件调用执行过程" class="headerlink" title="组件调用执行过程"></a>组件调用执行过程</h1><h2 id="加载渲染过程"><a href="#加载渲染过程" class="headerlink" title="加载渲染过程"></a>加载渲染过程</h2><p>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount -&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
-<h2 id="子组件更新过程"><a href="#子组件更新过程" class="headerlink" title="子组件更新过程"></a>子组件更新过程</h2><p>父 beforeUpdate -&gt; 子 beforeUpdate -&gt; 子 updated -&gt; 父 updated</p>
-<h2 id="父组件更新过程"><a href="#父组件更新过程" class="headerlink" title="父组件更新过程"></a>父组件更新过程</h2><p>父 beforeUpdate -&gt; 父 updated</p>
-<h2 id="销毁过程"><a href="#销毁过程" class="headerlink" title="销毁过程"></a>销毁过程</h2><p>父 beforeDestroy -&gt; 子 beforeDestroy -&gt; 子 destroyed -&gt; 父 destroyed</p>
-<h2 id="生命周期内调用异步请求？"><a href="#生命周期内调用异步请求？" class="headerlink" title="生命周期内调用异步请求？"></a>生命周期内调用异步请求？</h2><pre><code>可以在钩子函数 created、beforeMount、mounted 中进行调用，推荐在 created 钩子。
-</code></pre>
-<h2 id="什么阶段才能访问操作-DOM？"><a href="#什么阶段才能访问操作-DOM？" class="headerlink" title="什么阶段才能访问操作 DOM？"></a>什么阶段才能访问操作 DOM？</h2><pre><code>在 mounted 中可以访问操作 DOM。
-</code></pre>
+        <p>虚拟 DOM 的实现原理主要包括以下 3 部分：</p>
+<p>用 JavaScript 对象模拟真实 DOM 树，对真实 DOM 进行抽象；<br>diff 算法 — 比较两棵虚拟 DOM 树的差异；<br>pach 算法 — 将两个虚拟 DOM 对象的差异应用到真正的 DOM 树。</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903895467032589#heading-14">深入剖析：Vue 核心之虚拟 DOM</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/" data-id="cljp35sxm0000vjjdbnov0a58" data-title="Vue - 中实现组件通信？" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/" data-id="cljp590ou0001l2jdess5c316" data-title="Vue - 中实现组件通信？" class="article-share-link">分享</a>
       
       
       
@@ -100,19 +92,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          Vue - 如何实现路由守卫？
+          Vue - 中实现组件通信？
         
       </div>
     </a>
   
   
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/05/01/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/csrf%E6%94%BB%E5%87%BB/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">Vue - 中实现组件通信？</div>
+      <div class="article-nav-title">CSRF 使用入门</div>
     </a>
   
 </nav>
