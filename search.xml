@@ -1228,7 +1228,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Vue - 中实现组件通信？</title>
+    <title>Vue - 生命周期的理解？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/</url>
     <content><![CDATA[<p>生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -&gt; 渲染、更新 -&gt; 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
 <span id="more"></span>
@@ -1250,7 +1250,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>JS - 数据类型?</title>
+    <title>JS - Proxy 与 Object.defineProperty 优劣对比？</title>
     <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20Proxy%20%E4%B8%8E%20Object.defineProperty%20%E4%BC%98%E5%8A%A3%E5%AF%B9%E6%AF%94%EF%BC%9F/</url>
     <content><![CDATA[<h2 id="Proxy-的优势如下"><a href="#Proxy-的优势如下" class="headerlink" title="Proxy 的优势如下:"></a>Proxy 的优势如下:</h2><p>Proxy 可以直接监听对象而非属性；</p>
 <p>Proxy 可以直接监听数组的变化；</p>
@@ -1269,7 +1269,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Vue - 中实现组件通信？</title>
+    <title>Vue - 虚拟 DOM 实现原理？</title>
     <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/</url>
     <content><![CDATA[<p>虚拟 DOM 的实现原理主要包括以下 3 部分：</p>
 <p>用 JavaScript 对象模拟真实 DOM 树，对真实 DOM 进行抽象；<br>diff 算法 — 比较两棵虚拟 DOM 树的差异；<br>pach 算法 — 将两个虚拟 DOM 对象的差异应用到真正的 DOM 树。</p>
