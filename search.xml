@@ -1218,13 +1218,31 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
 <p>代码示范：</p>
 <span id="more"></span>
 
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">double</span> *y)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">5</span>;</span><br><span class="line">    <span class="type">double</span> y = <span class="number">10.0001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针交换变量</span></span><br><span class="line">    swap(&amp;x, &amp;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输出结果： %d %le \n&quot;</span>, x, y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">double</span> *y)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    temp = *x;</span><br><span class="line">    *x = *y;</span><br><span class="line">    *y = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">float</span> *y)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">5</span>;</span><br><span class="line">    <span class="type">float</span> y = <span class="number">10.0001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针交换变量</span></span><br><span class="line">    swap(&amp;x, &amp;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输出结果： %d %le \n&quot;</span>, x, y);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">float</span> *y)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    temp = *x;</span><br><span class="line">    *x = *y;</span><br><span class="line">    *y = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>c</category>
       </categories>
       <tags>
         <tag>c</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue - 中实现组件通信？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/</url>
+    <content><![CDATA[<p>生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -&gt; 渲染、更新 -&gt; 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
+<span id="more"></span>
+
+<h2 id="加载渲染过程"><a href="#加载渲染过程" class="headerlink" title="加载渲染过程"></a>加载渲染过程</h2><p>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount -&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
+<h2 id="子组件更新过程"><a href="#子组件更新过程" class="headerlink" title="子组件更新过程"></a>子组件更新过程</h2><p>父 beforeUpdate -&gt; 子 beforeUpdate -&gt; 子 updated -&gt; 父 updated</p>
+<h2 id="父组件更新过程"><a href="#父组件更新过程" class="headerlink" title="父组件更新过程"></a>父组件更新过程</h2><p>父 beforeUpdate -&gt; 父 updated</p>
+<h2 id="销毁过程"><a href="#销毁过程" class="headerlink" title="销毁过程"></a>销毁过程</h2><p>父 beforeDestroy -&gt; 子 beforeDestroy -&gt; 子 destroyed -&gt; 父 destroyed</p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
       </tags>
   </entry>
 </search>
