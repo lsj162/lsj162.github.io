@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>排序算法</title>
-    <url>/2016/05/01/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="冒泡排序原理-o-n-2"><a href="#冒泡排序原理-o-n-2" class="headerlink" title="冒泡排序原理 o(n^2)"></a>冒泡排序原理 o(n^2)</h2><p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title class_">Arr</span> = [<span class="number">3</span>, <span class="number">11</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">8</span>];</span><br><span class="line">    <span class="comment">// 交换</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">swap</span>(<span class="params">array, a, b</span>) &#123;</span><br><span class="line">        <span class="comment">// 独立的功能不受外界干扰</span></span><br><span class="line">        <span class="keyword">let</span> temp = array[a];</span><br><span class="line">        array[a] = array[b];</span><br><span class="line">        array[b] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 冒泡排序方法</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">MpSort</span>(<span class="params">Arr</span>) &#123;</span><br><span class="line">        <span class="comment">// 前值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, j = <span class="title class_">Arr</span>.<span class="property">length</span>; i &lt; j; i++) &#123;</span><br><span class="line">            <span class="comment">// 后值</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> k = <span class="number">0</span>; k &lt; i; k++) &#123;</span><br><span class="line">                <span class="comment">// 每一个前面值和后面值比较，交换位置；</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="title class_">Arr</span>[k] &gt; <span class="title class_">Arr</span>[i]) &#123;</span><br><span class="line">                    <span class="title function_">swap</span>(<span class="title class_">Arr</span>, i, k);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Arr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> result = <span class="title class_">MpSort</span>(<span class="title class_">Arr</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h2 id="选择排序原理-o-n2"><a href="#选择排序原理-o-n2" class="headerlink" title="选择排序原理 o(n2)"></a>选择排序原理 o(n2)</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Arr</span> = [<span class="number">9</span>, <span class="number">11</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">8</span>];</span><br><span class="line"><span class="comment">// 交换</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">swap</span>(<span class="params">array, a, b</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> temp = array[a];</span><br><span class="line">    array[a] = array[b];</span><br><span class="line">    array[b] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 选择排序方法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">selectionSort</span>(<span class="params">Arr</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = <span class="title class_">Arr</span>.<span class="property">length</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="comment">// 开始位置</span></span><br><span class="line">        <span class="keyword">let</span> index = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="title class_">Arr</span>[index] &gt; <span class="title class_">Arr</span>[j]) &#123;</span><br><span class="line">                index = j; <span class="comment">// 一轮循环后，将最小值的索引保存</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">swap</span>(<span class="title class_">Arr</span>, i, index);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Arr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">selectionSort</span>(<span class="title class_">Arr</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入排序原理-o-n2"><a href="#插入排序原理-o-n2" class="headerlink" title="插入排序原理 o(n2)"></a>插入排序原理 o(n2)</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Arr</span> = [<span class="number">9</span>, <span class="number">11</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">8</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">insertSort</span>(<span class="params">Arr</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = <span class="title class_">Arr</span>.<span class="property">length</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = <span class="title class_">Arr</span>[i]; <span class="comment">// 缓存当前位置的值</span></span><br><span class="line">        j = i;</span><br><span class="line">        <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; <span class="title class_">Arr</span>[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">            <span class="title class_">Arr</span>[j] = <span class="title class_">Arr</span>[j - <span class="number">1</span>]; <span class="comment">// 先赋值替换位置值</span></span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title class_">Arr</span>[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Arr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">insertSort</span>(<span class="title class_">Arr</span>));</span><br></pre></td></tr></table></figure>
-
-<h3 id="快速排序原理-o-N-log2N-不稳定"><a href="#快速排序原理-o-N-log2N-不稳定" class="headerlink" title="快速排序原理 o(N^log2N)(不稳定)"></a>快速排序原理 o(N^log2N)(不稳定)</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Arr</span> = [<span class="number">9</span>, <span class="number">11</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">8</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">quickSort</span>(<span class="params">Arr</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Arr</span>.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="title class_">Arr</span>;</span><br><span class="line">    <span class="keyword">let</span> index = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Arr</span>.<span class="property">length</span> / <span class="number">2</span>); <span class="comment">// 取中间位置</span></span><br><span class="line">    <span class="keyword">let</span> pivot = <span class="title class_">Arr</span>.<span class="title function_">splice</span>(index, <span class="number">1</span>)[<span class="number">0</span>]; <span class="comment">// 取中间值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> left = [],</span><br><span class="line">        right = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, j = <span class="title class_">Arr</span>.<span class="property">length</span>; i &lt; j; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="title class_">Arr</span>[i] &lt; pivot) left.<span class="title function_">push</span>(<span class="title class_">Arr</span>[i]);</span><br><span class="line">        <span class="comment">//左为小</span></span><br><span class="line">        <span class="keyword">else</span> right.<span class="title function_">push</span>(<span class="title class_">Arr</span>[i]); <span class="comment">//右为大</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;递归执行&quot;</span>);</span><br><span class="line">    <span class="comment">// 递归执行</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">quickSort</span>(left).<span class="title function_">concat</span>([pivot], <span class="title function_">quickSort</span>(right));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">quickSort</span>(<span class="title class_">Arr</span>));</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>算法与数据结构</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vi 命令</title>
     <url>/2016/05/01/%E7%B3%BB%E7%BB%9F/vi%20%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="平时操作-shell，用到的-vi-常用的命令；"><a href="#平时操作-shell，用到的-vi-常用的命令；" class="headerlink" title="平时操作 shell，用到的 vi 常用的命令；"></a>平时操作 shell，用到的 vi 常用的命令；</h2><ul>
@@ -70,129 +49,8 @@
       </tags>
   </entry>
   <entry>
-    <title>前端技术学习路线？</title>
-    <url>/2020/01/01/%E6%80%9D%E8%80%83/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E4%B8%8E%E9%80%89%E6%8B%A9/</url>
-    <content><![CDATA[<ul>
-<li>原生 html，css，js 必须学的<ul>
-<li>html5 包含可独立应用领域功能，学习路线也是比较陡峭，如：webgl，canvas。</li>
-<li>js：包含：Ecma6，及后续每年的更新</li>
-<li>typescript 大势所趋，基本上也是必须学习掌握的</li>
-<li>svg 矢量图</li>
-</ul>
-</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="前端框架有哪些："><a href="#前端框架有哪些：" class="headerlink" title="前端框架有哪些："></a>前端框架有哪些：</h2><ul>
-<li><p>react：react18 又更新了不少新特性</p>
-</li>
-<li><p>svelte：非常快，学过 react 学习起来也非常简单。</p>
-</li>
-<li><p>vue：对比 react 该有的功能都有，花里胡哨的功能是真的多；</p>
-</li>
-<li><p>Solid：观望中；</p>
-</li>
-<li><p>Lit：观察，框架前世一般；</p>
-</li>
-<li><p>angular，sea，require：加入淘汰系列，放弃深入学习，都被上面可代替了；</p>
-</li>
-</ul>
-<h2 id="前端脚手架有哪些："><a href="#前端脚手架有哪些：" class="headerlink" title="前端脚手架有哪些："></a>前端脚手架有哪些：</h2><ul>
-<li><p>webpack：学习可以掌握背后的原理；</p>
-</li>
-<li><p>vite：非常快，首选推荐；</p>
-</li>
-<li><p>nextjs、nuxtjs：ssr 脚手架，市场为主；</p>
-</li>
-<li><p>remix：观望，router 作者开发的，非常优秀，功能还不够全，期待 2.0 发布；</p>
-</li>
-<li><p>astro：很优秀的静态网页 ssr 框架，可支持任何框架的集成开发；</p>
-</li>
-<li><p>esbuild：vite 背后的支持；</p>
-</li>
-<li><p>swc：Rust 封装前端脚手架；</p>
-</li>
-</ul>
-<h1 id="后端个人学习路线？"><a href="#后端个人学习路线？" class="headerlink" title="后端个人学习路线？"></a>后端个人学习路线？</h1><h2 id="后台语言及工具"><a href="#后台语言及工具" class="headerlink" title="后台语言及工具"></a>后台语言及工具</h2><ul>
-<li><p>nodejs，nginx：首选推荐；</p>
-</li>
-<li><p>c，c++：基础学习；go，rust，python: 一般作为后端专业学习，跳过；</p>
-</li>
-<li><p>java，.net，php：不感兴趣，不如 nodejs 用的舒服；</p>
-</li>
-</ul>
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
-<li><p>mongo，redis： 首选推荐；</p>
-</li>
-<li><p>mysql：不感兴趣；</p>
-</li>
-</ul>
-<!-- # 同步来源
-[知识科学文档 https://docs.osliu.com/](https://docs.osliu.com/) -->
-]]></content>
-      <categories>
-        <category>思考</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>未来</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>四次挥手</title>
-    <url>/2016/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
-    <content><![CDATA[<ol>
-<li><p>客户端发送，FIN 包，请求关闭；</p>
-</li>
-<li><p>服务端接收到， 发送一个 ACK 包，表示确认收到</p>
-</li>
-</ol>
-<span id="more"></span>
-
-<ol start="3">
-<li><p>服务端发送一个 FIN 包，表示服务端也不再向客户端发送数据。</p>
-</li>
-<li><p>客户端接收到服务端的 FIN 包后，发送一个 ACK 包，表示确认收到，连接关闭完成。</p>
-</li>
-</ol>
-<p>需要注意的是，在四次挥手过程中，如果某个阶段超时或出错，则会重新开始四次挥手过程。同时，在 TCP 连接关闭过程中，可能存在 TIME_WAIT 状态，以避免网络延迟导致的重复请求。</p>
-]]></content>
-      <categories>
-        <category>网络协议</category>
-      </categories>
-      <tags>
-        <tag>网络协议</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三次握手</title>
-    <url>/2016/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</url>
-    <content><![CDATA[<ol>
-<li><p>客户端向服务器发送一个同步请求（SYN），告诉服务器客户端要开始建立连接。</p>
-</li>
-<li><p>服务器收到客户端的 SYN 请求后，回复一个同步确认（SYN-ACK），告诉客户端已经收到了请求，并准备好建立连接。</p>
-</li>
-</ol>
-<span id="more"></span>
-
-<ol start="3">
-<li>客户端收到服务器的 SYN-ACK 响应后，再次发送一个确认请求（ACK）（SYN&#x3D;0，ACK&#x3D;1，Seq&#x3D;X+1，Ack&#x3D;Y+1），告诉服务器客户端已经接收到了服务器的响应，并表示可以开始传输数据。</li>
-</ol>
-<p>需要注意的是，在三次握手过程中，如果某个阶段超时或出错，则会重新开始三次握手过程。同时，在连接关闭时还需要进行四次挥手过程来正常关闭连接。</p>
-<h1 id="为什么不使用二次握手？"><a href="#为什么不使用二次握手？" class="headerlink" title="为什么不使用二次握手？"></a>为什么不使用二次握手？</h1><ul>
-<li>不可靠。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>网络协议</category>
-      </categories>
-      <tags>
-        <tag>网络协议</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo 搭建和使用</title>
-    <url>/2023/05/01/%E5%B7%A5%E5%85%B7/Hexo%E6%90%AD%E5%BB%BA/</url>
+    <url>/2019/05/01/%E5%B7%A5%E5%85%B7/Hexo%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h1><pre><code>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 
 $ npm install -g hexo-cli
@@ -238,51 +96,6 @@ https://hexo.io/themes/
       </categories>
       <tags>
         <tag>XSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>http 使用入门</title>
-    <url>/2020/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/1.%20http1%EF%BC%8Chttp2%EF%BC%8Chttps/</url>
-    <content><![CDATA[<ol>
-<li>http0.9（1991） http1.0（1996） http1.1（1999）</li>
-<li>http2 优势（可以说是 SPDY 的升级版）</li>
-</ol>
-<span id="more"></span>
-
-<ol start="3">
-<li>https 原理</li>
-<li>三次握手，四次挥手</li>
-<li></li>
-<li>请求头，请求返回字段</li>
-<li></li>
-<li>18989479286</li>
-</ol>
-]]></content>
-      <categories>
-        <category>网络协议</category>
-      </categories>
-      <tags>
-        <tag>http</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>未来技术发展？</title>
-    <url>/2020/01/01/%E6%80%9D%E8%80%83/%E6%9C%AA%E6%9D%A5%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95/</url>
-    <content><![CDATA[<p>技术是第一生产力；</p>
-<h1 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h1><ul>
-<li>硬件；<br>机器革命；</li>
-<li>软件：<br>人工智能升级版；<br>游戏与 3D；<br>视觉；</li>
-</ul>
-<span id="more"></span>
-
-<h1 id="感叹"><a href="#感叹" class="headerlink" title="感叹"></a>感叹</h1><p>技术带动生产速度是真的快，未来科技行业一定也是很倦（空心病），对于那些有梦想的更多是寻找提升能力的环境；毕竟资金盘的潜力股行业非常多，所以选择很重要，选择对的行业可能更适合自己；</p>
-]]></content>
-      <categories>
-        <category>思考</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>未来</tag>
       </tags>
   </entry>
   <entry>
@@ -376,187 +189,161 @@ https://hexo.io/themes/
       </tags>
   </entry>
   <entry>
-    <title>Nodejs - 事件循环？</title>
-    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Nodejs - 事件循环？ -->
-
-<p>Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。</p>
-<span id="more"></span>
-
-<h1 id="loop-官方"><a href="#loop-官方" class="headerlink" title="loop 官方"></a>loop 官方</h1><pre><code>什么是事件循环？
-事件循环允许 Node.js 通过尽可能将操作卸载到系统内核来执行非阻塞 I/O 操作 ——尽管 JavaScript 是单线程的。
-
-事件循环解释
-当 Node.js 启动时，它会初始化事件循环，处理提供的输入脚本，这可能会进行异步 API 调用、调度计时器或调用 process.nextTick()，然后开始处理事件环形。
-</code></pre>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick">官方文档链接 https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick</a></p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs - 创建一个 HTTP 服务器？</title>
-    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%20HTTP%20%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Nodejs - 创建一个 HTTP 服务器？ -->
-
-<p>使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
+    <title>C - 如何使用指针交换变量？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/C/C%20-%20%E6%8C%87%E9%92%88%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F%EF%BC%9F/</url>
+    <content><![CDATA[<p>交换变量，使用指针处理；</p>
 <p>代码示范：</p>
 <span id="more"></span>
 
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.<span class="property">statusCode</span> = <span class="number">200</span>;</span><br><span class="line">    res.<span class="title function_">setHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;text/plain&quot;</span>);</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">3000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Server running at http://localhost:3000/&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">float</span> *y)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">5</span>;</span><br><span class="line">    <span class="type">float</span> y = <span class="number">10.0001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针交换变量</span></span><br><span class="line">    swap(&amp;x, &amp;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输出结果： %d %le \n&quot;</span>, x, y);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">float</span> *y)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    temp = *x;</span><br><span class="line">    *x = *y;</span><br><span class="line">    *y = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Nodejs</category>
+        <category>C</category>
       </categories>
       <tags>
-        <tag>Nodejs</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
-    <title>Nodejs - 处理文件系统？</title>
-    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Nodejs - 处理文件系统？ -->
+    <title>算法</title>
+    <url>/2016/05/01/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p><a href="https://lsj162.gitbook.io/suan-fa-xue-xi-bi-ji/">迁移到 GITBOOK</a></p>
+]]></content>
+      <categories>
+        <category>算法与数据结构</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/C/C%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Go/Go%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Java/Java%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Mongo/Mongo%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Mysql/Mysql%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx 上传文件大小限制</title>
+    <url>/2020/01/01/%E5%90%8E%E7%AB%AF/Nginx/2.%20Nginx%20%E9%85%8D%E7%BD%AE%E4%B9%8B%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6/</url>
+    <content><![CDATA[<h1 id="如果您需要上传限制-100MB-那么："><a href="#如果您需要上传限制-100MB-那么：" class="headerlink" title="如果您需要上传限制 100MB 那么："></a>如果您需要上传限制 100MB 那么：</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">localion / &#123;</span><br><span class="line">    # 将客户端主体大小设置为 100 MB</span><br><span class="line">    client_max_body_size 100M;</span><br><span class="line"></span><br><span class="line">    # ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
-<p>代码示范：</p>
 <span id="more"></span>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line">fs.<span class="title function_">readFile</span>(<span class="string">&quot;file.txt&quot;</span>, <span class="string">&quot;utf8&quot;</span>, <span class="function">(<span class="params">err, data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Nodejs</category>
+        <category>Nginx</category>
       </categories>
       <tags>
-        <tag>Nodejs</tag>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
-    <title>Nodejs - 中使用流？</title>
-    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%81%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Nodejs - 中使用流？ -->
-
-<p>在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> readStream = fs.<span class="title function_">createReadStream</span>(<span class="string">&#x27;file.txt&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> writeStream = fs.<span class="title function_">createWriteStream</span>(<span class="string">&#x27;output.txt&#x27;</span>);</span><br><span class="line"></span><br><span class="line">readStream.<span class="title function_">pipe</span>(write</span><br></pre></td></tr></table></figure>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Redis/Redis%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
 ]]></content>
       <categories>
-        <category>Nodejs</category>
+        <category>HTTP</category>
       </categories>
       <tags>
-        <tag>Nodejs</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
-    <title>Nodejs - 概述？</title>
-    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E6%A6%82%E8%BF%B0%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Nodejs - 概述？ -->
-
-<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，它在服务器端运行 JavaScript 代码。它的主要特点是非阻塞 I&#x2F;O，事件驱动和高效性能。</p>
-<span id="more"></span>
-
-<h1 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h1><p>2009</p>
-<p>Node.js 发布<br>创建 npm  的第一种形式</p>
-<p>2010</p>
-<p>Express  发布<br>Socket.io  发布</p>
-<p>2011</p>
-<p>npm 发布 1.0 版本<br>大公司开始采用 Node.js: 像 LinkedIn, Uber 等等。<br>hapi  发布</p>
-<p>2012</p>
-<p>持续被更多人所使用</p>
-<p>2013</p>
-<p>第一个使用 Node.js 的大型博客平台: Ghost<br>Koa  发布</p>
-<p>2014</p>
-<p>分裂分支: io.js 是 Node.js 分裂出的主要分支, 目标是引入 ES6 的支持并更快的开发迭代。</p>
-<p>2015</p>
-<p>Node.js 基金会   诞生<br>IO.js 合并回 Node.js<br>npm 引入私有模块<br>Node.js 4 (以前从未发布过 1, 2 和 3 版本)</p>
-<p>2016</p>
-<p>kik, left-pad 和 npm 事件<br>Yarn  发布<br>Node.js 6</p>
-<p>2017</p>
-<p>npm 更注重安全性<br>Node.js 8<br>HTTP&#x2F;2<br>V8 在其测试套件中引入 Node.js，正式使 Node.js 成为除 Chrome 之外的 JS 引擎的目标<br>每周超 30 亿次 npm 下载</p>
-<p>2018</p>
-<p>Node.js 10<br>ES modules .mjs 实验支持</p>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nodejs - 访问数据库？</title>
-    <url>/2016/05/01/%E5%89%8D%E7%AB%AF/nodejs/Nodejs%20-%20%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Nodejs - 访问数据库？ -->
-
-<p>在 Node.js 中访问数据库需要使用适当的数据库驱动程序。常见的数据库驱动程序包括 MongoDB 的 mongodb 模块和 MySQL 的 mysql2 模块。以下是使用 mongodb 模块连接到 MongoDB 并查询数据的示例：</p>
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MongoClient</span> = <span class="built_in">require</span>(<span class="string">&quot;mongodb&quot;</span>).<span class="property">MongoClient</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> url = <span class="string">&quot;mongodb://localhost:27017/myproject&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">MongoClient</span>.<span class="title function_">connect</span>(url, <span class="function">(<span class="params">err, client</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Connected successfully to server&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> db = client.<span class="title function_">db</span>(<span class="string">&quot;myproject&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> collection = db.<span class="title function_">collection</span>(<span class="string">&quot;documents&quot;</span>);</span><br><span class="line"></span><br><span class="line">    collection.<span class="title function_">find</span>(&#123;&#125;).<span class="title function_">toArray</span>(<span class="function">(<span class="params">err, docs</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Found the following records&quot;</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(docs);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    client.<span class="title function_">close</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Nodejs</category>
-      </categories>
-      <tags>
-        <tag>Nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hash 路由 与 history 路由有什么区别？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20hash%20%E8%B7%AF%E7%94%B1%20%E4%B8%8E%20history%20%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%F0%9F%94%A5%F0%9F%94%A5/</url>
-    <content><![CDATA[<!-- # hash 路由 与 history 路由有什么区别？ -->
-
-<ul>
-<li><p>区别：<br>URL 格式的不同。</p>
-<p>实现简单、兼容性好，而且可以运行在大多数 Web 服务器上；缺点在于 URL 不够美观，不利于搜索引擎优化（SEO）。</p>
-</li>
+    <title>HTTP 响应状态码</title>
+    <url>/2014/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/HTTP%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/HTTP%20%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+<h2 id="HTTP-响应状态码用来表明特定-HTTP-请求是否成功完成。-响应被归为以下五大类："><a href="#HTTP-响应状态码用来表明特定-HTTP-请求是否成功完成。-响应被归为以下五大类：" class="headerlink" title="HTTP 响应状态码用来表明特定 HTTP 请求是否成功完成。 响应被归为以下五大类："></a>HTTP 响应状态码用来表明特定 HTTP 请求是否成功完成。 响应被归为以下五大类：</h2><ul>
+<li>信息响应 (100–199)</li>
+<li>成功响应 (200–299)</li>
+<li>重定向消息 (300–399)</li>
+<li>客户端错误响应 (400–499)</li>
+<li>服务端错误响应 (500–599)</li>
 </ul>
 <span id="more"></span>
 
-<pre><code>History 路由解决了美观，SEO 的问题
-</code></pre>
-<ul>
-<li>实现原理：<br>html5 机制</li>
-</ul>
+<h2 id="信息响应"><a href="#信息响应" class="headerlink" title="信息响应"></a>信息响应</h2><p>‘100’: ‘Continue’,<br>‘101’: ‘Switching Protocols’,<br>‘102’: ‘Processing’, # 此代码表示服务器已收到并正在处理该请求，但当前没有响应可用。<br>‘103’: ‘Early Hints’,</p>
+<h2 id="成功响应"><a href="#成功响应" class="headerlink" title="成功响应"></a>成功响应</h2><p>‘200’: ‘OK’, # 请求成功。<br>‘201’: ‘Created’, # 该请求已成功，并因此创建了一个新的资源。这通常是在 POST 请求，或是某些 PUT 请求之后返回的响应。<br>‘202’: ‘Accepted’,<br>‘203’: ‘Non-Authoritative Information’,<br>‘204’: ‘No Content’, # 对于该请求没有的内容可发送，但头部字段可能有用。<br>‘205’: ‘Reset Content’,<br>‘206’: ‘Partial Content’, # 当从客户端发送 Range 范围标头以只请求资源的一部分时，将使用此响应代码。<br>‘207’: ‘Multi-Status’,<br>‘208’: ‘Already Reported’,<br>‘226’: ‘IM Used’,</p>
+<h2 id="重定向消息"><a href="#重定向消息" class="headerlink" title="重定向消息"></a>重定向消息</h2><p>‘300’: ‘Multiple Choices’,<br>‘301’: ‘Moved Permanently’, # 请求资源的 URL 已永久更改。在响应中给出了新的 URL。<br>‘302’: ‘Found’, # 临时性重定向。与 301 类似。但资源只是临时被移动。客户端应继续使用原有 URI<br>‘303’: ‘See Other’,<br>‘304’: ‘Not Modified’, # 这是用于缓存的目的。它告诉客户端响应还没有被修改，因此客户端可以继续使用相同的缓存版本的响应。<br>‘305’: ‘Use Proxy’,<br>‘307’: ‘Temporary Redirect’, # 临时重定向。与 302 类似。<br>‘308’: ‘Permanent Redirect’,</p>
+<h2 id="客户端错误响应"><a href="#客户端错误响应" class="headerlink" title="客户端错误响应"></a>客户端错误响应</h2><p>‘400’: ‘Bad Request’, # 由于被认为是客户端错误，服务器无法或不会处理请求。<br>‘401’: ‘Unauthorized’, # 客户端必须对自身进行身份验证才能获得请求的响应。<br>‘402’: ‘Payment Required’,<br>‘403’: ‘Forbidden’, # 客户端没有访问内容的权限；也就是说，它是未经授权的，因此服务器拒绝提供请求的资源。与 401 不同，服务器知道客户端的身份。<br>‘404’: ‘Not Found’, # 服务器找不到请求的资源。<br>‘405’: ‘Method Not Allowed’, # 服务器知道请求方法，但目标资源不支持该方法。<br>‘406’: ‘Not Acceptable’,<br>‘407’: ‘Proxy Authentication Required’,<br>‘408’: ‘Request Timeout’,<br>‘409’: ‘Conflict’,<br>‘410’: ‘Gone’,<br>‘411’: ‘Length Required’,<br>‘412’: ‘Precondition Failed’,<br>‘413’: ‘Payload Too Large’,<br>‘414’: ‘URI Too Long’,<br>‘415’: ‘Unsupported Media Type’,<br>‘416’: ‘Range Not Satisfiable’,<br>‘417’: ‘Expectation Failed’,<br>‘418’: “I’m a Teapot”,<br>‘421’: ‘Misdirected Request’,<br>‘422’: ‘Unprocessable Entity’,<br>‘423’: ‘Locked’,<br>‘424’: ‘Failed Dependency’,<br>‘425’: ‘Too Early’,<br>‘426’: ‘Upgrade Required’,<br>‘428’: ‘Precondition Required’,<br>‘429’: ‘Too Many Requests’,<br>‘431’: ‘Request Header Fields Too Large’,<br>‘451’: ‘Unavailable For Legal Reasons’,</p>
+<h2 id="服务端错误响应"><a href="#服务端错误响应" class="headerlink" title="服务端错误响应"></a>服务端错误响应</h2><p>‘500’: ‘Internal Server Error’, # 服务器遇到了不知道如何处理的情况。<br>‘501’: ‘Not Implemented’, # 服务器不支持请求方法，因此无法处理。<br>‘502’: ‘Bad Gateway’, # 服务器网关处理这个请求，返回一个错误的响应。<br>‘503’: ‘Service Unavailable’, # 服务器没有准备好处理请求。<br>‘504’: ‘Gateway Timeout’, # 当服务器充当网关且无法及时获得响应时，会给出此错误响应。<br>‘505’: ‘HTTP Version Not Supported’,<br>‘506’: ‘Variant Also Negotiates’,<br>‘507’: ‘Insufficient Storage’,<br>‘508’: ‘Loop Detected’,<br>‘509’: ‘Bandwidth Limit Exceeded’,<br>‘510’: ‘Not Extended’,<br>‘511’: ‘Network Authentication Required’</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status</a><br><a href="https://www.rfc-editor.org/">https://www.rfc-editor.org/</a><br><a href="https://datatracker.ietf.org/doc/html/rfc2616#section-10">https://datatracker.ietf.org/doc/html/rfc2616#section-10</a></p>
 ]]></content>
       <categories>
-        <category>JavaScript</category>
+        <category>HTTP</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
-    <title>JS - 什么作用域和闭包？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # 什么作用域和闭包？ -->
-
-<ul>
-<li>作用域<br>JavaScript 采用词法作用域（Lexical Scope）即静态作用域，函数的作用域在函数定义时就已经确定，不会受调用位置的影响。在 JavaScript 中，<code>全局作用域</code>和<code>函数作用域</code>都是词法作用域，也就是说函数可以访问其内部外部的变量，但是外部无法访问函数内部的变量。</li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li>闭包<br>闭包（Closure）是指函数可以访问并操作其外部作用域的变量，即使外部作用域已经销毁，也不会影响函数内部对这些变量的访问。<br>所以闭包也可以看做是函数对其外部作用域的引用，通过这种方式扩展了函数的作用域链。</li>
-</ul>
-<h1 id="产生的内存泄露"><a href="#产生的内存泄露" class="headerlink" title="产生的内存泄露"></a>产生的内存泄露</h1><p>或者使用 WeakMap 来实现自动化的垃圾回收。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createClosure</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="comment">/*...*/</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 使用 obj ...</span></span><br><span class="line">        obj = <span class="literal">null</span>; <span class="comment">// 将 obj 置为 null</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> closure = <span class="title function_">createClosure</span>();</span><br><span class="line"></span><br><span class="line"><span class="title function_">closure</span>(); <span class="comment">// 执行内部函数，此时 obj 对象已被置为 null，可以被垃圾回收机制回收</span></span><br></pre></td></tr></table></figure>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Rust/Rust%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
 ]]></content>
       <categories>
-        <category>JavaScript</category>
+        <category>HTTP</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
     <title>Css - 概念？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/css/Css%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/CSS/Css%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
     <content><![CDATA[<!-- # CSS 是什么？ -->
 
 <p>CSS 即层叠样式表（Cascading Style Sheets），是一种用来表现 HTML 或 XML 等文件样式的计算机语言。CSS 不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
@@ -583,20 +370,82 @@ https://hexo.io/themes/
 </ol>
 ]]></content>
       <categories>
-        <category>css</category>
+        <category>CSS</category>
       </categories>
       <tags>
-        <tag>css</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/07/04/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%B0%BE%E9%80%92%E5%BD%92%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
-    <content><![CDATA[]]></content>
+    <title>JS - Proxy 与 Object.defineProperty 优劣对比？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20Proxy%20%E4%B8%8E%20Object.defineProperty%20%E4%BC%98%E5%8A%A3%E5%AF%B9%E6%AF%94%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="Proxy-的优势如下"><a href="#Proxy-的优势如下" class="headerlink" title="Proxy 的优势如下:"></a>Proxy 的优势如下:</h2><p>Proxy 可以直接监听对象而非属性；</p>
+<p>Proxy 可以直接监听数组的变化；</p>
+<p>Proxy 有多达 13 种拦截方法,不限于 apply、ownKeys、deleteProperty、has 等等是 Object.<br>defineProperty 不具备的；</p>
+<span id="more"></span>
+
+<p>Proxy 返回的是一个新对象,我们可以只操作新的对象达到目的,而 Object.defineProperty 只能遍历对象属性直接修改；</p>
+<p>Proxy 作为新标准将受到浏览器厂商重点持续的性能优化，也就是传说中的新标准的性能红利；</p>
+<h2 id="Object-defineProperty-的优势如下"><a href="#Object-defineProperty-的优势如下" class="headerlink" title="Object.defineProperty 的优势如下:"></a>Object.defineProperty 的优势如下:</h2><p>兼容性好，支持 IE9，而 Proxy 不兼容性 IE,而且无法用 polyfill 磨平;</p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hash 路由 与 history 路由有什么区别？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20hash%20%E8%B7%AF%E7%94%B1%20%E4%B8%8E%20history%20%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%F0%9F%94%A5%F0%9F%94%A5/</url>
+    <content><![CDATA[<!-- # hash 路由 与 history 路由有什么区别？ -->
+
+<ul>
+<li><p>区别：<br>URL 格式的不同。</p>
+<p>实现简单、兼容性好，而且可以运行在大多数 Web 服务器上；缺点在于 URL 不够美观，不利于搜索引擎优化（SEO）。</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<pre><code>History 路由解决了美观，SEO 的问题
+</code></pre>
+<ul>
+<li>实现原理：<br>html5 机制</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 什么作用域和闭包？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # 什么作用域和闭包？ -->
+
+<ul>
+<li>作用域<br>JavaScript 采用词法作用域（Lexical Scope）即静态作用域，函数的作用域在函数定义时就已经确定，不会受调用位置的影响。在 JavaScript 中，<code>全局作用域</code>和<code>函数作用域</code>都是词法作用域，也就是说函数可以访问其内部外部的变量，但是外部无法访问函数内部的变量。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li>闭包<br>闭包（Closure）是指函数可以访问并操作其外部作用域的变量，即使外部作用域已经销毁，也不会影响函数内部对这些变量的访问。<br>所以闭包也可以看做是函数对其外部作用域的引用，通过这种方式扩展了函数的作用域链。</li>
+</ul>
+<h1 id="产生的内存泄露"><a href="#产生的内存泄露" class="headerlink" title="产生的内存泄露"></a>产生的内存泄露</h1><p>或者使用 WeakMap 来实现自动化的垃圾回收。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createClosure</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="comment">/*...*/</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 使用 obj ...</span></span><br><span class="line">        obj = <span class="literal">null</span>; <span class="comment">// 将 obj 置为 null</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> closure = <span class="title function_">createClosure</span>();</span><br><span class="line"></span><br><span class="line"><span class="title function_">closure</span>(); <span class="comment">// 执行内部函数，此时 obj 对象已被置为 null，可以被垃圾回收机制回收</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
   </entry>
   <entry>
     <title>JS - 什么是高阶函数？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9F/</url>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9F/</url>
     <content><![CDATA[<!-- # JS - 什么是高阶函数？ -->
 
 <p>高阶函数是接受一个或多个函数作为参数或返回一个函数的函数。</p>
@@ -612,7 +461,7 @@ https://hexo.io/themes/
   </entry>
   <entry>
     <title>JS - 实现一个promiseAll？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
     <content><![CDATA[<!-- # JS - 实现一个 promiseAll？ -->
 
 <p>代码示范：</p>
@@ -629,7 +478,7 @@ https://hexo.io/themes/
   </entry>
   <entry>
     <title>JS - 数据类型?</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B?/</url>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B?/</url>
     <content><![CDATA[<!-- # JS - 数据类型? -->
 
 <ul>
@@ -666,28 +515,8 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>JS - 页面如何渲染？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E9%A1%B5%E9%9D%A2%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # 页面如何渲染 -->
-
-<ul>
-<li>Reflow 回流</li>
-<li>为什么 JavaScript 要是单线程的 ?</li>
-</ul>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4. 为什么 JS 阻塞页面加载 ?</span><br><span class="line">    1. 是可操纵 DOM 的</span><br><span class="line">    2. js 会阻塞 Dom 解析，GUI 线程会被挂起，</span><br><span class="line">5. css 加载会造成阻塞吗 ？</span><br><span class="line">    1. CSS 加载会阻塞 Dom 的渲染和后面 js 的执行</span><br><span class="line">6. DOMContentLoaded 与 load 的区别 ?</span><br><span class="line">    1. DOMContentLoaded -&gt; load。</span><br><span class="line">7. 什么是 CRP,即关键渲染路径(Critical Rendering Path)? 如何优化 ?</span><br><span class="line">    1. 浏览器渲染流程。</span><br><span class="line">    2. 文件大小，阻塞，速度</span><br><span class="line">8. defer 和 async 的区别 ?</span><br><span class="line">9. 谈谈浏览器的回流与重绘 ?</span><br><span class="line">10. 什么是渲染层合并 (Composite) ?</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JS - 概念？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E6%A6%82%E5%BF%B5%EF%BC%9F/</url>
     <content><![CDATA[<!-- - JS - 概念？ -->
 
 <h2 id="什么是柯里化（Currying）？如何使用它？"><a href="#什么是柯里化（Currying）？如何使用它？" class="headerlink" title="什么是柯里化（Currying）？如何使用它？"></a>什么是柯里化（Currying）？如何使用它？</h2><p>柯里化（Currying）是一种将接受多个参数的函数转换为接受单个参数的函数序列的技术。使用柯里化可以更轻松地创建可重用的函数，并更容易地进行部分应用和组合。</p>
@@ -733,8 +562,370 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
+    <title>JS - 设计模式？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="收藏"><a href="#收藏" class="headerlink" title="收藏"></a>收藏</h2><p><a href="https://juejin.cn/post/6844904032826294286">JavaScript 设计模式 es6（23 种)</a><br><a href="https://juejin.cn/post/6844903506994806791">JavaScript 设计模式与开发实践</a></p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 页面如何渲染？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E9%A1%B5%E9%9D%A2%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # 页面如何渲染 -->
+
+<ul>
+<li>Reflow 回流</li>
+<li>为什么 JavaScript 要是单线程的 ?</li>
+</ul>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4. 为什么 JS 阻塞页面加载 ?</span><br><span class="line">    1. 是可操纵 DOM 的</span><br><span class="line">    2. js 会阻塞 Dom 解析，GUI 线程会被挂起，</span><br><span class="line">5. css 加载会造成阻塞吗 ？</span><br><span class="line">    1. CSS 加载会阻塞 Dom 的渲染和后面 js 的执行</span><br><span class="line">6. DOMContentLoaded 与 load 的区别 ?</span><br><span class="line">    1. DOMContentLoaded -&gt; load。</span><br><span class="line">7. 什么是 CRP,即关键渲染路径(Critical Rendering Path)? 如何优化 ?</span><br><span class="line">    1. 浏览器渲染流程。</span><br><span class="line">    2. 文件大小，阻塞，速度</span><br><span class="line">8. defer 和 async 的区别 ?</span><br><span class="line">9. 谈谈浏览器的回流与重绘 ?</span><br><span class="line">10. 什么是渲染层合并 (Composite) ?</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 什么作用域和闭包？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS-%20%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # 什么原型和原型链？ -->
+
+<ul>
+<li><p>每个 JavaScript 对象都有一个原型（prototype）属性，它指向另一个对象，<br>这个对象就是 当前对象的原型。</p>
+<p>当对象在自己的属性上找不到某个属性或方法，它会到原型对象中查找，直到找到为止，这就是原型链。</p>
+<p>原型链的顶端是 Object.prototype 对象，Object.prototype 的原型为 null。</p>
+</li>
+</ul>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C 诞生史</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JavaScript%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - Fiber？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20Fiber%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - Fiber？ -->
+
+<p>Fiber 是一种可中断的和优先级处理的协调引擎。</p>
+<p>它可以提高性能、改善用户体验和支持渐进式渲染。更好地流畅管理组件树的渲染过程。</p>
+<span id="more"></span>
+
+<p>在传统的 React 版本中，组件树的更新是通过递归遍历整个树来实现的，这可能会在更新过程中阻塞主线程。<br>而使用 Fiber，React 可以将更新分解为多个小任务，并使用优先级控制算法来安排这些任务的执行顺序，以便它们可以在不影响用户体验的情况下执行。此外，Fiber 还支持中断和恢复任务的执行，以便在处理紧急事件（如用户输入）时能够及时响应。</p>
+<p>Fiber 架构的另一个重要方面是它使 React 能够进行渐进式的渲染。这意味着 React 可以立即开始渲染页面并在后台继续执行剩余的工作，而不必等待所有内容都准备好才开始渲染。这可以改善首次加载时间并提高性能。</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - Hooks？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20Hooks%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - Hooks？ -->
+
+<p>常用的 Hooks 包括 useState、useEffect、useContext 等。<br>useState 可以让我们在函数组件中使用 state，useEffect 可以让我们在组件渲染后执行副作用代码，而 useContext 则可以让我们在组件间共享数据。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - Virtual DOM？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20Virtual%20DOM%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - Virtual DOM？ -->
+
+<p>Virtual DOM 是一个轻量级的 JavaScript 对象，描述了真实 DOM 的层次结构。</p>
+<p>在 React 中，当状态发生变化时，React 会创建一个新的 Virtual DOM 对象来代表新的 DOM 层次结构，并使用算法比较旧的和新的 Virtual DOM 对象之间的不同之处。根据 diff 算法的结果，React 只更新需要更改的部分，而不需要重新渲染整个页面。</p>
+<span id="more"></span>
+
+<p>Virtual DOM 是 React 用于提高性能的重要机制。它是一个轻量级的 JavaScript 对象树，用于表示真实的 DOM 结构，并且与真实的 DOM 保持同步。在 React 应用程序中，当状态发生变化时，React 首先会更新 Virtual DOM，然后通过比较前后两个版本的 Virtual DOM，计算出需要更新的最小操作，最后只更新这些操作对应的真实 DOM 节点，从而提高性能和减少不必要的 DOM 操作。</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - useMemo 和 useCallback 区别？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20useMemo%20%E5%92%8C%20useCallback%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - useMemo 和 useCallback 区别？ -->
+
+<p>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</p>
+<span id="more"></span>
+
+<p>useMemo 可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedValue = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> <span class="title function_">computeExpensiveValue</span>(a, b), [a, b]);</span><br></pre></td></tr></table></figure>
+
+<p>这里的 computeExpensiveValue 是一个计算成本很高的函数，memoizedValue 将会被缓存，并且只有在 a 或 b 发生变化时才会重新计算。</p>
+<p>useCallback 则是用于缓存回调函数，以避免不必要的重复创建。例如：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedCallback = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">doSomethingWith</span>(a, b);</span><br><span class="line">&#125;, [a, b]);</span><br></pre></td></tr></table></figure>
+
+<p>这里的 memoizedCallback 将会被缓存，并且只有在 a 或 b 发生变化时才会重新创建。如果我们将这个回调函数传递给了子组件，那么子组件在重新渲染时就不需要重新创建这个回调函数，从而避免了不必要的重复渲染。</p>
+<p>使用 useMemo 和 useCallback 都可以有效地避免在 React 应用程序中重复渲染组件，提高应用程序的性能和响应速度。</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - useState 和 useReducer 的区别是什么？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20useState%20%E5%92%8C%20useReducer%20%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - useState 和 useReducer 的区别是什么？ -->
+
+<p>useState 和 useReducer 都是 React 中用于管理组件的状态。</p>
+<span id="more"></span>
+
+<p>主要区别如下：<br>useState：只能处理单个状态值，可以通过多次调用。</p>
+<p>useReducer：适用于复杂的状态管理，可以处理多个相关联的状态值，并支持在更新状态时执行自定义操作。useReducer 接受一个 reducer 函数和初始状态，并返回当前状态和 dispatch 函数，用于触发状态更新。</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - 如何处理错误信息？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - 如何处理错误信息？ -->
+
+<p>在组件中通过定义 componentDidCatch 生命周期方法来捕获错误，并使用 ErrorBoundary 组件或 static getDerivedStateFromError 方法来处理错误。</p>
+<p>目前没有办法将错误边界写成函数组件。但是，您不必自己编写错误边界类。例如，您可以 react-error-boundary 改为使用。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - 生命周期有哪些？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%87%92%E5%8A%A0%E8%BD%BD%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - 生命周期有哪些？ -->
+
+<p>可以通过使用 React.lazy 和 Suspense 组件，在需要时才动态加载组件代码。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - 属性key作用？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E5%B1%9E%E6%80%A7key%E4%BD%9C%E7%94%A8%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - 属性 key 作用？ -->
+
+<p>Key 是 React 用于识别哪些元素已经被修改、添加或删除的机制。当我们使用数组渲染组件列表时，每个组件都需要有一个唯一的 key 属性，这样 React 就可以快速确定哪些组件需要更新，避免不必要的渲染，从而提高性能。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - 性能优化？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - 性能优化？ -->
+
+<p>避免重复渲染： 使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数<br>组件懒加载：React.lazy 和 Suspense<br>使用 key 属性<br>按需加载模块<br>SSR 提高首屏渲染速度<br>Web Workers 避免阻塞 UI 线程</p>
+<span id="more"></span>
+
+<h1 id="避免重复渲染组件？🔥"><a href="#避免重复渲染组件？🔥" class="headerlink" title="避免重复渲染组件？🔥"></a>避免重复渲染组件？🔥</h1><p>使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React -  描述下react生命周期？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E6%8F%8F%E8%BF%B0%E4%B8%8Breact%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - 描述下 react 生命周期？ -->
+
+<p>constructor()：当组件被实例化时调用。<br>render()：根据组件的 props 和状态返回一个 React 元素。<br>componentDidMount()：当组件已经渲染到页面上时调用。<br>componentDidUpdate()：当组件更新时调用。<br>componentWillUnmount()：当组件从页面上卸载时调用。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - 组件通信？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - 组件通信？ -->
+
+<ul>
+<li>常用的组件通信方式包括：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">props、</span><br><span class="line"></span><br><span class="line">Context、</span><br><span class="line"></span><br><span class="line">Redux</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h1 id="如何使用-React-Context-来管理全局数据？"><a href="#如何使用-React-Context-来管理全局数据？" class="headerlink" title="如何使用 React Context 来管理全局数据？"></a>如何使用 React Context 来管理全局数据？</h1><p>简单回答下：<br>可以通过 React.createContext 方法创建一个 Context 实例，并通过 Provider 组件来向下传递数据，而子组件可以通过 Consumer 组件或 useContext 钩子来获取这些数据。</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React - 高阶组件？</title>
+    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # React - 高阶组件？ -->
+
+<p>高阶组件是指接受一个组件并返回一个新组件的函数。和高阶函数一样同理。</p>
+<p>主要作用：在组件之间共享代码、提取和重用状态逻辑，或者对包装的组件额外的操作。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - TypeScript 中的泛型是什么？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # TypeScript 中的泛型是什么？如何使用泛型？ -->
+
+<p>TypeScript 中的泛型是一种类型参数，它可以在定义函数、类或接口时使用，用于指定一个类型占位符。<br>这个类型占位符可以在调用函数或实例化类时被具体的类型所代替，从而实现代码的灵活性和复用性。</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> identity&lt;T&gt;(<span class="attr">arg</span>: T): T &#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - interface 和 type 区别？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Ts - interface 和 type 区别？ -->
+
+<p>interface 主要用于描述对象的结构，可继承</p>
+<p>type 更适合用于描述一般的类型，type 能够给任何类型起别名，</p>
+<p>type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在 TypeScript 中使用命名空间？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # 如何在 TypeScript 中使用命名空间？ -->
+
+<p>简单回答下：<br>在 TypeScript 中，命名空间是一种用于组织代码的结构化方式。<br>我们可以使用命名空间来避免命名冲突，并将相关的函数、类和接口等组织到一个逻辑单元中。</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">namespace <span class="title class_">MyNamespace</span> &#123;</span><br><span class="line">  <span class="keyword">export</span> interface <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: string;</span><br><span class="line">    <span class="attr">age</span>: number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params">person: Person</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello, <span class="subst">$&#123;person.name&#125;</span>!`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">person</span>: <span class="title class_">MyNamespace</span>.<span class="property">Person</span> = &#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="title class_">MyNamespace</span>.<span class="title function_">sayHello</span>(person);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - 如何使用接口来描述函数类型？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Ts - 如何使用接口来描述函数类型？ -->
+
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">interface <span class="title class_">AddFunction</span> &#123;</span><br><span class="line">    (<span class="attr">x</span>: number, <span class="attr">y</span>: number): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？ -->
+
+<p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span>,</span><br><span class="line">    <span class="title class_">Down</span>,</span><br><span class="line">    <span class="title class_">Left</span>,</span><br><span class="line">    <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue - 中实现组件通信？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
     <content><![CDATA[<!-- # Vue2 中实现组件通信？ -->
 
 <ol>
@@ -756,28 +947,8 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>JS - 什么作用域和闭包？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS-%20%E4%BB%80%E4%B9%88%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # 什么原型和原型链？ -->
-
-<ul>
-<li><p>每个 JavaScript 对象都有一个原型（prototype）属性，它指向另一个对象，<br>这个对象就是 当前对象的原型。</p>
-<p>当对象在自己的属性上找不到某个属性或方法，它会到原型对象中查找，直到找到为止，这就是原型链。</p>
-<p>原型链的顶端是 Object.prototype 对象，Object.prototype 的原型为 null。</p>
-</li>
-</ul>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue - 中的 computed 和 watch 区别？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
     <content><![CDATA[<!-- # Vue - 中的 computed 和 watch 区别？ -->
 
 <p>在 Vue 中，computed 和 watch 都可以用于监听数据变化并做出响应。 区别在于：</p>
@@ -799,7 +970,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   </entry>
   <entry>
     <title>Vue - 中的 mixin 和 extends 优缺点？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/</url>
     <content><![CDATA[<!-- # Vue - 中的 mixin 和 extends 优缺点？ -->
 
 <p>mixin</p>
@@ -823,7 +994,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   </entry>
   <entry>
     <title>Vue - 中的 v-model 指令？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/</url>
     <content><![CDATA[<!-- # Vue - 中的 v-model 指令？ -->
 
 <p>它可以简化表单元素上的双向数据绑定。它通常用于对表单元素的输入值进行绑定，这样数据就会在视图和模型之间自动同步。</p>
@@ -843,7 +1014,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   </entry>
   <entry>
     <title>Vue - 什么是 Virtual DOM，优势？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/</url>
     <content><![CDATA[<!-- # Vue - 什么是 Virtual DOM，优势？ -->
 
 <p>它是一个内存中的虚拟节点树，其结构与真实的 DOM 树相似，但是它只存在于内存中，并不需要直接操作浏览器中的 DOM。当数据发生变化时，框架会先利用算法比较新旧虚拟 DOM 的差异，并仅更新需要更新的部分。</p>
@@ -866,8 +1037,39 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
+    <title>Vue - 如何实现路由守卫？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Vue - 如何实现路由守卫？ -->
+
+<p>在 Vue 中，可以通过守卫来拦截导航、验证用户身份等操作。</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 假设路由表</span></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/home&quot;</span>, <span class="attr">component</span>: <span class="title class_">Home</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/about&quot;</span>, <span class="attr">component</span>: <span class="title class_">About</span>, <span class="attr">meta</span>: &#123; <span class="attr">requiresAuth</span>: <span class="literal">true</span> &#125; &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">routes.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 需要登录验证但用户未登录</span></span><br><span class="line">    <span class="keyword">if</span> (to.<span class="property">meta</span>.<span class="property">requiresAuth</span> &amp;&amp; !auth.<span class="title function_">isLoggedIn</span>()) &#123;</span><br><span class="line">        <span class="title function_">next</span>(<span class="string">&quot;/login&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 继续导航</span></span><br><span class="line">        <span class="title function_">next</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://router.vuejs.org/guide/advanced/meta.html">https://router.vuejs.org/guide/advanced/meta.html</a></p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue - 数据双向绑定？</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="收藏"><a href="#收藏" class="headerlink" title="收藏"></a>收藏</h2><p><a href="https://juejin.cn/post/6844903903822086151#heading-17">Vue 核心之数据双向绑定</a></p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue - 有哪些性能优化？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E6%9C%89%E5%93%AA%E4%BA%9B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E6%9C%89%E5%93%AA%E4%BA%9B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
     <content><![CDATA[<!-- # Vue - 有哪些性能优化？ -->
 
 <ol>
@@ -895,341 +1097,8 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Ts - TypeScript 中的泛型是什么？</title>
-    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # TypeScript 中的泛型是什么？如何使用泛型？ -->
-
-<p>TypeScript 中的泛型是一种类型参数，它可以在定义函数、类或接口时使用，用于指定一个类型占位符。<br>这个类型占位符可以在调用函数或实例化类时被具体的类型所代替，从而实现代码的灵活性和复用性。</p>
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> identity&lt;T&gt;(<span class="attr">arg</span>: T): T &#123;</span><br><span class="line">    <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ts - interface 和 type 区别？</title>
-    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Ts - interface 和 type 区别？ -->
-
-<p>interface 主要用于描述对象的结构，可继承</p>
-<p>type 更适合用于描述一般的类型，type 能够给任何类型起别名，</p>
-<p>type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在 TypeScript 中使用命名空间？</title>
-    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # 如何在 TypeScript 中使用命名空间？ -->
-
-<p>简单回答下：<br>在 TypeScript 中，命名空间是一种用于组织代码的结构化方式。<br>我们可以使用命名空间来避免命名冲突，并将相关的函数、类和接口等组织到一个逻辑单元中。</p>
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">namespace <span class="title class_">MyNamespace</span> &#123;</span><br><span class="line">  <span class="keyword">export</span> interface <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: string;</span><br><span class="line">    <span class="attr">age</span>: number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params">person: Person</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello, <span class="subst">$&#123;person.name&#125;</span>!`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">person</span>: <span class="title class_">MyNamespace</span>.<span class="property">Person</span> = &#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="title class_">MyNamespace</span>.<span class="title function_">sayHello</span>(person);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ts - 如何使用接口来描述函数类型？</title>
-    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Ts - 如何使用接口来描述函数类型？ -->
-
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">interface <span class="title class_">AddFunction</span> &#123;</span><br><span class="line">    (<span class="attr">x</span>: number, <span class="attr">y</span>: number): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue - 如何实现路由守卫？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Vue - 如何实现路由守卫？ -->
-
-<p>在 Vue 中，可以通过守卫来拦截导航、验证用户身份等操作。</p>
-<span id="more"></span>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 假设路由表</span></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/home&quot;</span>, <span class="attr">component</span>: <span class="title class_">Home</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">&quot;/about&quot;</span>, <span class="attr">component</span>: <span class="title class_">About</span>, <span class="attr">meta</span>: &#123; <span class="attr">requiresAuth</span>: <span class="literal">true</span> &#125; &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">routes.<span class="title function_">beforeEach</span>(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 需要登录验证但用户未登录</span></span><br><span class="line">    <span class="keyword">if</span> (to.<span class="property">meta</span>.<span class="property">requiresAuth</span> &amp;&amp; !auth.<span class="title function_">isLoggedIn</span>()) &#123;</span><br><span class="line">        <span class="title function_">next</span>(<span class="string">&quot;/login&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 继续导航</span></span><br><span class="line">        <span class="title function_">next</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://router.vuejs.org/guide/advanced/meta.html">https://router.vuejs.org/guide/advanced/meta.html</a></p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ts - 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</title>
-    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？ -->
-
-<p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span>,</span><br><span class="line">    <span class="title class_">Down</span>,</span><br><span class="line">    <span class="title class_">Left</span>,</span><br><span class="line">    <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - Fiber？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Fiber%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - Fiber？ -->
-
-<p>Fiber 是一种可中断的和优先级处理的协调引擎。</p>
-<p>它可以提高性能、改善用户体验和支持渐进式渲染。更好地流畅管理组件树的渲染过程。</p>
-<span id="more"></span>
-
-<p>在传统的 React 版本中，组件树的更新是通过递归遍历整个树来实现的，这可能会在更新过程中阻塞主线程。<br>而使用 Fiber，React 可以将更新分解为多个小任务，并使用优先级控制算法来安排这些任务的执行顺序，以便它们可以在不影响用户体验的情况下执行。此外，Fiber 还支持中断和恢复任务的执行，以便在处理紧急事件（如用户输入）时能够及时响应。</p>
-<p>Fiber 架构的另一个重要方面是它使 React 能够进行渐进式的渲染。这意味着 React 可以立即开始渲染页面并在后台继续执行剩余的工作，而不必等待所有内容都准备好才开始渲染。这可以改善首次加载时间并提高性能。</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - Hooks？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Hooks%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - Hooks？ -->
-
-<p>常用的 Hooks 包括 useState、useEffect、useContext 等。<br>useState 可以让我们在函数组件中使用 state，useEffect 可以让我们在组件渲染后执行副作用代码，而 useContext 则可以让我们在组件间共享数据。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - Virtual DOM？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20Virtual%20DOM%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - Virtual DOM？ -->
-
-<p>Virtual DOM 是一个轻量级的 JavaScript 对象，描述了真实 DOM 的层次结构。</p>
-<p>在 React 中，当状态发生变化时，React 会创建一个新的 Virtual DOM 对象来代表新的 DOM 层次结构，并使用算法比较旧的和新的 Virtual DOM 对象之间的不同之处。根据 diff 算法的结果，React 只更新需要更改的部分，而不需要重新渲染整个页面。</p>
-<span id="more"></span>
-
-<p>Virtual DOM 是 React 用于提高性能的重要机制。它是一个轻量级的 JavaScript 对象树，用于表示真实的 DOM 结构，并且与真实的 DOM 保持同步。在 React 应用程序中，当状态发生变化时，React 首先会更新 Virtual DOM，然后通过比较前后两个版本的 Virtual DOM，计算出需要更新的最小操作，最后只更新这些操作对应的真实 DOM 节点，从而提高性能和减少不必要的 DOM 操作。</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - useMemo 和 useCallback 区别？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20useMemo%20%E5%92%8C%20useCallback%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - useMemo 和 useCallback 区别？ -->
-
-<p>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</p>
-<span id="more"></span>
-
-<p>useMemo 可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如：</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedValue = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> <span class="title function_">computeExpensiveValue</span>(a, b), [a, b]);</span><br></pre></td></tr></table></figure>
-
-<p>这里的 computeExpensiveValue 是一个计算成本很高的函数，memoizedValue 将会被缓存，并且只有在 a 或 b 发生变化时才会重新计算。</p>
-<p>useCallback 则是用于缓存回调函数，以避免不必要的重复创建。例如：</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedCallback = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">doSomethingWith</span>(a, b);</span><br><span class="line">&#125;, [a, b]);</span><br></pre></td></tr></table></figure>
-
-<p>这里的 memoizedCallback 将会被缓存，并且只有在 a 或 b 发生变化时才会重新创建。如果我们将这个回调函数传递给了子组件，那么子组件在重新渲染时就不需要重新创建这个回调函数，从而避免了不必要的重复渲染。</p>
-<p>使用 useMemo 和 useCallback 都可以有效地避免在 React 应用程序中重复渲染组件，提高应用程序的性能和响应速度。</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - useState 和 useReducer 的区别是什么？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20useState%20%E5%92%8C%20useReducer%20%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - useState 和 useReducer 的区别是什么？ -->
-
-<p>useState 和 useReducer 都是 React 中用于管理组件的状态。</p>
-<span id="more"></span>
-
-<p>主要区别如下：<br>useState：只能处理单个状态值，可以通过多次调用。</p>
-<p>useReducer：适用于复杂的状态管理，可以处理多个相关联的状态值，并支持在更新状态时执行自定义操作。useReducer 接受一个 reducer 函数和初始状态，并返回当前状态和 dispatch 函数，用于触发状态更新。</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - 如何处理错误信息？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - 如何处理错误信息？ -->
-
-<p>在组件中通过定义 componentDidCatch 生命周期方法来捕获错误，并使用 ErrorBoundary 组件或 static getDerivedStateFromError 方法来处理错误。</p>
-<p>目前没有办法将错误边界写成函数组件。但是，您不必自己编写错误边界类。例如，您可以 react-error-boundary 改为使用。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - 生命周期有哪些？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%87%92%E5%8A%A0%E8%BD%BD%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - 生命周期有哪些？ -->
-
-<p>可以通过使用 React.lazy 和 Suspense 组件，在需要时才动态加载组件代码。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - 属性key作用？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E5%B1%9E%E6%80%A7key%E4%BD%9C%E7%94%A8%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - 属性 key 作用？ -->
-
-<p>Key 是 React 用于识别哪些元素已经被修改、添加或删除的机制。当我们使用数组渲染组件列表时，每个组件都需要有一个唯一的 key 属性，这样 React 就可以快速确定哪些组件需要更新，避免不必要的渲染，从而提高性能。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - 性能优化？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - 性能优化？ -->
-
-<p>避免重复渲染： 使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数<br>组件懒加载：React.lazy 和 Suspense<br>使用 key 属性<br>按需加载模块<br>SSR 提高首屏渲染速度<br>Web Workers 避免阻塞 UI 线程</p>
-<span id="more"></span>
-
-<h1 id="避免重复渲染组件？🔥"><a href="#避免重复渲染组件？🔥" class="headerlink" title="避免重复渲染组件？🔥"></a>避免重复渲染组件？🔥</h1><p>使用 shouldComponentUpdate，PureComponent，React.memo<br>函数组件：useMemo 和 useCallback 函数</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React -  描述下react生命周期？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E6%8F%8F%E8%BF%B0%E4%B8%8Breact%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - 描述下 react 生命周期？ -->
-
-<p>constructor()：当组件被实例化时调用。<br>render()：根据组件的 props 和状态返回一个 React 元素。<br>componentDidMount()：当组件已经渲染到页面上时调用。<br>componentDidUpdate()：当组件更新时调用。<br>componentWillUnmount()：当组件从页面上卸载时调用。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - 组件通信？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - 组件通信？ -->
-
-<ul>
-<li>常用的组件通信方式包括：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">props、</span><br><span class="line"></span><br><span class="line">Context、</span><br><span class="line"></span><br><span class="line">Redux</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h1 id="如何使用-React-Context-来管理全局数据？"><a href="#如何使用-React-Context-来管理全局数据？" class="headerlink" title="如何使用 React Context 来管理全局数据？"></a>如何使用 React Context 来管理全局数据？</h1><p>简单回答下：<br>可以通过 React.createContext 方法创建一个 Context 实例，并通过 Provider 组件来向下传递数据，而子组件可以通过 Consumer 组件或 useContext 钩子来获取这些数据。</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React - 高阶组件？</title>
-    <url>/2018/05/01/%E5%89%8D%E7%AB%AF/react/React%20-%20%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # React - 高阶组件？ -->
-
-<p>高阶组件是指接受一个组件并返回一个新组件的函数。和高阶函数一样同理。</p>
-<p>主要作用：在组件之间共享代码、提取和重用状态逻辑，或者对包装的组件额外的操作。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C - 如何使用指针交换变量？</title>
-    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/C/C%20-%20%E6%8C%87%E9%92%88%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F%EF%BC%9F/</url>
-    <content><![CDATA[<p>交换变量，使用指针处理；</p>
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">float</span> *y)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">5</span>;</span><br><span class="line">    <span class="type">float</span> y = <span class="number">10.0001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针交换变量</span></span><br><span class="line">    swap(&amp;x, &amp;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输出结果： %d %le \n&quot;</span>, x, y);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *x, <span class="type">float</span> *y)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    temp = *x;</span><br><span class="line">    *x = *y;</span><br><span class="line">    *y = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>c</category>
-      </categories>
-      <tags>
-        <tag>c</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue - 生命周期的理解？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F/</url>
     <content><![CDATA[<p>生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -&gt; 渲染、更新 -&gt; 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
 <span id="more"></span>
 
@@ -1250,27 +1119,8 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>JS - Proxy 与 Object.defineProperty 优劣对比？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20Proxy%20%E4%B8%8E%20Object.defineProperty%20%E4%BC%98%E5%8A%A3%E5%AF%B9%E6%AF%94%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="Proxy-的优势如下"><a href="#Proxy-的优势如下" class="headerlink" title="Proxy 的优势如下:"></a>Proxy 的优势如下:</h2><p>Proxy 可以直接监听对象而非属性；</p>
-<p>Proxy 可以直接监听数组的变化；</p>
-<p>Proxy 有多达 13 种拦截方法,不限于 apply、ownKeys、deleteProperty、has 等等是 Object.<br>defineProperty 不具备的；</p>
-<span id="more"></span>
-
-<p>Proxy 返回的是一个新对象,我们可以只操作新的对象达到目的,而 Object.defineProperty 只能遍历对象属性直接修改；</p>
-<p>Proxy 作为新标准将受到浏览器厂商重点持续的性能优化，也就是传说中的新标准的性能红利；</p>
-<h2 id="Object-defineProperty-的优势如下"><a href="#Object-defineProperty-的优势如下" class="headerlink" title="Object.defineProperty 的优势如下:"></a>Object.defineProperty 的优势如下:</h2><p>兼容性好，支持 IE9，而 Proxy 不兼容性 IE,而且无法用 polyfill 磨平;</p>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue - 虚拟 DOM 实现原理？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/</url>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E8%99%9A%E6%8B%9F%20DOM%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%EF%BC%9F/</url>
     <content><![CDATA[<p>虚拟 DOM 的实现原理主要包括以下 3 部分：</p>
 <p>用 JavaScript 对象模拟真实 DOM 树，对真实 DOM 进行抽象；<br>diff 算法 — 比较两棵虚拟 DOM 树的差异；<br>pach 算法 — 将两个虚拟 DOM 对象的差异应用到真正的 DOM 树。</p>
 <p><a href="https://juejin.cn/post/6844903895467032589#heading-14">深入剖析：Vue 核心之虚拟 DOM</a></p>
@@ -1283,27 +1133,302 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>JS - 设计模式？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/javaScript/JS%20-%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="收藏"><a href="#收藏" class="headerlink" title="收藏"></a>收藏</h2><p><a href="https://juejin.cn/post/6844904032826294286">JavaScript 设计模式 es6（23 种)</a><br><a href="https://juejin.cn/post/6844903506994806791">JavaScript 设计模式与开发实践</a></p>
+    <title>Nodejs - 中使用流？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/Nodejs/Nodejs%20-%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B5%81%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Nodejs - 中使用流？ -->
+
+<p>在 Node.js 中使用流需要使用核心的 stream 模块。例如，可以使用 createReadStream 方法创建一个可读流并使用 pipe 方法将数据写入可写流：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> readStream = fs.<span class="title function_">createReadStream</span>(<span class="string">&#x27;file.txt&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> writeStream = fs.<span class="title function_">createWriteStream</span>(<span class="string">&#x27;output.txt&#x27;</span>);</span><br><span class="line"></span><br><span class="line">readStream.<span class="title function_">pipe</span>(write</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>JavaScript</category>
+        <category>Nodejs</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
+        <tag>Nodejs</tag>
       </tags>
   </entry>
   <entry>
-    <title>Vue - 数据双向绑定？</title>
-    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/vue/Vue%20-%20%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="收藏"><a href="#收藏" class="headerlink" title="收藏"></a>收藏</h2><p><a href="https://juejin.cn/post/6844903903822086151#heading-17">Vue 核心之数据双向绑定</a></p>
+    <title>Nodejs - 事件循环？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/Nodejs/Nodejs%20-%20%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Nodejs - 事件循环？ -->
+
+<p>Node.js 中的事件循环是一种异步执行模型，它通过监听事件队列中的事件并调用相应的回调函数来处理请求。事件循环始终处于运行状态，处理每个进入队列的事件并返回结果。</p>
+<span id="more"></span>
+
+<h1 id="loop-官方"><a href="#loop-官方" class="headerlink" title="loop 官方"></a>loop 官方</h1><pre><code>什么是事件循环？
+事件循环允许 Node.js 通过尽可能将操作卸载到系统内核来执行非阻塞 I/O 操作 ——尽管 JavaScript 是单线程的。
+
+事件循环解释
+当 Node.js 启动时，它会初始化事件循环，处理提供的输入脚本，这可能会进行异步 API 调用、调度计时器或调用 process.nextTick()，然后开始处理事件环形。
+</code></pre>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick">官方文档链接 https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick</a></p>
 ]]></content>
       <categories>
-        <category>Vue</category>
+        <category>Nodejs</category>
       </categories>
       <tags>
-        <tag>Vue</tag>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 创建一个 HTTP 服务器？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/Nodejs/Nodejs%20-%20%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%20HTTP%20%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Nodejs - 创建一个 HTTP 服务器？ -->
+
+<p>使用 Node.js 创建一个 HTTP 服务器需要使用核心的 http 模块。例如，可以使用 createServer 方法创建一个服务器实例，并在回调函数中处理请求和响应：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.<span class="property">statusCode</span> = <span class="number">200</span>;</span><br><span class="line">    res.<span class="title function_">setHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;text/plain&quot;</span>);</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">3000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Server running at http://localhost:3000/&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 处理文件系统？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/Nodejs/Nodejs%20-%20%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Nodejs - 处理文件系统？ -->
+
+<p>在 Node.js 中处理文件系统需要使用核心的 fs 模块。例如，可以使用 readFile 方法读取文件内容，并在回调函数中处理结果：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line">fs.<span class="title function_">readFile</span>(<span class="string">&quot;file.txt&quot;</span>, <span class="string">&quot;utf8&quot;</span>, <span class="function">(<span class="params">err, data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 概述？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/Nodejs/Nodejs%20-%20%E6%A6%82%E8%BF%B0%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Nodejs - 概述？ -->
+
+<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时，它在服务器端运行 JavaScript 代码。它的主要特点是非阻塞 I&#x2F;O，事件驱动和高效性能。</p>
+<span id="more"></span>
+
+<h1 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h1><p>2009</p>
+<p>Node.js 发布<br>创建 npm  的第一种形式</p>
+<p>2010</p>
+<p>Express  发布<br>Socket.io  发布</p>
+<p>2011</p>
+<p>npm 发布 1.0 版本<br>大公司开始采用 Node.js: 像 LinkedIn, Uber 等等。<br>hapi  发布</p>
+<p>2012</p>
+<p>持续被更多人所使用</p>
+<p>2013</p>
+<p>第一个使用 Node.js 的大型博客平台: Ghost<br>Koa  发布</p>
+<p>2014</p>
+<p>分裂分支: io.js 是 Node.js 分裂出的主要分支, 目标是引入 ES6 的支持并更快的开发迭代。</p>
+<p>2015</p>
+<p>Node.js 基金会   诞生<br>IO.js 合并回 Node.js<br>npm 引入私有模块<br>Node.js 4 (以前从未发布过 1, 2 和 3 版本)</p>
+<p>2016</p>
+<p>kik, left-pad 和 npm 事件<br>Yarn  发布<br>Node.js 6</p>
+<p>2017</p>
+<p>npm 更注重安全性<br>Node.js 8<br>HTTP&#x2F;2<br>V8 在其测试套件中引入 Node.js，正式使 Node.js 成为除 Chrome 之外的 JS 引擎的目标<br>每周超 30 亿次 npm 下载</p>
+<p>2018</p>
+<p>Node.js 10<br>ES modules .mjs 实验支持</p>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nodejs - 访问数据库？</title>
+    <url>/2016/05/01/%E5%90%8E%E7%AB%AF/Nodejs/Nodejs%20-%20%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # Nodejs - 访问数据库？ -->
+
+<p>在 Node.js 中访问数据库需要使用适当的数据库驱动程序。常见的数据库驱动程序包括 MongoDB 的 mongodb 模块和 MySQL 的 mysql2 模块。以下是使用 mongodb 模块连接到 MongoDB 并查询数据的示例：</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MongoClient</span> = <span class="built_in">require</span>(<span class="string">&quot;mongodb&quot;</span>).<span class="property">MongoClient</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> url = <span class="string">&quot;mongodb://localhost:27017/myproject&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">MongoClient</span>.<span class="title function_">connect</span>(url, <span class="function">(<span class="params">err, client</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Connected successfully to server&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> db = client.<span class="title function_">db</span>(<span class="string">&quot;myproject&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> collection = db.<span class="title function_">collection</span>(<span class="string">&quot;documents&quot;</span>);</span><br><span class="line"></span><br><span class="line">    collection.<span class="title function_">find</span>(&#123;&#125;).<span class="title function_">toArray</span>(<span class="function">(<span class="params">err, docs</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Found the following records&quot;</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(docs);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    client.<span class="title function_">close</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTP 会话</title>
+    <url>/2014/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/HTTP%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/HTTP%20%E4%BC%9A%E8%AF%9D/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTP 的发展</title>
+    <url>/2014/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/HTTP%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/HTTP%20%E7%9A%84%E5%8F%91%E5%B1%95/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+<h2 id="HTTP（HyperText-Transfer-Protocol）是万维网（World-Wide-Web）的基础协议。"><a href="#HTTP（HyperText-Transfer-Protocol）是万维网（World-Wide-Web）的基础协议。" class="headerlink" title="HTTP（HyperText Transfer Protocol）是万维网（World Wide Web）的基础协议。"></a>HTTP（HyperText Transfer Protocol）是万维网（World Wide Web）的基础协议。</h2><p>自 Tim Berners-Lee 博士和他的团队在 1989-1991 年间创造出它以来，HTTP 已经发生了太多的变化，在保持协议简单性的同时，不断扩展其灵活性。如今，HTTP 已经从一个只在实验室之间交换文件的早期协议进化到了可以传输图片，高分辨率视频和 3D 效果的现代复杂互联网协议。</p>
+<span id="more"></span>
+
+<h2 id="万维网的发明"><a href="#万维网的发明" class="headerlink" title="万维网的发明"></a>万维网的发明</h2><p>1989 年，当时在 CERN 工作的 Tim Berners-Lee 博士写了一份关于建立一个通过网络传输超文本系统的报告。这个系统起初被命名为 Mesh，在随后的 1990 年项目实施期间被更名为万维网（World Wide Web）。它在现有的 TCP 和 IP 协议基础之上建立，由四个部分组成：</p>
+<ul>
+<li>一个用来表示超文本文档的文本格式，超文本标记语言（HTML）。</li>
+<li>一个用来交换超文本文档的简单协议，超文本传输协议（HTTP）。</li>
+<li>一个显示（以及编辑）超文本文档的客户端，即网络浏览器。第一个网络浏览器被称为 WorldWideWeb。</li>
+<li>一个服务器用于提供可访问的文档，即 httpd 的前身。</li>
+</ul>
+<h2 id="HTTP-x2F-2——为了更优异的表现"><a href="#HTTP-x2F-2——为了更优异的表现" class="headerlink" title="HTTP&#x2F;2——为了更优异的表现"></a>HTTP&#x2F;2——为了更优异的表现</h2><p>HTTP&#x2F;2 在 HTTP&#x2F;1.1 有几处基本的不同：</p>
+<p>HTTP&#x2F;2 是二进制协议而不是文本协议。不再可读，也不可无障碍的手动创建，改善的优化技术现在可被实施。<br>这是一个多路复用协议。并行的请求能在同一个链接中处理，移除了 HTTP&#x2F;1.x 中顺序和阻塞的约束。<br>压缩了标头。因为标头在一系列请求中常常是相似的，其移除了重复和传输重复数据的成本。<br>其允许服务器在客户端缓存中填充数据，通过一个叫服务器推送的机制来提前请求。</p>
+<p>在 2015 年 5 月正式标准化后，HTTP&#x2F;2 取得了极大的成功，在 2022 年 1 月达到峰值，占所有网站的 46.9%（见这些统计数据）。高流量的站点最迅速的普及，在数据传输上节省了可观的成本和支出。</p>
+<h2 id="HTTP-x2F-3——基于-QUIC-的-HTTP"><a href="#HTTP-x2F-3——基于-QUIC-的-HTTP" class="headerlink" title="HTTP&#x2F;3——基于 QUIC 的 HTTP"></a>HTTP&#x2F;3——基于 QUIC 的 HTTP</h2><p>HTTP 的下一个主要版本，HTTP&#x2F;3 有这与 HTTP 早期版本的相同语义，但在传输层部分使用 QUIC (en-US) 而不是 TCP。到 2022 年 10 月，26% 的网站正在使用 HTTP&#x2F;3。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP&#x2F;Evolution_of_HTTP</a></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTP 安全</title>
+    <url>/2014/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/HTTP%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/HTTP%20%E5%AE%89%E5%85%A8/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+<h2 id="HTTPS（超文本传输安全协议）是-HTTP-协议的加密版本。"><a href="#HTTPS（超文本传输安全协议）是-HTTP-协议的加密版本。" class="headerlink" title="HTTPS（超文本传输安全协议）是 HTTP 协议的加密版本。"></a>HTTPS（超文本传输安全协议）是 HTTP 协议的加密版本。</h2><p>它使用 SSL 或 TLS 协议来加密客户端和服务器之间所有的通信。安全连接允许客户端与服务器安全地交换敏感数据，例如网上银行或者在线商城等涉及金钱的操作。</p>
+<h2 id="SSL（安全套接层）"><a href="#SSL（安全套接层）" class="headerlink" title="SSL（安全套接层）"></a>SSL（安全套接层）</h2><p>SSL（Secure Sockets Layer，安全套接层）是旧的标准安全技术，用于在服务器和客户端之间创建加密的网络链路，确保传递的所有数据都是私密且安全的。SSL 的当前版本是 Netscape 于 1996 年发布的 3.0 版本，已被 TLS 协议取代。</p>
+<h2 id="TLS"><a href="#TLS" class="headerlink" title="TLS"></a>TLS</h2><p>传输层安全性协议 (Transport Layer Security，缩写作 TLS)，它的前身是安全套接层 (Secure Sockets Layer，缩写作 SSL)，是一个被应用程序用来在网络中安全通信的 protocol （通讯协议），防止电子邮件、网页、消息以及其他协议被篡改或是窃听。</p>
+<p>所有现代浏览器都支持 TLS 协议，它们都要求服务器提供一个有效的 digital certificate（数字证书）来确认身份以建立安全连接。如果客户端和服务器都能提供自己的数字证书，则它们可以互相认证。</p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三次握手四次握手</title>
+    <url>/2014/05/01/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/TCP%20%E5%8D%8F%E8%AE%AE/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p>传输控制协议（TCP）是主要的网络协议之一。它使两台主机能够建立连接并交换数据流。TCP 能保证数据的交付，维持数据包的发送顺序。TCP 在 1970 年代被两位 DARPA 的科学家 Vint Cerf 和 Bob Kahn 所设计出来，他们当时被称为互联网之父。</p>
+<span id="more"></span>
+
+<p>深入<br>TCP 是互联网的基本通信语言协议。它会校验包的交付。TCP 被用于 Web 浏览器连接到互联网时以及从一个地址向另一个地址发送文件传递电子邮件。TCP 确保数据传输的可靠性，并且保证每一个字节在接收时维持它们的发送顺序。操作系统通过一个编程接口来管理 TCP。TCP 使用三次握手来建立一个连接和四次握手来中断一个连接。</p>
+<h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><ol>
+<li><p>客户端向服务器发送一个同步请求（SYN），告诉服务器客户端要开始建立连接。</p>
+</li>
+<li><p>服务器收到客户端的 SYN 请求后，回复一个同步确认（SYN-ACK），告诉客户端已经收到了请求，并准备好建立连接。</p>
+</li>
+<li><p>客户端收到服务器的 SYN-ACK 响应后，再次发送一个确认请求（ACK）（SYN&#x3D;0，ACK&#x3D;1，Seq&#x3D;X+1，Ack&#x3D;Y+1），告诉服务器客户端已经接收到了服务器的响应，并表示可以开始传输数据。</p>
+</li>
+</ol>
+<p>需要注意的是，在三次握手过程中，如果某个阶段超时或出错，则会重新开始三次握手过程。同时，在连接关闭时还需要进行四次挥手过程来正常关闭连接。</p>
+<h2 id="四次握手"><a href="#四次握手" class="headerlink" title="四次握手"></a>四次握手</h2><ol>
+<li><p>客户端发送，FIN 包，请求关闭；</p>
+</li>
+<li><p>服务端接收到， 发送一个 ACK 包，表示确认收到</p>
+</li>
+<li><p>服务端发送一个 FIN 包，表示服务端也不再向客户端发送数据。</p>
+</li>
+<li><p>客户端接收到服务端的 FIN 包后，发送一个 ACK 包，表示确认收到，连接关闭完成。</p>
+</li>
+</ol>
+<p>需要注意的是，在四次挥手过程中，如果某个阶段超时或出错，则会重新开始四次挥手过程。同时，在 TCP 连接关闭过程中，可能存在 TIME_WAIT 状态，以避免网络延迟导致的重复请求。</p>
+]]></content>
+      <categories>
+        <category>TCP 协议</category>
+      </categories>
+      <tags>
+        <tag>TCP 协议</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>技术学习路线？</title>
+    <url>/2020/01/01/%E6%80%9D%E8%80%83/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
+    <content><![CDATA[<h2 id="学习与选择"><a href="#学习与选择" class="headerlink" title="学习与选择"></a>学习与选择</h2><pre><code>技术是第一生产力，兴趣决定动力，理论是一切基础；
+</code></pre>
+<span id="more"></span>
+
+<h2 id="前端发展："><a href="#前端发展：" class="headerlink" title="前端发展："></a>前端发展：</h2><ul>
+<li><p>前端路线</p>
+<ul>
+<li>深不可测，既能开发服务端，客户端，移动端，小程序，WEB；</li>
+<li>前途无亮，领域广泛，全栈难度高，精通复杂；</li>
+</ul>
+</li>
+<li><p>框架</p>
+<ul>
+<li><p>react：又更新不少新特性；</p>
+</li>
+<li><p>svelte：非常快；</p>
+</li>
+<li><p>vue：与 react 比较，该有的功能都有，还有些花里胡哨的功能；</p>
+</li>
+<li><p>Solid：观望；</p>
+</li>
+<li><p>Lit：观望；</p>
+</li>
+<li><p>angular，sea，require，jquery：加入淘汰系列，都被上面可代替；</p>
+</li>
+</ul>
+</li>
+<li><p>脚手架：</p>
+<ul>
+<li><p>webpack：模块打包器；</p>
+</li>
+<li><p>vite：对比 webpack 非常快；</p>
+</li>
+<li><p>nextjs、nuxtjs：ssr 脚手架；</p>
+</li>
+<li><p>remix：观望，router 作者开发的，非常优秀，功能还不够全，期待 2.0 发布；</p>
+</li>
+<li><p>astro：很优秀的静态网页 ssr 框架，可支持任何框架的集成开发；</p>
+</li>
+<li><p>esbuild：vite 背后的支持；</p>
+</li>
+<li><p>swc：Rust 封装前端脚手架；</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="后端学习路线："><a href="#后端学习路线：" class="headerlink" title="后端学习路线："></a>后端学习路线：</h2><ul>
+<li><p>语言及工具</p>
+<ul>
+<li><p>nodejs，nginx：首选推荐；</p>
+</li>
+<li><p>c，c++：基础学习； go，rust，python: 一般作为后端专业学习，跳过；</p>
+</li>
+<li><p>java，php，.net：应试学习；</p>
+</li>
+</ul>
+</li>
+<li><p>数据库</p>
+<ul>
+<li><p>mongo，redis： 首选推荐；</p>
+</li>
+<li><p>mysql：应试学习；</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>思考</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
 </search>
