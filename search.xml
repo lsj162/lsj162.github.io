@@ -1559,11 +1559,11 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   </entry>
   <entry>
     <title>Python 笔记</title>
-    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h1 id="Python-安装"><a href="#Python-安装" class="headerlink" title="Python 安装"></a>Python 安装</h1><h1 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h1><pre><code>python --version
+    <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h1><pre><code>python --version
 </code></pre>
+<span id="more"></span>
+
 <h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><pre><code>&gt; python
 </code></pre>
 <h1 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h1><pre><code>exit()
@@ -1584,15 +1584,15 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   </entry>
   <entry>
     <title>Python 笔记</title>
-    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h1 id="变量名称"><a href="#变量名称" class="headerlink" title="变量名称"></a>变量名称</h1><pre><code>变量名必须以字母或下划线字符开头
+    <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<h1 id="变量名称"><a href="#变量名称" class="headerlink" title="变量名称"></a>变量名称</h1><pre><code>变量名必须以字母或下划线字符开头
 变量名不能以数字开头
 变量名称只能包含字母数字字符和下划线（Az、0-9 和 _）
 变量名区分大小写（age、Age 和 AGE 是三个不同的变量）
 变量名不能是任何Python 关键字。
 </code></pre>
+<span id="more"></span>
+
 <h1 id="获取类型"><a href="#获取类型" class="headerlink" title="获取类型"></a>获取类型</h1><pre><code>print(type(x))
 </code></pre>
 <h1 id="多个值对应多个变量"><a href="#多个值对应多个变量" class="headerlink" title="多个值对应多个变量"></a>多个值对应多个变量</h1><pre><code>x, y, z = &quot;Orange&quot;, &quot;Banana&quot;, &quot;Cherry&quot;
@@ -1622,12 +1622,12 @@ print(&quot;Python is &quot; + x)
   </entry>
   <entry>
     <title>Python 笔记</title>
-    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<span id="more"></span>
+    <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h1><pre><code>使用以下type()函数获取任何对象的数据类型
+</code></pre>
+<span id="more"></span>
 
-<h1 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h1><pre><code>使用以下type()函数获取任何对象的数据类型
-
-文本类型： str
+<pre><code>文本类型： str
 数字类型： int, float, complex
 序列类型： list, tuple, range
 映射类型： dict
@@ -1650,10 +1650,10 @@ int(y)
   </entry>
   <entry>
     <title>Python 笔记</title>
-    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<span id="more"></span>
+    <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<h1 id="循环遍历字符串"><a href="#循环遍历字符串" class="headerlink" title="循环遍历字符串"></a>循环遍历字符串</h1><p>for x in “banana”:<br>print(x)</p>
+<span id="more"></span>
 
-<h1 id="循环遍历字符串"><a href="#循环遍历字符串" class="headerlink" title="循环遍历字符串"></a>循环遍历字符串</h1><p>for x in “banana”:<br>print(x)</p>
 <h1 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h1><p>a &#x3D; “Hello, World!”</p>
 <p>print(len(a))</p>
 <h1 id="检查字符串"><a href="#检查字符串" class="headerlink" title="检查字符串"></a>检查字符串</h1><p>txt &#x3D; “The best things in life are free!”<br>print(“free” in txt)</p>
