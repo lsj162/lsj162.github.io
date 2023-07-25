@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>vi 命令</title>
+    <title>Vi 命令</title>
     <url>/2016/05/01/%E7%B3%BB%E7%BB%9F/vi%20%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="平时操作-shell，用到的-vi-常用的命令；"><a href="#平时操作-shell，用到的-vi-常用的命令；" class="headerlink" title="平时操作 shell，用到的 vi 常用的命令；"></a>平时操作 shell，用到的 vi 常用的命令；</h2><ul>
 <li><p>i：插入模式，在当前光标位置前插入文本。</p>
@@ -44,8 +44,7 @@
         <category>系统</category>
       </categories>
       <tags>
-        <tag>vi</tag>
-        <tag>linux</tag>
+        <tag>Vim</tag>
       </tags>
   </entry>
   <entry>
@@ -71,7 +70,7 @@ https://hexo.io/themes/
         <category>工具</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
@@ -87,7 +86,7 @@ https://hexo.io/themes/
       </tags>
   </entry>
   <entry>
-    <title>XSS 使用入门</title>
+    <title>XSS</title>
     <url>/2020/05/01/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/xss%E6%94%BB%E5%87%BB/</url>
     <content><![CDATA[<p>XSS：不需要登录。<br>XSS：是向网站 A 注入 JS 代码，然后执行 JS 里的代码，篡改网站 A 的内容。</p>
 ]]></content>
@@ -95,7 +94,7 @@ https://hexo.io/themes/
         <category>网络安全</category>
       </categories>
       <tags>
-        <tag>XSS</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -138,7 +137,7 @@ https://hexo.io/themes/
 </li>
 <li><p>git remote -v [远程库信息]</p>
 </li>
-<li><p>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:somewhile&#x2F;systemjs.git [git 关联 github]</p>
+<li><p>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:somewhile&#x2F;systemjs.git [git 关联 github]</p>
 </li>
 <li><p>git branch –set-upstream-to&#x3D;origin name [关联远程分支]</p>
 </li>
@@ -185,7 +184,7 @@ https://hexo.io/themes/
         <category>工具</category>
       </categories>
       <tags>
-        <tag>git</tag>
+        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
@@ -517,23 +516,6 @@ https://hexo.io/themes/
       </categories>
       <tags>
         <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS - 实现一个promiseAll？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JS%20-%20%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # JS - 实现一个 promiseAll？ -->
-
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">promiseAll</span>(<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> len = promises.<span class="property">length</span>;</span><br><span class="line">        <span class="comment">// 请求等待结果</span></span><br><span class="line">        <span class="keyword">let</span> res = [];</span><br><span class="line">        <span class="comment">// 累计请求成功的数量</span></span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">next</span>(<span class="params">index</span>) &#123;</span><br><span class="line">            promises[index]().<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">                res[index] = result;</span><br><span class="line">                count++;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (count === len) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="title function_">resolve</span>(res);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="title function_">next</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>promise</tag>
       </tags>
   </entry>
   <entry>
@@ -1664,6 +1646,23 @@ int(y)
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS - 实现一个promiseAll？</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/Promise/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
+    <content><![CDATA[<!-- # JS - 实现一个 promiseAll？ -->
+
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">promiseAll</span>(<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> len = promises.<span class="property">length</span>;</span><br><span class="line">        <span class="comment">// 请求等待结果</span></span><br><span class="line">        <span class="keyword">let</span> res = [];</span><br><span class="line">        <span class="comment">// 累计请求成功的数量</span></span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">next</span>(<span class="params">index</span>) &#123;</span><br><span class="line">            promises[index]().<span class="title function_">then</span>(<span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">                res[index] = result;</span><br><span class="line">                count++;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (count === len) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="title function_">resolve</span>(res);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="title function_">next</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Promise</category>
+      </categories>
+      <tags>
+        <tag>Promise</tag>
       </tags>
   </entry>
 </search>
