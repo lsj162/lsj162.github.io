@@ -380,7 +380,7 @@ https://hexo.io/themes/
       </tags>
   </entry>
   <entry>
-    <title>C 诞生史</title>
+    <title>Rust 诞生史</title>
     <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Rust/Rust%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
     <content><![CDATA[<p><img src="/images/w3c.png"></p>
 <p>🪴</p>
@@ -395,10 +395,10 @@ https://hexo.io/themes/
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">https://en.wikipedia.org/wiki/Rust_(programming_language)</a></p>
 ]]></content>
       <categories>
-        <category>HTTP</category>
+        <category>Rust</category>
       </categories>
       <tags>
-        <tag>HTTP</tag>
+        <tag>Rust</tag>
       </tags>
   </entry>
   <entry>
@@ -1536,6 +1536,134 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </categories>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 诞生史</title>
+    <url>/2014/05/01/%E5%90%8E%E7%AB%AF/Python/Python%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+<p>🪴</p>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>Python 的作者，Guido von Rossum，确实是荷兰人。1982 年，Guido 从阿姆斯特丹大学获得了数学和计算机硕士学位。然而，尽管他算得上是一位数学家，但他更加享受计算机带来的乐趣。用他的话说，尽管拥有数学和计算机双料资质，他总趋向于做计算机相关的工作，并热衷于做任何和编程相关的活儿。</p>
+<p>1991 年，第一个 Python 编译器诞生。它是用 C 语言实现的，并能够调用 C 语言的库文件。</p>
+<p>2000 年 10 月，Python 2.0 发布。Python 2.7 的生命周期最初定于 2015 年，然后推迟到 2020 年。</p>
+<p>2008 年 12 月，Python 3.0 发布。</p>
+<p>2022 年 11 月，Python 3.11 是稳定版本。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://en.wikipedia.org/wiki/Redis">https://en.wikipedia.org/wiki/Redis</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 笔记</title>
+    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="Python-安装"><a href="#Python-安装" class="headerlink" title="Python 安装"></a>Python 安装</h1><h1 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h1><pre><code>python --version
+</code></pre>
+<h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><pre><code>&gt; python
+</code></pre>
+<h1 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h1><pre><code>exit()
+</code></pre>
+<h1 id="Python-缩进"><a href="#Python-缩进" class="headerlink" title="Python 缩进"></a>Python 缩进</h1><pre><code>缩进是指代码行开头的空格。
+</code></pre>
+<h1 id="Python-变量"><a href="#Python-变量" class="headerlink" title="Python 变量"></a>Python 变量</h1><pre><code>Python 没有用于声明变量的命令。
+</code></pre>
+<h1 id="Python-注释"><a href="#Python-注释" class="headerlink" title="Python 注释"></a>Python 注释</h1><pre><code>注释以 开头#，Python 将忽略它们：
+</code></pre>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 笔记</title>
+    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="变量名称"><a href="#变量名称" class="headerlink" title="变量名称"></a>变量名称</h1><pre><code>变量名必须以字母或下划线字符开头
+变量名不能以数字开头
+变量名称只能包含字母数字字符和下划线（Az、0-9 和 _）
+变量名区分大小写（age、Age 和 AGE 是三个不同的变量）
+变量名不能是任何Python 关键字。
+</code></pre>
+<h1 id="获取类型"><a href="#获取类型" class="headerlink" title="获取类型"></a>获取类型</h1><pre><code>print(type(x))
+</code></pre>
+<h1 id="多个值对应多个变量"><a href="#多个值对应多个变量" class="headerlink" title="多个值对应多个变量"></a>多个值对应多个变量</h1><pre><code>x, y, z = &quot;Orange&quot;, &quot;Banana&quot;, &quot;Cherry&quot;
+</code></pre>
+<h1 id="一个值对应多个变量"><a href="#一个值对应多个变量" class="headerlink" title="一个值对应多个变量"></a>一个值对应多个变量</h1><pre><code>x = y = z = &quot;Orange&quot;
+</code></pre>
+<h1 id="解构"><a href="#解构" class="headerlink" title="解构"></a>解构</h1><pre><code>fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
+x, y, z = fruits
+</code></pre>
+<h1 id="输出变量"><a href="#输出变量" class="headerlink" title="输出变量"></a>输出变量</h1><pre><code>print()函数经常用来输出变量。
+</code></pre>
+<h1 id="全局关键字"><a href="#全局关键字" class="headerlink" title="全局关键字"></a>全局关键字</h1><pre><code>def myfunc():
+    global x
+    x = &quot;fantastic&quot;
+
+myfunc()
+
+print(&quot;Python is &quot; + x)
+</code></pre>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 笔记</title>
+    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h1><pre><code>使用以下type()函数获取任何对象的数据类型
+
+文本类型： str
+数字类型： int, float, complex
+序列类型： list, tuple, range
+映射类型： dict
+套装类型： set,frozenset
+布尔类型： bool
+二进制类型： bytes, bytearray, memoryview
+无类型： NoneType
+</code></pre>
+<h1 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h1><pre><code>y = 2.8  # float
+
+int(y)
+</code></pre>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 笔记</title>
+    <url>/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="循环遍历字符串"><a href="#循环遍历字符串" class="headerlink" title="循环遍历字符串"></a>循环遍历字符串</h1><p>for x in “banana”:<br>print(x)</p>
+<h1 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h1><p>a &#x3D; “Hello, World!”</p>
+<p>print(len(a))</p>
+<h1 id="检查字符串"><a href="#检查字符串" class="headerlink" title="检查字符串"></a>检查字符串</h1><p>txt &#x3D; “The best things in life are free!”<br>print(“free” in txt)</p>
+<h1 id="Slicing-切片"><a href="#Slicing-切片" class="headerlink" title="Slicing 切片"></a>Slicing 切片</h1><p>b &#x3D; “Hello, World!”<br>print(b[2:5],b[:])</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>

@@ -49,6 +49,247 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-后端/Python/入门级/1. 入门语法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2022-12-31T16:00:00.000Z" itemprop="datePublished">2023-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/">Python 笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h1 id="Python-安装"><a href="#Python-安装" class="headerlink" title="Python 安装"></a>Python 安装</h1><h1 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h1><pre><code>python --version
+</code></pre>
+<h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><pre><code>&gt; python
+</code></pre>
+<h1 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h1><pre><code>exit()
+</code></pre>
+<h1 id="Python-缩进"><a href="#Python-缩进" class="headerlink" title="Python 缩进"></a>Python 缩进</h1><pre><code>缩进是指代码行开头的空格。
+</code></pre>
+<h1 id="Python-变量"><a href="#Python-变量" class="headerlink" title="Python 变量"></a>Python 变量</h1><pre><code>Python 没有用于声明变量的命令。
+</code></pre>
+<h1 id="Python-注释"><a href="#Python-注释" class="headerlink" title="Python 注释"></a>Python 注释</h1><pre><code>注释以 开头#，Python 将忽略它们：
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/" data-id="clkhsyesg0003sfjdfw8w1l8c" data-title="Python 笔记" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-后端/Python/入门级/2. 变量" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/" class="article-date">
+  <time class="dt-published" datetime="2022-12-31T16:00:00.000Z" itemprop="datePublished">2023-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/">Python 笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h1 id="变量名称"><a href="#变量名称" class="headerlink" title="变量名称"></a>变量名称</h1><pre><code>变量名必须以字母或下划线字符开头
+变量名不能以数字开头
+变量名称只能包含字母数字字符和下划线（Az、0-9 和 _）
+变量名区分大小写（age、Age 和 AGE 是三个不同的变量）
+变量名不能是任何Python 关键字。
+</code></pre>
+<h1 id="获取类型"><a href="#获取类型" class="headerlink" title="获取类型"></a>获取类型</h1><pre><code>print(type(x))
+</code></pre>
+<h1 id="多个值对应多个变量"><a href="#多个值对应多个变量" class="headerlink" title="多个值对应多个变量"></a>多个值对应多个变量</h1><pre><code>x, y, z = &quot;Orange&quot;, &quot;Banana&quot;, &quot;Cherry&quot;
+</code></pre>
+<h1 id="一个值对应多个变量"><a href="#一个值对应多个变量" class="headerlink" title="一个值对应多个变量"></a>一个值对应多个变量</h1><pre><code>x = y = z = &quot;Orange&quot;
+</code></pre>
+<h1 id="解构"><a href="#解构" class="headerlink" title="解构"></a>解构</h1><pre><code>fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]
+x, y, z = fruits
+</code></pre>
+<h1 id="输出变量"><a href="#输出变量" class="headerlink" title="输出变量"></a>输出变量</h1><pre><code>print()函数经常用来输出变量。
+</code></pre>
+<h1 id="全局关键字"><a href="#全局关键字" class="headerlink" title="全局关键字"></a>全局关键字</h1><pre><code>def myfunc():
+    global x
+    x = &quot;fantastic&quot;
+
+myfunc()
+
+print(&quot;Python is &quot; + x)
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/" data-id="clkhsyesj0004sfjde7px6tzc" data-title="Python 笔记" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-后端/Python/入门级/3. 数据类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2022-12-31T16:00:00.000Z" itemprop="datePublished">2023-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Python 笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h1 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h1><pre><code>使用以下type()函数获取任何对象的数据类型
+
+文本类型： str
+数字类型： int, float, complex
+序列类型： list, tuple, range
+映射类型： dict
+套装类型： set,frozenset
+布尔类型： bool
+二进制类型： bytes, bytearray, memoryview
+无类型： NoneType
+</code></pre>
+<h1 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h1><pre><code>y = 2.8  # float
+
+int(y)
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="clkhsyesk0005sfjdezq5andi" data-title="Python 笔记" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-后端/Python/入门级/4. Strings字符串" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time class="dt-published" datetime="2022-12-31T16:00:00.000Z" itemprop="datePublished">2023-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/">Python 笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+
+<h1 id="循环遍历字符串"><a href="#循环遍历字符串" class="headerlink" title="循环遍历字符串"></a>循环遍历字符串</h1><p>for x in “banana”:<br>print(x)</p>
+<h1 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h1><p>a &#x3D; “Hello, World!”</p>
+<p>print(len(a))</p>
+<h1 id="检查字符串"><a href="#检查字符串" class="headerlink" title="检查字符串"></a>检查字符串</h1><p>txt &#x3D; “The best things in life are free!”<br>print(“free” in txt)</p>
+<h1 id="Slicing-切片"><a href="#Slicing-切片" class="headerlink" title="Slicing 切片"></a>Slicing 切片</h1><p>b &#x3D; “Hello, World!”<br>print(b[2:5],b[:])</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="clkhsyesm0009sfjdgdjy7o6f" data-title="Python 笔记" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-前端/Typescript/Ts - TypeScript 中的泛型是什么？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" class="article-date">
@@ -364,219 +605,11 @@
 
 
   
-    <article id="post-前端/Vue/Vue - 中的 computed 和 watch 区别？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/" class="article-date">
-  <time class="dt-published" datetime="2021-12-31T16:00:00.000Z" itemprop="datePublished">2022-01-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/">Vue - 中的 computed 和 watch 区别？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <!-- # Vue - 中的 computed 和 watch 区别？ -->
-
-<p>在 Vue 中，computed 和 watch 都可以用于监听数据变化并做出响应。 区别在于：</p>
-<ol>
-<li>计算属性 (computed)：可以处理依赖关系，并且具有缓存机制。</li>
-</ol>
-        
-          <p class="article-more-link">
-            <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20computed%20%E5%92%8C%20watch%20%E5%8C%BA%E5%88%AB%EF%BC%9F/" data-id="clkgispqo002urcjd16bpdlrw" data-title="Vue - 中的 computed 和 watch 区别？" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-前端/Vue/Vue - 中的 mixin 和 extends 优缺点？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/" class="article-date">
-  <time class="dt-published" datetime="2021-12-31T16:00:00.000Z" itemprop="datePublished">2022-01-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/">Vue - 中的 mixin 和 extends 优缺点？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <!-- # Vue - 中的 mixin 和 extends 优缺点？ -->
-
-<p>mixin</p>
-<p>优点：<br>可以包含任意选项，具有很大的灵活性；<br>可以复用在多个组件中，提高了代码的复用性和维护性；<br>可以通过 Vue.mixin 全局混入到所有组件中，扩展了 Vue 的能力。</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20mixin%20%E5%92%8C%20extends%20%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F/" data-id="clkgispqq002xrcjdde1k6vm6" data-title="Vue - 中的 mixin 和 extends 优缺点？" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-前端/Vue/Vue - 中的 v-model 指令？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/" class="article-date">
-  <time class="dt-published" datetime="2021-12-31T16:00:00.000Z" itemprop="datePublished">2022-01-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/">Vue - 中的 v-model 指令？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <!-- # Vue - 中的 v-model 指令？ -->
-
-<p>它可以简化表单元素上的双向数据绑定。它通常用于对表单元素的输入值进行绑定，这样数据就会在视图和模型之间自动同步。</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E7%9A%84%20v-model%20%E6%8C%87%E4%BB%A4%EF%BC%9F/" data-id="clkgispqr0030rcjd35pv3v0l" data-title="Vue - 中的 v-model 指令？" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-前端/Vue/Vue - 什么是 Virtual DOM，优势？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/" class="article-date">
-  <time class="dt-published" datetime="2021-12-31T16:00:00.000Z" itemprop="datePublished">2022-01-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/">Vue - 什么是 Virtual DOM，优势？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <!-- # Vue - 什么是 Virtual DOM，优势？ -->
-
-<p>它是一个内存中的虚拟节点树，其结构与真实的 DOM 树相似，但是它只存在于内存中，并不需要直接操作浏览器中的 DOM。当数据发生变化时，框架会先利用算法比较新旧虚拟 DOM 的差异，并仅更新需要更新的部分。</p>
-        
-          <p class="article-more-link">
-            <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Virtual%20DOM%EF%BC%8C%E4%BC%98%E5%8A%BF%EF%BC%9F/" data-id="clkgispqt0033rcjd6xrs5105" data-title="Vue - 什么是 Virtual DOM，优势？" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
   </nav>
 </section>
         <aside id="sidebar">
@@ -585,7 +618,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Go/" rel="tag">Go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongo/" rel="tag">Mongo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/" rel="tag">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-%E5%8D%8F%E8%AE%AE/" rel="tag">TCP 协议</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XSS/" rel="tag">XSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/" rel="tag">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/" rel="tag">vi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSRF/" rel="tag">CSRF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Go/" rel="tag">Go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mongo/" rel="tag">Mongo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/" rel="tag">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rust/" rel="tag">Rust</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-%E5%8D%8F%E8%AE%AE/" rel="tag">TCP 协议</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XSS/" rel="tag">XSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/promise/" rel="tag">promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/" rel="tag">vi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
     </div>
   </div>
 
@@ -598,23 +631,23 @@
       <ul>
         
           <li>
+            <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/">Python 笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/">Python 笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Python 笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/">Python 笔记</a>
+          </li>
+        
+          <li>
             <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/">Ts - TypeScript 中的泛型是什么？</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/">Ts - interface 和 type 区别？</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/">如何在 TypeScript 中使用命名空间？</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/">Ts - 如何使用接口来描述函数类型？</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%EF%BC%9F/">Ts - 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</a>
           </li>
         
       </ul>
@@ -626,7 +659,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Go/">Go</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mongo/">Mongo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TCP-%E5%8D%8F%E8%AE%AE/">TCP 协议</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E8%80%83/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B3%BB%E7%BB%9F/">系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Go/">Go</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mongo/">Mongo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/">Nodejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TCP-%E5%8D%8F%E8%AE%AE/">TCP 协议</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%9D%E8%80%83/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B3%BB%E7%BB%9F/">系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></li></ul>
     </div>
   </div>
 
@@ -636,7 +669,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">五月 2014</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">五月 2014</a></li></ul>
     </div>
   </div>
 
