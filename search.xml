@@ -1558,7 +1558,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Python 笔记</title>
+    <title>1. 入门语法</title>
     <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/1.%20%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h1><pre><code>python --version
 </code></pre>
@@ -1583,7 +1583,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Python 笔记</title>
+    <title>2. 变量</title>
     <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/2.%20%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 id="变量名称"><a href="#变量名称" class="headerlink" title="变量名称"></a>变量名称</h1><pre><code>变量名必须以字母或下划线字符开头
 变量名不能以数字开头
@@ -1621,7 +1621,7 @@ print(&quot;Python is &quot; + x)
       </tags>
   </entry>
   <entry>
-    <title>Python 笔记</title>
+    <title>3. 数据类型</title>
     <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/3.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h1><pre><code>使用以下type()函数获取任何对象的数据类型
 </code></pre>
@@ -1649,7 +1649,7 @@ int(y)
       </tags>
   </entry>
   <entry>
-    <title>Python 笔记</title>
+    <title>4. Strings字符串</title>
     <url>/2021/01/01/%E5%90%8E%E7%AB%AF/Python/%E5%85%A5%E9%97%A8%E7%BA%A7/4.%20Strings%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
     <content><![CDATA[<h1 id="循环遍历字符串"><a href="#循环遍历字符串" class="headerlink" title="循环遍历字符串"></a>循环遍历字符串</h1><p>for x in “banana”:<br>print(x)</p>
 <span id="more"></span>
