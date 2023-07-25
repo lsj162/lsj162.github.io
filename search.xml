@@ -674,18 +674,6 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>C 诞生史</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JavaScript%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
-    <content><![CDATA[<p><img src="/images/w3c.png"></p>
-]]></content>
-      <categories>
-        <category>HTTP</category>
-      </categories>
-      <tags>
-        <tag>HTTP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>React - Fiber？</title>
     <url>/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20Fiber%EF%BC%9F/</url>
     <content><![CDATA[<!-- # React - Fiber？ -->
@@ -1514,6 +1502,40 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </categories>
       <tags>
         <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript 诞生史</title>
+    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/JavaScript/JavaScript%20%E8%AF%9E%E7%94%9F%E5%8F%B2/</url>
+    <content><![CDATA[<p><img src="/images/w3c.png"></p>
+<p>🪴</p>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>1990 年底，欧洲核能研究组织（CERN）科学家 Tim Berners-Lee，在全世界最大的电脑网络——互联网的基础上，发明了万维网（World Wide Web），从此可以在网上浏览网页文件。</p>
+<p>1992 年底，美国国家超级电脑应用中心（NCSA）开始开发一个独立的浏览器，叫做 Mosaic。这是人类历史上第一个浏览器。</p>
+<p>1994 年 10 月，NCSA 的一个主要程序员 Marc Andreessen 联合风险投资家 Jim Clark，成立了 Mosaic 通信公司（Mosaic Communications），不久后改名为 Netscape。这家公司的方向，就是在 Mosaic 的基础上，开发面向普通用户的新一代的浏览器 Netscape Navigator。Netscape 公司很快发现，Navigator 浏览器需要一种可以嵌入网页的脚本语言，用来控制浏览器行为。当时，网速很慢而且上网费很贵，有些操作不宜在服务器端完成。</p>
+<p>1995 年，Netscape 公司雇佣了程序员 Brendan Eich 开发这种网页脚本语言。Brendan Eich 有很强的函数式编程背景，希望以 Scheme 语言（函数式语言鼻祖 LISP 语言的一种方言）为蓝本，实现这种新语言。</p>
+<p>1995 年 5 月，Brendan Eich 只用了 10 天，就设计完成了这种语言的第一版。它是一个大杂烩，语法有多个来源。</p>
+<ul>
+<li>基本语法：借鉴 C 语言和 Java 语言。</li>
+<li>数据结构：借鉴 Java 语言，包括将值分成原始值和对象两大类。</li>
+<li>函数的用法：借鉴 Scheme 语言和 Awk 语言，将函数当作第一等公民，并引入闭包。</li>
+<li>原型继承模型：借鉴 Self 语言（Smalltalk 的一种变种）。</li>
+<li>正则表达式：借鉴 Perl 语言。</li>
+<li>字符串和数组处理：借鉴 Python 语言。</li>
+</ul>
+<p>Netscape 公司的这种浏览器脚本语言，最初名字叫做 Mocha，1995 年 9 月改为 LiveScript。12 月，Netscape 公司与 Sun 公司（Java 语言的发明者和所有者）达成协议，后者允许将这种语言叫做 JavaScript。</p>
+<p>1996 年 11 月，Netscape 公司决定将 JavaScript 提交给国际标准化组织 ECMA（European Computer Manufacturers Association），希望 JavaScript 能够成为国际标准，以此抵抗微软 JScript。</p>
+<p>1997 年 07 月，ECMA 组织发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript。</p>
+<p>1997 年 07 月，ECMAScript 1.0 发布。</p>
+<p>1999 年 12 月，ECMAScript 3.0 版发布。</p>
+<p>2009 年 12 月，ECMAScript 5.0 版正式发布。</p>
+<p>2015 年 06 月，ECMAScript 6.0 正式发布，并且更名为“ECMAScript 2015”。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://wangdoc.com/javascript/basic/history">https://wangdoc.com/javascript/basic/history</a></p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
 </search>
