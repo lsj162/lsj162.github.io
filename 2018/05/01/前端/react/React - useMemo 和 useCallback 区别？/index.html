@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>React - useMemo 和 useCallback 区别？ | 启示录·异境</title>
+  <title>🎉 useMemo 和 useCallback 区别？ | 启示录·异境</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -65,7 +65,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      React - useMemo 和 useCallback 区别？
+      🎉 useMemo 和 useCallback 区别？
     </h1>
   
 
@@ -73,17 +73,13 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <!-- # React - useMemo 和 useCallback 区别？ -->
+        <h2 id="useMemo-和-useCallback-在缓存的对象和返回值上存在差异，但二者都可以优化-React-函数组件性能。"><a href="#useMemo-和-useCallback-在缓存的对象和返回值上存在差异，但二者都可以优化-React-函数组件性能。" class="headerlink" title="useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。"></a>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</h2><hr>
+<h2 id="useMemo-可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如："><a href="#useMemo-可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如：" class="headerlink" title="useMemo 可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如："></a>useMemo 可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如：</h2><span id="more"></span>
 
-<p>useMemo 和 useCallback 在缓存的对象和返回值上存在差异，但二者都可以优化 React 函数组件性能。</p>
-<span id="more"></span>
-
-<p>useMemo 可以根据依赖项的变化来缓存计算结果，从而避免不必要的重复计算。例如：</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedValue = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> <span class="title function_">computeExpensiveValue</span>(a, b), [a, b]);</span><br></pre></td></tr></table></figure>
 
 <p>这里的 computeExpensiveValue 是一个计算成本很高的函数，memoizedValue 将会被缓存，并且只有在 a 或 b 发生变化时才会重新计算。</p>
-<p>useCallback 则是用于缓存回调函数，以避免不必要的重复创建。例如：</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedCallback = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">doSomethingWith</span>(a, b);</span><br><span class="line">&#125;, [a, b]);</span><br></pre></td></tr></table></figure>
+<h2 id="useCallback-则是用于缓存回调函数，以避免不必要的重复创建。例如："><a href="#useCallback-则是用于缓存回调函数，以避免不必要的重复创建。例如：" class="headerlink" title="useCallback 则是用于缓存回调函数，以避免不必要的重复创建。例如："></a>useCallback 则是用于缓存回调函数，以避免不必要的重复创建。例如：</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> memoizedCallback = <span class="title function_">useCallback</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">doSomethingWith</span>(a, b);</span><br><span class="line">&#125;, [a, b]);</span><br></pre></td></tr></table></figure>
 
 <p>这里的 memoizedCallback 将会被缓存，并且只有在 a 或 b 发生变化时才会重新创建。如果我们将这个回调函数传递给了子组件，那么子组件在重新渲染时就不需要重新创建这个回调函数，从而避免了不必要的重复渲染。</p>
 <p>使用 useMemo 和 useCallback 都可以有效地避免在 React 应用程序中重复渲染组件，提高应用程序的性能和响应速度。</p>
@@ -91,7 +87,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20useMemo%20%E5%92%8C%20useCallback%20%E5%8C%BA%E5%88%AB%EF%BC%9F/" data-id="clkgispq2001lrcjd63ny5av4" data-title="React - useMemo 和 useCallback 区别？" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20useMemo%20%E5%92%8C%20useCallback%20%E5%8C%BA%E5%88%AB%EF%BC%9F/" data-id="clkgispq2001lrcjd63ny5av4" data-title="🎉 useMemo 和 useCallback 区别？" class="article-share-link">分享</a>
       
       
       
@@ -115,7 +111,7 @@
   
     <a href="/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20useState%20%E5%92%8C%20useReducer%20%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">React - useState 和 useReducer 的区别是什么？</div>
+      <div class="article-nav-title">🎉 - useState 和 useReducer 的区别是什么？</div>
     </a>
   
 </nav>

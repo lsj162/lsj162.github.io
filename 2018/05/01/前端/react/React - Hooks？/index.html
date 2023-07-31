@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>React - Hooks？ | 启示录·异境</title>
+  <title>🎉 React - Hooks？ | 启示录·异境</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -65,7 +65,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      React - Hooks？
+      🎉 React - Hooks？
     </h1>
   
 
@@ -73,15 +73,86 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <!-- # React - Hooks？ -->
-
-<p>常用的 Hooks 包括 useState、useEffect、useContext 等。<br>useState 可以让我们在函数组件中使用 state，useEffect 可以让我们在组件渲染后执行副作用代码，而 useContext 则可以让我们在组件间共享数据。</p>
+        <h2 id="基本挂钩"><a href="#基本挂钩" class="headerlink" title="基本挂钩"></a>基本挂钩</h2><ul>
+<li>useState<ul>
+<li>const [state, setState] &#x3D; useState(initialState);</li>
+<li>返回一个有状态的值以及一个更新它的函数。</li>
+</ul>
+</li>
+<li>useEffect<ul>
+<li>useEffect(didUpdate);</li>
+<li>接受包含命令式、可能有效的代码的函数。</li>
+<li>函数 useEffect 可能会返回一个清理函数。</li>
+</ul>
+</li>
+<li>useContext<ul>
+<li>const value &#x3D; useContext(MyContext);</li>
+<li>接受上下文对象并返回该上下文的当前上下文值。</li>
+</ul>
+</li>
+</ul>
 <span id="more"></span>
+
+<h2 id="附加挂钩"><a href="#附加挂钩" class="headerlink" title="附加挂钩"></a>附加挂钩</h2><ul>
+<li>useReducer<ul>
+<li>const [state, dispatch] &#x3D; useReducer(reducer, initialArg, init);</li>
+<li>替代品 useState。接受 类型的减速器(state, action) &#x3D;&gt; newState，并返回与方法配对的当前状态 dispatch。（如果您熟悉 Redux，您就已经知道它是如何工作的。）</li>
+</ul>
+</li>
+<li>useCallback<ul>
+<li>返回一个记忆的回调。</li>
+<li>仅当依赖项之一发生更改时该版本才会更改。</li>
+</ul>
+</li>
+<li>useMemo<ul>
+<li>返回一个记忆值。</li>
+<li>如果未提供数组，则每次渲染时都会计算一个新值。</li>
+</ul>
+</li>
+<li>useRef<ul>
+<li>useRef 返回一个可变的 ref 对象，其.current 属性被初始化为传递的参数 ( initialValue)。</li>
+</ul>
+</li>
+<li>useImperativeHandle<ul>
+<li>useImperativeHandle 自定义使用时暴露给父组件的实例值 ref。应该与以下一起使用 forwardRef</li>
+</ul>
+</li>
+<li>useLayoutEffect<ul>
+<li>签名与 相同 useEffect，但它在所有 DOM 突变后同步触发。使用它从 DOM 读取布局并同步重新渲染。在浏览器有机会绘制之前，内部计划的更新 useLayoutEffect 将同步刷新。</li>
+</ul>
+</li>
+<li>useDebugValue<ul>
+<li>useDebugValue 可用于在 React DevTools 中显示自定义挂钩的标签。</li>
+</ul>
+</li>
+<li>useDeferredValue<ul>
+<li>useDeferredValue 接受一个值并返回该值的新副本，该副本将推迟到更紧急的更新。</li>
+</ul>
+</li>
+<li>useTransition<ul>
+<li>返回转换的挂起状态的有状态值以及启动它的函数。</li>
+</ul>
+</li>
+<li>useId<ul>
+<li>useId 是一个钩子，用于生成在服务器和客户端上稳定的唯一 ID，同时避免水合不匹配。</li>
+</ul>
+</li>
+</ul>
+<h2 id="其他挂钩"><a href="#其他挂钩" class="headerlink" title="其他挂钩"></a>其他挂钩</h2><ul>
+<li>useSyncExternalStore<ul>
+<li>useSyncExternalStore 是一个推荐用于从外部数据源读取和订阅的钩子，其方式与选择性水合和时间切片等并发渲染功能兼容。</li>
+</ul>
+</li>
+<li>useInsertionEffect<ul>
+<li>在所有 DOM 突变之前 useEffect 同步触发。</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20Hooks%EF%BC%9F/" data-id="clkgispq1001grcjd7rzz8cgi" data-title="React - Hooks？" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20Hooks%EF%BC%9F/" data-id="clkgispq1001grcjd7rzz8cgi" data-title="🎉 React - Hooks？" class="article-share-link">分享</a>
       
       
       

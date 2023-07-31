@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>React -  描述下react生命周期？ | 启示录·异境</title>
+  <title>🎉 React - 生命周期？ | 启示录·异境</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -47,9 +47,9 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-前端/React/React - 描述下react生命周期？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-前端/React/React - 生命周期？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E6%8F%8F%E8%BF%B0%E4%B8%8Breact%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/" class="article-date">
+    <a href="/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/" class="article-date">
   <time class="dt-published" datetime="2018-04-30T16:00:00.000Z" itemprop="datePublished">2018-05-01</time>
 </a>
     
@@ -65,7 +65,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      React -  描述下react生命周期？
+      🎉 React - 生命周期？
     </h1>
   
 
@@ -73,15 +73,80 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <!-- # React - 描述下 react 生命周期？ -->
-
-<p>constructor()：当组件被实例化时调用。<br>render()：根据组件的 props 和状态返回一个 React 元素。<br>componentDidMount()：当组件已经渲染到页面上时调用。<br>componentDidUpdate()：当组件更新时调用。<br>componentWillUnmount()：当组件从页面上卸载时调用。</p>
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h2 id="当创建组件实例并将其插入到-DOM-中时，将按以下顺序调用这些方法："><a href="#当创建组件实例并将其插入到-DOM-中时，将按以下顺序调用这些方法：" class="headerlink" title="当创建组件实例并将其插入到 DOM 中时，将按以下顺序调用这些方法："></a>当创建组件实例并将其插入到 DOM 中时，将按以下顺序调用这些方法：</h2><ul>
+<li>constructor(props)<ul>
+<li>super(props);</li>
+<li>初始化本地状态 this.state。</li>
+<li>将事件处理程序方法绑定到实例。</li>
+</ul>
+</li>
+<li>static getDerivedStateFromProps() 「很少使用」<ul>
+<li>getDerivedStateFromProps(props, state) 在调用 render 方法之前调用，无论是在初始安装还是后续更新时。它应该返回一个对象来更新状态，或者 null 不更新任何内容。</li>
+</ul>
+</li>
+<li>render()<ul>
+<li>返回以下类型之一：JSX；片段；文本节点；布尔值 或 null 或 undefined。不渲染任何内容。</li>
+</ul>
+</li>
+<li>componentDidMount()<ul>
+<li>componentDidMount()在安装组件（插入树中）后立即调用。需要 DOM 节点的初始化应该放在此处。</li>
+</ul>
+</li>
+</ul>
 <span id="more"></span>
+
+<h2 id="更新中"><a href="#更新中" class="headerlink" title="更新中"></a>更新中</h2><h2 id="当组件被重新渲染时，这些方法将按以下顺序调用："><a href="#当组件被重新渲染时，这些方法将按以下顺序调用：" class="headerlink" title="当组件被重新渲染时，这些方法将按以下顺序调用："></a>当组件被重新渲染时，这些方法将按以下顺序调用：</h2><ul>
+<li>static getDerivedStateFromProps()</li>
+<li>shouldComponentUpdate() 「很少使用」<ul>
+<li>用于 shouldComponentUpdate(nextProps, nextState) 让 React 知道组件的输出是否不受当前状态或属性变化的影响。默认行为是在每次状态更改时重新渲染，并且在绝大多数情况下您应该依赖默认行为。</li>
+</ul>
+</li>
+<li>render()</li>
+<li>getSnapshotBeforeUpdate()「很少使用」<ul>
+<li>getSnapshotBeforeUpdate(prevProps, prevState) 在最近渲染的输出被提交到例如 DOM 之前调用。它使您的组件能够在 DOM 发生更改之前捕获一些信息（例如滚动位置）。此生命周期方法返回的任何值都将作为参数传递给 componentDidUpdate().</li>
+</ul>
+</li>
+<li>componentDidUpdate()<ul>
+<li>componentDidUpdate(prevProps, prevState, snapshot) 更新发生后立即调用。初始渲染不会调用此方法。</li>
+</ul>
+</li>
+</ul>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><h2 id="当从-DOM-中删除组件时会调用此方法："><a href="#当从-DOM-中删除组件时会调用此方法：" class="headerlink" title="当从 DOM 中删除组件时会调用此方法："></a>当从 DOM 中删除组件时会调用此方法：</h2><ul>
+<li>componentWillUnmount()<ul>
+<li>componentWillUnmount()在组件被卸载和销毁之前立即调用。</li>
+</ul>
+</li>
+</ul>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><h2 id="当渲染期间、生命周期方法或任何子组件的构造函数中出现错误时，将调用这些方法。"><a href="#当渲染期间、生命周期方法或任何子组件的构造函数中出现错误时，将调用这些方法。" class="headerlink" title="当渲染期间、生命周期方法或任何子组件的构造函数中出现错误时，将调用这些方法。"></a>当渲染期间、生命周期方法或任何子组件的构造函数中出现错误时，将调用这些方法。</h2><ul>
+<li>static getDerivedStateFromError(error)<ul>
+<li>在后代组件抛出错误后调用此生命周期。它接收作为参数抛出的错误，并应返回一个值来更新状态。</li>
+</ul>
+</li>
+<li>componentDidCatch(error, info)<ul>
+<li>在后代组件抛出错误后调用此生命周期。它接收两个参数：</li>
+<li>error- 抛出的错误。</li>
+<li>info- 一个对象，其 componentStack 键包含有关哪个组件引发错误的信息。</li>
+</ul>
+</li>
+</ul>
+<h2 id="其他-API"><a href="#其他-API" class="headerlink" title="其他 API"></a>其他 API</h2><h2 id="每个组件还提供一些其他-API："><a href="#每个组件还提供一些其他-API：" class="headerlink" title="每个组件还提供一些其他 API："></a>每个组件还提供一些其他 API：</h2><ul>
+<li>setState()<ul>
+<li>setState(updater[, callback])</li>
+<li>将组件状态的更改加入队列，并告诉 React 该组件及其子组件需要使用更新后的状态重新渲染。</li>
+</ul>
+</li>
+<li>forceUpdate()<ul>
+<li>component.forceUpdate(callback)</li>
+<li>默认情况下，当组件的状态或属性发生更改时，组件将重新渲染。如果你的 render()方法依赖于一些其他数据，你可以通过调用 来告诉 React 该组件需要重新渲染 forceUpdate()。</li>
+</ul>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/">生命周期图</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E6%8F%8F%E8%BF%B0%E4%B8%8Breact%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/" data-id="clkgispq90023rcjd21vncojc" data-title="React -  描述下react生命周期？" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%9F/" data-id="clkq815zy0000tdjd1wkq8b8g" data-title="🎉 React - 生命周期？" class="article-share-link">分享</a>
       
       
       
@@ -93,19 +158,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          React - 性能优化？
+          React - 高阶组件？
         
       </div>
     </a>
   
   
-    <a href="/2018/05/01/%E5%89%8D%E7%AB%AF/React/React%20-%20%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/01/%E7%B3%BB%E7%BB%9F/vi%20%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">React - 组件通信？</div>
+      <div class="article-nav-title">Vi 命令</div>
     </a>
   
 </nav>
