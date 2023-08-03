@@ -1598,7 +1598,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
   </entry>
   <entry>
     <title>JS - 实现一个promiseAll？</title>
-    <url>/2014/05/01/%E5%89%8D%E7%AB%AF/Promise/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
+    <url>/2019/05/01/%E5%89%8D%E7%AB%AF/Promise/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AApromiseAll%EF%BC%9F/</url>
     <content><![CDATA[<!-- # JS - 实现一个 promiseAll？ -->
 
 <p>代码示范：</p>
