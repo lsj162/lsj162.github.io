@@ -3,42 +3,42 @@
   <entry>
     <title>Vi 命令</title>
     <url>/2016/05/01/%E7%B3%BB%E7%BB%9F/vi%20%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="平时操作-shell，用到的-vi-常用的命令；"><a href="#平时操作-shell，用到的-vi-常用的命令；" class="headerlink" title="平时操作 shell，用到的 vi 常用的命令；"></a>平时操作 shell，用到的 vi 常用的命令；</h2><ul>
-<li><p>i：插入模式，在当前光标位置前插入文本。</p>
-</li>
-<li><p>a：插入模式，在当前光标位置后插入文本。</p>
-</li>
-<li><p>o：在当前行下面新开一行并进入插入模式。</p>
-</li>
-</ul>
+    <content><![CDATA[<h1 id="什么是-vi？"><a href="#什么是-vi？" class="headerlink" title="什么是 vi？"></a>什么是 vi？</h1><p>UNIX 操作系统自带的默认编辑器称为 vi（可视化编辑器）。[UNIX 环境的替代编辑器包括 pico 和 emacs，它是 GNU 的产品。]</p>
 <span id="more"></span>
 
 <ul>
-<li><p>x：删除光标所在位置的字符。</p>
-</li>
-<li><p>dd：删除当前行。</p>
-</li>
-<li><p>yy：复制当前行。</p>
-</li>
-<li><p>p：将之前复制或剪切的内容粘贴到当前光标位置下方。</p>
-</li>
-<li><p>:w：保存文件。</p>
-</li>
-<li><p>:q：退出 vi。</p>
-</li>
-<li><p>:wq：保存并退出 vi。</p>
-</li>
-<li><p>&#x2F;：查找指定字符串。</p>
-</li>
-<li><p>n：在搜索结果中跳转到下一个匹配项。</p>
-</li>
-<li><p>N：在搜索结果中跳转到上一个匹配项。</p>
-</li>
-<li><p>u：撤销上一次操作。</p>
-</li>
-<li><p>Ctrl + r：重做上一次被撤销的操作。</p>
+<li>UNIX vi 编辑器是全屏编辑器，有两种操作模式：<ol>
+<li>命令模式命令导致对文件采取操作，以及</li>
+<li>插入模式，将输入的文本插入到文件中。</li>
+</ol>
 </li>
 </ul>
+<p>在命令模式下，输入的每个字符都是一个命令，对正在编辑的文本文件执行某些操作；在命令模式下键入的字符甚至可能导致 vi 编辑器进入插入模式。在插入模式下，输入的每个字符都会添加到文件中的文本中；按<Esc> ( Escape ) 键可关闭插入模式。</p>
+<p>虽然 vi 命令有很多，但对于 vi 初学者来说，通常只需要其中的一小部分就足够了。为了帮助此类用户，此网页包含基本 vi 命令的示例。下表中最基本和最有用的命令用星号（*或星号）标记。经过练习，这些命令应该变得自动。</p>
+<p>注意： UNIX 和 vi 都区分大小写。确保不要使用大写字母代替小写字母；结果不会是你所期望的。</p>
+<h1 id="进入和退出-vi"><a href="#进入和退出-vi" class="headerlink" title="进入和退出 vi"></a>进入和退出 vi</h1><h3 id="开始-vi"><a href="#开始-vi" class="headerlink" title="开始 vi"></a><code>开始 vi</code></h3><p>要对文件使用 vi ，请输入 vi filename。如果名为 filename 的文件存在，则显示该文件的第一页（或屏幕）；如果该文件不存在，则会创建一个空文件和屏幕，您可以在其中输入文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   vi 文件名   编辑从第 1 行开始的文件名</span><br><span class="line">    vi -r 文件名    恢复系统崩溃时正在编辑的文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="退出-vi"><a href="#退出-vi" class="headerlink" title="退出 vi"></a><code>退出 vi</code></h3><p>通常，当您离开 vi 时，会保存新的或修改的文件。但是，也可以退出 vi 而不保存文件。</p>
+<p>注意：每当键入冒号 (:) 时，光标就会移动到屏幕底部。此类命令可通过按&lt;Return&gt;（或&lt;Enter&gt;）键来完成。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   :x  退出vi，将修改后的文件写入原始调用中指定的文件</span><br><span class="line">    :wq 退出vi，将修改后的文件写入原始调用中指定的文件</span><br><span class="line">    :q  退出（或退出）vi</span><br><span class="line">*   :q! 退出vi，即使尚未为此 vi 调用保存最新更改</span><br></pre></td></tr></table></figure>
+
+<h1 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h1><p>与许多 PC 和 MacIntosh 编辑器不同，鼠标不会在 vi 编辑器屏幕（或窗口）内移动光标。您必须使用下面列出的键盘命令。在某些 UNIX 平台上，也可以使用方向键；然而，由于 vi 在设计时考虑了 Qwerty 键盘（不包含箭头键），因此箭头键有时会在 vi 中产生奇怪的效果，应避免使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   j   或 &lt;回车&gt; [或向下箭头]  将光标向下移动一行</span><br><span class="line">*   k   [或向上箭头]    将光标向上移动一行</span><br><span class="line">*   h   或 &lt;空格&gt; [或左箭头]    将光标向左移动一个字符</span><br><span class="line">*   l   或 &lt;空格&gt; [或右箭头]    将光标向右移动一个字符</span><br><span class="line">*   o   将光标移动到当前行的开头（有光标的行）</span><br><span class="line">*   $   将光标移至当前行末尾</span><br><span class="line">    w	将光标移至下一个单词的开头</span><br><span class="line">    b	将光标移回前一个单词的开头</span><br><span class="line">    :0  &lt;回车&gt;或1G  将光标移动到文件的第一行</span><br><span class="line">    :n  &lt;回车&gt;或nG  将光标移至第 n行</span><br><span class="line">    :$  &lt;回车&gt;或G   将光标移动到文件的最后一行</span><br></pre></td></tr></table></figure>
+
+<h1 id="添加、更改和删除文本"><a href="#添加、更改和删除文本" class="headerlink" title="添加、更改和删除文本"></a>添加、更改和删除文本</h1><p>以下命令允许您插入和添加文本。每个命令都会将 vi 编辑器置于插入模式；因此，必须按下<Esc>键来终止文本输入并将 vi 编辑器返回到命令模式。</p>
+<h3 id="插入或添加文本"><a href="#插入或添加文本" class="headerlink" title="插入或添加文本"></a>插入或添加文本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   i	在光标前插入文本，直到按下&lt;Esc&gt;</span><br><span class="line">    I	在当前行的开头插入文本，直到按下&lt;Esc&gt;</span><br><span class="line">*   a	在光标后追加文本，直到按下&lt;Esc&gt;</span><br><span class="line">    A	将文本附加到当前行末尾，直到按下&lt;Esc&gt;</span><br><span class="line">*   o	打开文本并将文本放入当前行下方的新行中，直到按下&lt;Esc&gt;</span><br><span class="line">*   O	打开文本并将文本放在当前行上方的新行中，直到按下&lt;Esc&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="更改文本"><a href="#更改文本" class="headerlink" title="更改文本"></a>更改文本</h3><p>以下命令允许您修改文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   r   替换光标下的单个字符（无需&lt;Esc&gt;）</span><br><span class="line">    R   替换字符，从当前光标位置开始，直到按下&lt;Esc&gt;</span><br><span class="line">    cw  从光标下的字符开始，用新文本更改当前单词 ，直到按下&lt;Esc&gt;</span><br><span class="line">    cNw 更改以光标下的字符开头的 N 个单词，直到按下&lt;Esc&gt;；例如，c5w 改变 5 个单词</span><br><span class="line">    C   更改（替换）当前行中的字符，直到按下&lt;Esc&gt;</span><br><span class="line">    cc  更改（替换）整个当前行，按下&lt;Esc&gt;时停止</span><br><span class="line">    Ncc or cNc 更改（替换）从当前行开始的接下来的 N 行， 当按下 &lt;Esc&gt; 时停止</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除文本"><a href="#删除文本" class="headerlink" title="删除文本"></a>删除文本</h3><p>以下命令允许您删除文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   X	删除光标下的单个字符</span><br><span class="line">    Nx	删除N个字符，从光标下的字符开始</span><br><span class="line">    dw	删除以光标所在字符开头的单个单词</span><br><span class="line">    dNw	删除以光标处字符开头的 N个单词；例如，d5w删除 5 个单词</span><br><span class="line">    D	从当前光标位置开始删除该行的其余部分</span><br><span class="line">*   DD	删除整个当前行</span><br><span class="line">    Ndd 或 dNd	删除N行，从当前行开始；例如，5dd删除 5 行</span><br></pre></td></tr></table></figure>
+
+<h3 id="剪切和粘贴文本"><a href="#剪切和粘贴文本" class="headerlink" title="剪切和粘贴文本"></a>剪切和粘贴文本</h3><p>以下命令允许您复制和粘贴文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   yy	将当前行复制（复制、剪切）到缓冲区中</span><br><span class="line">    NYy 或 yNy	将接下来的 N 行（包括当前行）复制（复制、剪切）到缓冲区中</span><br><span class="line">    p	将缓冲区中的行放入（粘贴）到当前行之后的文本中</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://www.cs.colostate.edu/helpdocs/vi.html">https://www.cs.colostate.edu/helpdocs/vi.html</a></p>
 ]]></content>
       <categories>
         <category>系统</category>
@@ -941,23 +941,6 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Ts - interface 和 type 区别？</title>
-    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # Ts - interface 和 type 区别？ -->
-
-<p>interface 主要用于描述对象的结构，可继承</p>
-<p>type 更适合用于描述一般的类型，type 能够给任何类型起别名，</p>
-<p>type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何在 TypeScript 中使用命名空间？</title>
     <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/</url>
     <content><![CDATA[<!-- # 如何在 TypeScript 中使用命名空间？ -->
@@ -976,7 +959,7 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </tags>
   </entry>
   <entry>
-    <title>Ts - 如何使用接口来描述函数类型？</title>
+    <title>Ts - 如何定义接口？</title>
     <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/</url>
     <content><![CDATA[<!-- # Ts - 如何使用接口来描述函数类型？ -->
 
@@ -984,24 +967,10 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
 <span id="more"></span>
 
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">interface <span class="title class_">AddFunction</span> &#123;</span><br><span class="line">    (<span class="attr">x</span>: number, <span class="attr">y</span>: number): number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ts - 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</title>
-    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%EF%BC%9F/</url>
-    <content><![CDATA[<!-- # 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？ -->
 
-<p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
-<p>代码示范：</p>
-<span id="more"></span>
-
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span>,</span><br><span class="line">    <span class="title class_">Down</span>,</span><br><span class="line">    <span class="title class_">Left</span>,</span><br><span class="line">    <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span></span><br></pre></td></tr></table></figure>
+<h1 id="Ts-interface-和-type-区别？"><a href="#Ts-interface-和-type-区别？" class="headerlink" title="Ts - interface 和 type 区别？"></a>Ts - interface 和 type 区别？</h1><p>interface 主要用于描述对象的结构，可继承</p>
+<p>type 更适合用于描述一般的类型，type 能够给任何类型起别名，</p>
+<p>type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
 ]]></content>
       <categories>
         <category>TypeScript</category>
@@ -1493,19 +1462,15 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
 <h2 id="后端学习路线："><a href="#后端学习路线：" class="headerlink" title="后端学习路线："></a>后端学习路线：</h2><ul>
 <li><p>语言及工具</p>
 <ul>
-<li><p>nodejs，nginx：首选推荐；</p>
-</li>
-<li><p>c，c++：基础学习； go，rust，python: 一般作为后端专业学习，跳过；</p>
-</li>
-<li><p>java，php，.net：应试学习；</p>
-</li>
+<li>nodejs，nginx：首选推荐；</li>
+<li>c，rust，python，c++，go，java，php，.net：基础学习，非必要；</li>
 </ul>
 </li>
 <li><p>数据库</p>
 <ul>
 <li><p>mongo，redis： 首选推荐；</p>
 </li>
-<li><p>mysql：应试学习；</p>
+<li><p>mysql：基础；</p>
 </li>
 </ul>
 </li>
@@ -1691,6 +1656,22 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </categories>
       <tags>
         <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ts - 如何使用枚举？</title>
+    <url>/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%EF%BC%9F/</url>
+    <content><![CDATA[<p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
+<p>代码示范：</p>
+<span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span>,</span><br><span class="line">    <span class="title class_">Down</span>,</span><br><span class="line">    <span class="title class_">Left</span>,</span><br><span class="line">    <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
       </tags>
   </entry>
 </search>

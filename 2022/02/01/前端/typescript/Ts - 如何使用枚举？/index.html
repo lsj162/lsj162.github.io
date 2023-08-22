@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ts - interface 和 type 区别？ | 启示录·异境</title>
+  <title>Ts - 如何使用枚举？ | 启示录·异境</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -47,9 +47,9 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-前端/Typescript/Ts - interface 和 type 区别？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-前端/Typescript/Ts - 如何使用枚举？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/" class="article-date">
+    <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%EF%BC%9F/" class="article-date">
   <time class="dt-published" datetime="2022-01-31T16:00:00.000Z" itemprop="datePublished">2022-02-01</time>
 </a>
     
@@ -65,7 +65,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Ts - interface 和 type 区别？
+      Ts - 如何使用枚举？
     </h1>
   
 
@@ -73,17 +73,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <!-- # Ts - interface 和 type 区别？ -->
-
-<p>interface 主要用于描述对象的结构，可继承</p>
-<p>type 更适合用于描述一般的类型，type 能够给任何类型起别名，</p>
-<p>type 支持使用 &amp; 运算符实现交叉类型，使用 | 运算符实现联合类型。</p>
+        <p>在 TypeScript 中，你可以使用 enum 关键字来定义一个枚举类型。</p>
+<p>代码示范：</p>
 <span id="more"></span>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span>,</span><br><span class="line">    <span class="title class_">Down</span>,</span><br><span class="line">    <span class="title class_">Left</span>,</span><br><span class="line">    <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/" data-id="clkgispqe002frcjdhpp0a8cy" data-title="Ts - interface 和 type 区别？" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%EF%BC%9F/" data-id="cllg26yxg000089jdc85v01vg" data-title="Ts - 如何使用枚举？" class="article-share-link">分享</a>
       
       
       
@@ -95,19 +94,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20TypeScript%20%E4%B8%AD%E7%9A%84%E6%B3%9B%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          Ts - TypeScript 中的泛型是什么？
+          Ts - 如何定义接口？
         
       </div>
     </a>
   
   
-    <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">如何在 TypeScript 中使用命名空间？</div>
+      <div class="article-nav-title">Vue - 中实现组件通信？</div>
     </a>
   
 </nav>
@@ -140,19 +139,19 @@
           </li>
         
           <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20interface%20%E5%92%8C%20type%20%E5%8C%BA%E5%88%AB%EF%BC%9F/">Ts - interface 和 type 区别？</a>
-          </li>
-        
-          <li>
             <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%9C%A8%20TypeScript%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%9F/">如何在 TypeScript 中使用命名空间？</a>
           </li>
         
           <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/">Ts - 如何使用接口来描述函数类型？</a>
+            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3%EF%BC%9F/">Ts - 如何定义接口？</a>
           </li>
         
           <li>
-            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%EF%BC%9F/">Ts - 在 TypeScript 中，如何定义一个枚举类型？如何使用枚举类型？</a>
+            <a href="/2022/02/01/%E5%89%8D%E7%AB%AF/Typescript/Ts%20-%20%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%EF%BC%9F/">Ts - 如何使用枚举？</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/01/%E5%89%8D%E7%AB%AF/Vue/Vue%20-%20%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%EF%BC%9F/">Vue - 中实现组件通信？</a>
           </li>
         
       </ul>
