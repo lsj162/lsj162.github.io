@@ -1,79 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Vi 命令</title>
-    <url>/2016/05/01/%E7%B3%BB%E7%BB%9F/vi%20%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="什么是-vi？"><a href="#什么是-vi？" class="headerlink" title="什么是 vi？"></a>什么是 vi？</h1><p>UNIX 操作系统自带的默认编辑器称为 vi（可视化编辑器）。[UNIX 环境的替代编辑器包括 pico 和 emacs，它是 GNU 的产品。]</p>
-<span id="more"></span>
-
-<ul>
-<li>UNIX vi 编辑器是全屏编辑器，有两种操作模式：<ol>
-<li>命令模式命令导致对文件采取操作，以及</li>
-<li>插入模式，将输入的文本插入到文件中。</li>
-</ol>
-</li>
-</ul>
-<p>在命令模式下，输入的每个字符都是一个命令，对正在编辑的文本文件执行某些操作；在命令模式下键入的字符甚至可能导致 vi 编辑器进入插入模式。在插入模式下，输入的每个字符都会添加到文件中的文本中；按<Esc> ( Escape ) 键可关闭插入模式。</p>
-<p>虽然 vi 命令有很多，但对于 vi 初学者来说，通常只需要其中的一小部分就足够了。为了帮助此类用户，此网页包含基本 vi 命令的示例。下表中最基本和最有用的命令用星号（*或星号）标记。经过练习，这些命令应该变得自动。</p>
-<p>注意： UNIX 和 vi 都区分大小写。确保不要使用大写字母代替小写字母；结果不会是你所期望的。</p>
-<h1 id="进入和退出-vi"><a href="#进入和退出-vi" class="headerlink" title="进入和退出 vi"></a>进入和退出 vi</h1><h3 id="开始-vi"><a href="#开始-vi" class="headerlink" title="开始 vi"></a><code>开始 vi</code></h3><p>要对文件使用 vi ，请输入 vi filename。如果名为 filename 的文件存在，则显示该文件的第一页（或屏幕）；如果该文件不存在，则会创建一个空文件和屏幕，您可以在其中输入文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   vi 文件名   编辑从第 1 行开始的文件名</span><br><span class="line">    vi -r 文件名    恢复系统崩溃时正在编辑的文件名</span><br></pre></td></tr></table></figure>
-
-<h3 id="退出-vi"><a href="#退出-vi" class="headerlink" title="退出 vi"></a><code>退出 vi</code></h3><p>通常，当您离开 vi 时，会保存新的或修改的文件。但是，也可以退出 vi 而不保存文件。</p>
-<p>注意：每当键入冒号 (:) 时，光标就会移动到屏幕底部。此类命令可通过按&lt;Return&gt;（或&lt;Enter&gt;）键来完成。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   :x  退出vi，将修改后的文件写入原始调用中指定的文件</span><br><span class="line">    :wq 退出vi，将修改后的文件写入原始调用中指定的文件</span><br><span class="line">    :q  退出（或退出）vi</span><br><span class="line">*   :q! 退出vi，即使尚未为此 vi 调用保存最新更改</span><br></pre></td></tr></table></figure>
-
-<h1 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h1><p>与许多 PC 和 MacIntosh 编辑器不同，鼠标不会在 vi 编辑器屏幕（或窗口）内移动光标。您必须使用下面列出的键盘命令。在某些 UNIX 平台上，也可以使用方向键；然而，由于 vi 在设计时考虑了 Qwerty 键盘（不包含箭头键），因此箭头键有时会在 vi 中产生奇怪的效果，应避免使用。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   j   或 &lt;回车&gt; [或向下箭头]  将光标向下移动一行</span><br><span class="line">*   k   [或向上箭头]    将光标向上移动一行</span><br><span class="line">*   h   或 &lt;空格&gt; [或左箭头]    将光标向左移动一个字符</span><br><span class="line">*   l   或 &lt;空格&gt; [或右箭头]    将光标向右移动一个字符</span><br><span class="line">*   o   将光标移动到当前行的开头（有光标的行）</span><br><span class="line">*   $   将光标移至当前行末尾</span><br><span class="line">    w	将光标移至下一个单词的开头</span><br><span class="line">    b	将光标移回前一个单词的开头</span><br><span class="line">    :0  &lt;回车&gt;或1G  将光标移动到文件的第一行</span><br><span class="line">    :n  &lt;回车&gt;或nG  将光标移至第 n行</span><br><span class="line">    :$  &lt;回车&gt;或G   将光标移动到文件的最后一行</span><br></pre></td></tr></table></figure>
-
-<h1 id="添加、更改和删除文本"><a href="#添加、更改和删除文本" class="headerlink" title="添加、更改和删除文本"></a>添加、更改和删除文本</h1><p>以下命令允许您插入和添加文本。每个命令都会将 vi 编辑器置于插入模式；因此，必须按下<Esc>键来终止文本输入并将 vi 编辑器返回到命令模式。</p>
-<h3 id="插入或添加文本"><a href="#插入或添加文本" class="headerlink" title="插入或添加文本"></a>插入或添加文本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   i	在光标前插入文本，直到按下&lt;Esc&gt;</span><br><span class="line">    I	在当前行的开头插入文本，直到按下&lt;Esc&gt;</span><br><span class="line">*   a	在光标后追加文本，直到按下&lt;Esc&gt;</span><br><span class="line">    A	将文本附加到当前行末尾，直到按下&lt;Esc&gt;</span><br><span class="line">*   o	打开文本并将文本放入当前行下方的新行中，直到按下&lt;Esc&gt;</span><br><span class="line">*   O	打开文本并将文本放在当前行上方的新行中，直到按下&lt;Esc&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="更改文本"><a href="#更改文本" class="headerlink" title="更改文本"></a>更改文本</h3><p>以下命令允许您修改文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   r   替换光标下的单个字符（无需&lt;Esc&gt;）</span><br><span class="line">    R   替换字符，从当前光标位置开始，直到按下&lt;Esc&gt;</span><br><span class="line">    cw  从光标下的字符开始，用新文本更改当前单词 ，直到按下&lt;Esc&gt;</span><br><span class="line">    cNw 更改以光标下的字符开头的 N 个单词，直到按下&lt;Esc&gt;；例如，c5w 改变 5 个单词</span><br><span class="line">    C   更改（替换）当前行中的字符，直到按下&lt;Esc&gt;</span><br><span class="line">    cc  更改（替换）整个当前行，按下&lt;Esc&gt;时停止</span><br><span class="line">    Ncc or cNc 更改（替换）从当前行开始的接下来的 N 行， 当按下 &lt;Esc&gt; 时停止</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除文本"><a href="#删除文本" class="headerlink" title="删除文本"></a>删除文本</h3><p>以下命令允许您删除文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   X	删除光标下的单个字符</span><br><span class="line">    Nx	删除N个字符，从光标下的字符开始</span><br><span class="line">    dw	删除以光标所在字符开头的单个单词</span><br><span class="line">    dNw	删除以光标处字符开头的 N个单词；例如，d5w删除 5 个单词</span><br><span class="line">    D	从当前光标位置开始删除该行的其余部分</span><br><span class="line">*   DD	删除整个当前行</span><br><span class="line">    Ndd 或 dNd	删除N行，从当前行开始；例如，5dd删除 5 行</span><br></pre></td></tr></table></figure>
-
-<h3 id="剪切和粘贴文本"><a href="#剪切和粘贴文本" class="headerlink" title="剪切和粘贴文本"></a>剪切和粘贴文本</h3><p>以下命令允许您复制和粘贴文本。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   yy	将当前行复制（复制、剪切）到缓冲区中</span><br><span class="line">    NYy 或 yNy	将接下来的 N 行（包括当前行）复制（复制、剪切）到缓冲区中</span><br><span class="line">    p	将缓冲区中的行放入（粘贴）到当前行之后的文本中</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://www.cs.colostate.edu/helpdocs/vi.html">https://www.cs.colostate.edu/helpdocs/vi.html</a></p>
-]]></content>
-      <categories>
-        <category>系统</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>🎉 Hexo 搭建和使用</title>
-    <url>/2019/05/01/%E5%B7%A5%E5%85%B7/Hexo%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h1><pre><code>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
-
-$ npm install -g hexo-cli
-</code></pre>
-<h1 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h1><pre><code>- themes 下载放置此处
-
-- _config.yml
-    - theme: landscape 设置主题
-</code></pre>
-<span id="more"></span>
-
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><pre><code>https://hexo.io/zh-cn/docs/
-
-https://hexo.io/themes/
-</code></pre>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSRF 使用入门</title>
     <url>/2020/05/01/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/csrf%E6%94%BB%E5%87%BB/</url>
     <content><![CDATA[<p>CSRF：需要用户先登录网站 A，获取 cookie。<br>CSRF：是利用网站 A 本身的漏洞，去请求网站 A 的 api。</p>
@@ -95,96 +22,6 @@ https://hexo.io/themes/
       </categories>
       <tags>
         <tag>HTTP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git 入门</title>
-    <url>/2018/05/01/%E5%B7%A5%E5%85%B7/Git%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<ul>
-<li><p>git config user.name [查看用户名]</p>
-</li>
-<li><p>git config user.email [邮箱地址]</p>
-</li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><p>git config –global user.name “username” [修改用户名]</p>
-</li>
-<li><p>git config user.name “username”[局部]</p>
-</li>
-<li><p>git config –global user.email “email” [邮箱地址]</p>
-</li>
-<li><p>git init [初始化]</p>
-</li>
-<li><p>git add [放入暂存区]</p>
-</li>
-<li><p>git status [状态]</p>
-</li>
-<li><p>git commit -m [提交并说明]</p>
-</li>
-<li><p>git diff [查看修改内容]</p>
-</li>
-<li><p>git reset –hard commit_id [回退和恢复版本分支]</p>
-</li>
-<li><p>git checkout – file [工作区的内容修改撤销]</p>
-</li>
-<li><p>rm || git rm [删除工作区||暂存区]</p>
-</li>
-</ul>
-<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
-<li><p>ssh [密码]</p>
-</li>
-<li><p>git remote -v [远程库信息]</p>
-</li>
-<li><p>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:somewhile&#x2F;systemjs.git [git 关联 github]</p>
-</li>
-<li><p>git branch –set-upstream-to&#x3D;origin name [关联远程分支]</p>
-</li>
-<li><p>git remote rm origin [删除关联]</p>
-</li>
-<li><p>git push -u origin master [推送]</p>
-</li>
-<li><p>git pull [更新]</p>
-</li>
-<li><p>git clone [克隆]</p>
-</li>
-<li><p>git stash [pull 冲突，本地暂时先存储起来，非常熟练及轻松项目可用，否则容易产生冲突]</p>
-</li>
-<li><p>git stash pop stash@{0}</p>
-</li>
-<li><p>git stash apply [恢复当前分支]</p>
-</li>
-</ul>
-<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><ul>
-<li><p>git checkout -b name 远程或本地 [创建分支]</p>
-</li>
-<li><p>git push origin [提交分支]</p>
-</li>
-<li><p>git branch [查看]</p>
-</li>
-<li><p>git checkout master [切换分支]</p>
-</li>
-<li><p>git merge dev [合并分支]</p>
-</li>
-<li><p>git branch -d||D dev [删除分支,不合并强制删除]</p>
-</li>
-<li><p>git push –set-upstream origin name [提交远程分支]</p>
-</li>
-<li><p>git push –delete origin name [删除远程分支]</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li>git 不能提交空文件夹</li>
-</ul>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
@@ -1672,6 +1509,218 @@ Object.prototype.toString.call() 方法：这种方法可以用于检测任何�
       </categories>
       <tags>
         <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🎉 Hexo 搭建和使用</title>
+    <url>/2019/05/01/%E5%B7%A5%E5%85%B7/%F0%9F%8E%89%20Hexo%20%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h1><pre><code>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
+
+$ npm install -g hexo-cli
+</code></pre>
+<h1 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h1><pre><code>- themes 下载放置此处
+
+- _config.yml
+    - theme: landscape 设置主题
+</code></pre>
+<span id="more"></span>
+
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><pre><code>https://hexo.io/zh-cn/docs/
+
+https://hexo.io/themes/
+</code></pre>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🦀️ Git教程🔗</title>
+    <url>/2018/05/01/%E5%B7%A5%E5%85%B7/%F0%9F%A6%80%EF%B8%8F%20Git%E6%95%99%E7%A8%8B%F0%9F%94%97/</url>
+    <content><![CDATA[<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600">Git 教程</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🦀️ YAML 语言教程🔗</title>
+    <url>/2018/05/01/%E5%B7%A5%E5%85%B7/%F0%9F%A6%80%EF%B8%8F%20YAML%20%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B%F0%9F%94%97/</url>
+    <content><![CDATA[<p><a href="https://www.ruanyifeng.com/blog/2016/07/yaml.html">YAML 语言教程</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🦀️ curl 的用法指南🔗</title>
+    <url>/2018/05/01/%E5%B7%A5%E5%85%B7/%F0%9F%A6%80%EF%B8%8F%20curl%20%E7%9A%84%E7%94%A8%E6%B3%95%E6%8C%87%E5%8D%97%F0%9F%94%97/</url>
+    <content><![CDATA[<p><a href="https://www.ruanyifeng.com/blog/2019/09/curl-reference.html">curl 的用法指南</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 入门</title>
+    <url>/2018/05/01/%E5%B7%A5%E5%85%B7/%F0%9F%8E%89%20Git%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<ul>
+<li><p>git config user.name [查看用户名]</p>
+</li>
+<li><p>git config user.email [邮箱地址]</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>git config –global user.name “username” [修改用户名]</p>
+</li>
+<li><p>git config user.name “username”[局部]</p>
+</li>
+<li><p>git config –global user.email “email” [邮箱地址]</p>
+</li>
+<li><p>git init [初始化]</p>
+</li>
+<li><p>git add [放入暂存区]</p>
+</li>
+<li><p>git status [状态]</p>
+</li>
+<li><p>git commit -m [提交并说明]</p>
+</li>
+<li><p>git diff [查看修改内容]</p>
+</li>
+<li><p>git reset –hard commit_id [回退和恢复版本分支]</p>
+</li>
+<li><p>git checkout – file [工作区的内容修改撤销]</p>
+</li>
+<li><p>rm || git rm [删除工作区||暂存区]</p>
+</li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><p>ssh [密码]</p>
+</li>
+<li><p>git remote -v [远程库信息]</p>
+</li>
+<li><p>git remote add origin <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#x6d;</a>:somewhile&#x2F;systemjs.git [git 关联 github]</p>
+</li>
+<li><p>git branch –set-upstream-to&#x3D;origin name [关联远程分支]</p>
+</li>
+<li><p>git remote rm origin [删除关联]</p>
+</li>
+<li><p>git push -u origin master [推送]</p>
+</li>
+<li><p>git pull [更新]</p>
+</li>
+<li><p>git clone [克隆]</p>
+</li>
+<li><p>git stash [pull 冲突，本地暂时先存储起来，非常熟练及轻松项目可用，否则容易产生冲突]</p>
+</li>
+<li><p>git stash pop stash@{0}</p>
+</li>
+<li><p>git stash apply [恢复当前分支]</p>
+</li>
+</ul>
+<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><ul>
+<li><p>git checkout -b name 远程或本地 [创建分支]</p>
+</li>
+<li><p>git push origin [提交分支]</p>
+</li>
+<li><p>git branch [查看]</p>
+</li>
+<li><p>git checkout master [切换分支]</p>
+</li>
+<li><p>git merge dev [合并分支]</p>
+</li>
+<li><p>git branch -d||D dev [删除分支,不合并强制删除]</p>
+</li>
+<li><p>git push –set-upstream origin name [提交远程分支]</p>
+</li>
+<li><p>git push –delete origin name [删除远程分支]</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>git 不能提交空文件夹</li>
+</ul>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🎉 Vi 命令</title>
+    <url>/2016/05/01/%E7%B3%BB%E7%BB%9F/%F0%9F%8E%89%20vi%20%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="什么是-vi？"><a href="#什么是-vi？" class="headerlink" title="什么是 vi？"></a>什么是 vi？</h1><p>UNIX 操作系统自带的默认编辑器称为 vi（可视化编辑器）。[UNIX 环境的替代编辑器包括 pico 和 emacs，它是 GNU 的产品。]</p>
+<span id="more"></span>
+
+<ul>
+<li>UNIX vi 编辑器是全屏编辑器，有两种操作模式：<ol>
+<li>命令模式命令导致对文件采取操作，以及</li>
+<li>插入模式，将输入的文本插入到文件中。</li>
+</ol>
+</li>
+</ul>
+<p>在命令模式下，输入的每个字符都是一个命令，对正在编辑的文本文件执行某些操作；在命令模式下键入的字符甚至可能导致 vi 编辑器进入插入模式。在插入模式下，输入的每个字符都会添加到文件中的文本中；按、&lt;Esc&gt; ( Escape ) 键可关闭插入模式。</p>
+<p>虽然 vi 命令有很多，但对于 vi 初学者来说，通常只需要其中的一小部分就足够了。为了帮助此类用户，此网页包含基本 vi 命令的示例。下表中最基本和最有用的命令用星号（*或星号）标记。经过练习，这些命令应该变得自动。</p>
+<p>注意： UNIX 和 vi 都区分大小写。确保不要使用大写字母代替小写字母；结果不会是你所期望的。</p>
+<h1 id="进入和退出-vi"><a href="#进入和退出-vi" class="headerlink" title="进入和退出 vi"></a>进入和退出 vi</h1><h3 id="开始-vi"><a href="#开始-vi" class="headerlink" title="开始 vi"></a><code>开始 vi</code></h3><p>要对文件使用 vi ，请输入 vi filename。如果名为 filename 的文件存在，则显示该文件的第一页（或屏幕）；如果该文件不存在，则会创建一个空文件和屏幕，您可以在其中输入文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   vi 文件名   编辑从第 1 行开始的文件名</span><br><span class="line">    vi -r 文件名    恢复系统崩溃时正在编辑的文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="退出-vi"><a href="#退出-vi" class="headerlink" title="退出 vi"></a><code>退出 vi</code></h3><p>通常，当您离开 vi 时，会保存新的或修改的文件。但是，也可以退出 vi 而不保存文件。</p>
+<p>注意：每当键入冒号 (:) 时，光标就会移动到屏幕底部。此类命令可通过按&lt;Return&gt;（或&lt;Enter&gt;）键来完成。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   :x  退出vi，将修改后的文件写入原始调用中指定的文件</span><br><span class="line">    :wq 退出vi，将修改后的文件写入原始调用中指定的文件</span><br><span class="line">    :q  退出（或退出）vi</span><br><span class="line">*   :q! 退出vi，即使尚未为此 vi 调用保存最新更改</span><br></pre></td></tr></table></figure>
+
+<h1 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h1><p>与许多 PC 和 MacIntosh 编辑器不同，鼠标不会在 vi 编辑器屏幕（或窗口）内移动光标。您必须使用下面列出的键盘命令。在某些 UNIX 平台上，也可以使用方向键；然而，由于 vi 在设计时考虑了 Qwerty 键盘（不包含箭头键），因此箭头键有时会在 vi 中产生奇怪的效果，应避免使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   j   或 &lt;回车&gt; [或向下箭头]  将光标向下移动一行</span><br><span class="line">*   k   [或向上箭头]    将光标向上移动一行</span><br><span class="line">*   h   或 &lt;空格&gt; [或左箭头]    将光标向左移动一个字符</span><br><span class="line">*   l   或 &lt;空格&gt; [或右箭头]    将光标向右移动一个字符</span><br><span class="line">*   o   将光标移动到当前行的开头（有光标的行）</span><br><span class="line">*   $   将光标移至当前行末尾</span><br><span class="line">    w	将光标移至下一个单词的开头</span><br><span class="line">    b	将光标移回前一个单词的开头</span><br><span class="line">    :0  &lt;回车&gt;或1G  将光标移动到文件的第一行</span><br><span class="line">    :n  &lt;回车&gt;或nG  将光标移至第 n行</span><br><span class="line">    :$  &lt;回车&gt;或G   将光标移动到文件的最后一行</span><br></pre></td></tr></table></figure>
+
+<h1 id="添加、更改和删除文本"><a href="#添加、更改和删除文本" class="headerlink" title="添加、更改和删除文本"></a>添加、更改和删除文本</h1><p>以下命令允许您插入和添加文本。每个命令都会将 vi 编辑器置于插入模式；因此，必须按下<Esc>键来终止文本输入并将 vi 编辑器返回到命令模式。</p>
+<h3 id="插入或添加文本"><a href="#插入或添加文本" class="headerlink" title="插入或添加文本"></a>插入或添加文本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   i	在光标前插入文本，直到按下&lt;Esc&gt;</span><br><span class="line">    I	在当前行的开头插入文本，直到按下&lt;Esc&gt;</span><br><span class="line">*   a	在光标后追加文本，直到按下&lt;Esc&gt;</span><br><span class="line">    A	将文本附加到当前行末尾，直到按下&lt;Esc&gt;</span><br><span class="line">*   o	打开文本并将文本放入当前行下方的新行中，直到按下&lt;Esc&gt;</span><br><span class="line">*   O	打开文本并将文本放在当前行上方的新行中，直到按下&lt;Esc&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="更改文本"><a href="#更改文本" class="headerlink" title="更改文本"></a>更改文本</h3><p>以下命令允许您修改文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   r   替换光标下的单个字符（无需&lt;Esc&gt;）</span><br><span class="line">    R   替换字符，从当前光标位置开始，直到按下&lt;Esc&gt;</span><br><span class="line">    cw  从光标下的字符开始，用新文本更改当前单词 ，直到按下&lt;Esc&gt;</span><br><span class="line">    cNw 更改以光标下的字符开头的 N 个单词，直到按下&lt;Esc&gt;；例如，c5w 改变 5 个单词</span><br><span class="line">    C   更改（替换）当前行中的字符，直到按下&lt;Esc&gt;</span><br><span class="line">    cc  更改（替换）整个当前行，按下&lt;Esc&gt;时停止</span><br><span class="line">    Ncc or cNc 更改（替换）从当前行开始的接下来的 N 行， 当按下 &lt;Esc&gt; 时停止</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除文本"><a href="#删除文本" class="headerlink" title="删除文本"></a>删除文本</h3><p>以下命令允许您删除文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   X	删除光标下的单个字符</span><br><span class="line">    Nx	删除N个字符，从光标下的字符开始</span><br><span class="line">    dw	删除以光标所在字符开头的单个单词</span><br><span class="line">    dNw	删除以光标处字符开头的 N个单词；例如，d5w删除 5 个单词</span><br><span class="line">    D	从当前光标位置开始删除该行的其余部分</span><br><span class="line">*   DD	删除整个当前行</span><br><span class="line">    Ndd 或 dNd	删除N行，从当前行开始；例如，5dd删除 5 行</span><br></pre></td></tr></table></figure>
+
+<h3 id="剪切和粘贴文本"><a href="#剪切和粘贴文本" class="headerlink" title="剪切和粘贴文本"></a>剪切和粘贴文本</h3><p>以下命令允许您复制和粘贴文本。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   yy	将当前行复制（复制、剪切）到缓冲区中</span><br><span class="line">    NYy 或 yNy	将接下来的 N 行（包括当前行）复制（复制、剪切）到缓冲区中</span><br><span class="line">    p	将缓冲区中的行放入（粘贴）到当前行之后的文本中</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://www.cs.colostate.edu/helpdocs/vi.html">https://www.cs.colostate.edu/helpdocs/vi.html</a></p>
+]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🦀️ 搭建 babel 编译环境 🔗</title>
+    <url>/2022/01/01/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/%F0%9F%A6%80%EF%B8%8F%20%E6%90%AD%E5%BB%BA%20babel%20%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%20%F0%9F%94%97/</url>
+    <content><![CDATA[<p>俗话说：工欲善其事，必先利其器。学习 ES6 必不可少的一步就是搭建 babel 的编译环境，毕竟现在主流浏览器对 ES6 的很多语法和 API 支持不全面，还是需要 babel 转换成 ES5 的语法。</p>
+<h1 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h1><p><a href="https://mitianyi.gitbook.io/frontend-interview-guide/es6/build-babel-compiling-environment">搭建 babel 编译环境</a></p>
+]]></content>
+      <categories>
+        <category>Babel</category>
+      </categories>
+      <tags>
+        <tag>Babel</tag>
       </tags>
   </entry>
 </search>
