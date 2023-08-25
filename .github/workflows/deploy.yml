@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3 # 操作安装指定的 Node.js 版本
         with:
-          node-version: 18
+          node-version: 16
           cache: yarn # or pnpm / yarn /npm
       - name: Setup Pages
         uses: actions/configure-pages@v3 # 此操作有助于支持从任何静态站点生成器部署到 GitHub Pages。
