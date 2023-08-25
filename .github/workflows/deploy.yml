@@ -22,22 +22,41 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest # 定义要运行作业的计算机类型
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3 #  在使用操作之前，必须检查仓库。
+        with:
+          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+      # - uses: pnpm/action-setup@v2 # Uncomment this if you're using pnpm
+      - name: Setup Node
+        uses: actions/setup-node@v3 # 操作安装指定的 Node.js 版本
+        with:
+          node-version: 18
+          cache: yarn # or pnpm / yarn /npm
+      - name: Setup Pages
+        uses: actions/configure-pages@v3 # 此操作有助于支持从任何静态站点生成器部署到 GitHub Pages。
+      - name: Install dependencies
+        run: yarn install # or pnpm install / yarn install / npm cli
+      - name: Build with VitePress
+        run: |
+          yarn docs:build # or pnpm docs:build / yarn docs:build / npm run docs:build
+          touch docs/.vitepress/dist/.nojekyll
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2 # 通过 upload-pages-artifact 操作可以打包和上传项目。
+        with:
+          path: docs/.vitepress/dist
+          
   # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # Upload entire repository
-          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
