@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as t,R as i}from"./chunks/framework.FQOLfzW2.js";const m=JSON.parse('{"title":"概述","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"前端/index.md","filePath":"前端/index.md"}'),l={name:"前端/index.md"},r=i("",11),o=[r];function n(c,d,s,h,u,_){return e(),t("div",null,o)}const f=a(l,[["render",n]]);export{m as __pageData,f as default};
