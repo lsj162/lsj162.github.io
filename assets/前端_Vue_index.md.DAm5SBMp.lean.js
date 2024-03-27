@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,a5 as r}from"./chunks/framework.AYenO5Lm.js";const V=JSON.parse('{"title":"Vue","description":"","frontmatter":{},"headers":[],"relativePath":"前端/Vue/index.md","filePath":"前端/Vue/index.md"}'),s={name:"前端/Vue/index.md"},o=r("",14),i=[o];function u(p,n,c,l,d,h){return t(),a("div",null,i)}const m=e(s,[["render",u]]);export{V as __pageData,m as default};
