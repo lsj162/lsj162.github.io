@@ -46,6 +46,8 @@ import{_ as i,c as s,o as a,a5 as n}from"./chunks/framework.AYenO5Lm.js";const c
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> git clone [</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF;--shiki-light-text-decoration:underline;--shiki-dark-text-decoration:underline;">克隆</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
 <span class="line"></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> git clone ... -depth=1 克隆最近一次提交分支</span></span>
+<span class="line"></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 不熟练，千万别用 Stash，新开分支，这时突然一个分支临时 bug，修改这 bug，修改后继续工作</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> git stash [pull 冲突，本地暂时先存储起来]</span></span>
