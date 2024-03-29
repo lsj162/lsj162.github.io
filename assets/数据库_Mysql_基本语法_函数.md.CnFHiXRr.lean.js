@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.AYenO5Lm.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"数据库/Mysql/基本语法/函数.md","filePath":"数据库/Mysql/基本语法/函数.md"}'),s={name:"数据库/Mysql/基本语法/函数.md"};function r(o,c,n,_,p,d){return a(),t("div")}const m=e(s,[["render",r]]);export{l as __pageData,m as default};
