@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a6 as n}from"./chunks/framework.DwCPU-X7.js";const y=JSON.parse('{"title":"评论","description":"","frontmatter":{},"headers":[],"relativePath":"工具/文档工具/index.md","filePath":"工具/文档工具/index.md"}'),t={name:"工具/文档工具/index.md"},h=n("",12),p=[h];function l(k,e,E,r,d,g){return a(),i("div",null,p)}const F=s(t,[["render",l]]);export{y as __pageData,F as default};
