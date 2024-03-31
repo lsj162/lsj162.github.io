@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.DwCPU-X7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"前端/小程序/Uniapp/index.md","filePath":"前端/小程序/Uniapp/index.md"}'),n={name:"前端/小程序/Uniapp/index.md"};function r(i,o,p,s,c,d){return a(),t("div")}const f=e(n,[["render",r]]);export{m as __pageData,f as default};
