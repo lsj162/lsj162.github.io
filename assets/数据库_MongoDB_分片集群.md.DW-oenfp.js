@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.DwCPU-X7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"数据库/MongoDB/分片集群.md","filePath":"数据库/MongoDB/分片集群.md","lastUpdated":1712399324000}'),a={name:"数据库/MongoDB/分片集群.md"};function n(r,s,c,_,d,p){return o(),t("div")}const f=e(a,[["render",n]]);export{m as __pageData,f as default};
